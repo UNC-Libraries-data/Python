@@ -69,7 +69,7 @@
 
 # <center> <h1>1. Entering code</h1> </center>
 # 
-# We'll begin by using Python as a simple calculator.  
+# We'll begin by using Python as a simple calculator.  The objective here is to introduce you to both how the windows in Spyder work together and some basic Python functionality.
 # 
 # For the purposes of this workshop, Python code will be presented in numbered grey cells as below.  Any output generated will also be displayed.
 
