@@ -13109,6 +13109,28 @@ div#notebook {
     });
     </script>
     <!-- End of mathjax configuration --></head>
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://rawgit.com/ipython-contrib/jupyter_contrib_nbextensions/master/src/jupyter_contrib_nbextensions/nbextensions/toc2/main.css">
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://rawgit.com/ipython-contrib/jupyter_contrib_nbextensions/master/src/jupyter_contrib_nbextensions/nbextensions/toc2/toc2.js"></script>
+
+<script>
+$( document ).ready(function(){
+
+            var cfg = {"base_numbering": 1, "nav_menu": {"height": "823px", "width": "482px"}, "number_sections": false, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "384px"}, "toc_section_display": true, "toc_window_display": true};
+
+            // fire the main function with these parameters
+            require(['nbextensions/toc2/toc2'], function (toc2) {
+                toc2.table_of_contents(cfg);
+            });
+    });
+</script>
 <body>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
@@ -13116,7 +13138,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center><h1>Python I</h1></center><p><a href="https://guides.lib.unc.edu/mattjansen"><em>Matt Jansen, Davis Library Research Hub</em></a></p>
+<h1 id="Python">Python<a class="anchor-link" href="#Python">&#182;</a></h1><p><a href="https://guides.lib.unc.edu/mattjansen"><em>Matt Jansen, Davis Library Research Hub</em></a></p>
 
 </div>
 </div>
@@ -13134,26 +13156,20 @@ div#notebook {
 <p><strong>Goals:</strong></p>
 <ul>
 <li>Get the Anaconda Distribution of Python 3.7 downloaded and installed on your computer</li>
-<li>Learn to work with basic Python objects</li>
+<li>Learn to work with basic Python data types and objects</li>
 <li>Introduce Loops and Conditionals</li>
 </ul>
 <h2 id="Why-Python?">Why Python?<a class="anchor-link" href="#Why-Python?">&#182;</a></h2><p>Python is a general-purpose programming language that has become popular for data and text analysis.  Python can be easier to learn than other languages because it emphasizes (human) readability and flexibility.  Python is <a href="https://octoverse.github.com/projects#languages">the third most used language on GitHub</a>; this means you'll find packages (sets of functionality developed by other users) to use Python for a wide variety of problems and tasks.</p>
 <p>If you haven't worked with a programming language before, learning Python will introduce you to approaches and thought processes common to many similar languages, making it easier to learn other languages like Java and R.</p>
-<h3 id="Use-Cases:">Use Cases:<a class="anchor-link" href="#Use-Cases:">&#182;</a></h3><ul>
-<li><p>Scripting: writing code to automate repeptitive tasks.  For example, extracting text from thousands of pdf files and sorting them into directories based on the information in the texts.</p>
-</li>
-<li><p>Quantitative analysis: specialized tools and functions for everything from fitting deep learning models with <code>tensorflow</code> to creating interactive visualizations with <code>bokeh</code>.</p>
-</li>
-<li><p>Natural Language Processing: extracting text from different file formats and parsing and analyzing sentiment using tools from the <code>NLTK</code> package.</p>
-</li>
-<li><p>Web development(<code>Django</code>), Image processing (<code>pillow</code>), Web scraping (<code>BeautifulSoup</code>), Acessing APIs, and many more.</p>
-</li>
-</ul>
+<h3 id="Use-Cases:">Use Cases:<a class="anchor-link" href="#Use-Cases:">&#182;</a></h3><h4 id="Scripting:">Scripting:<a class="anchor-link" href="#Scripting:">&#182;</a></h4><p>Writing code to automate repeptitive tasks.  For example, extracting text from thousands of pdf files and sorting them into directories based on the whether the texts mention particular people or places.  To do this, we'll need to create instructions for how to find the pdfs (and skip any non-pdfs!), open them, somehow extract text, search for a key term, then depending on what we find, move the file to a location.   In this series, we'll learn about some of the fundamental building blocks for translating a manual process into instructions the computer can understand.  The other uses outlined below often involve some element of automation!</p>
+<h4 id="Quantitative-analysis:">Quantitative analysis:<a class="anchor-link" href="#Quantitative-analysis:">&#182;</a></h4><p>Python has a well-developed ecosystem of specialized tools and functions for everything from fitting deep learning models with <code>tensorflow</code> to creating interactive visualizations with <code>bokeh</code>.  Most of this functionality isn't in base Python (our focus for Python 1), but we'll need base Python to bring together different packages and processes.</p>
+<h4 id="Natural-Language-Processing:">Natural Language Processing:<a class="anchor-link" href="#Natural-Language-Processing:">&#182;</a></h4><p>The <code>NLTK</code> package, among others, provides tools for dealing with unstructured text like parsing words and sentences, or tagging parts of speech.</p>
+<h4 id="Others:">Others:<a class="anchor-link" href="#Others:">&#182;</a></h4><p>Web development (<code>Django</code>), Image processing (<code>pillow</code>), Web scraping (<code>BeautifulSoup</code>), APIs, databases, and many more.</p>
 <p>However, there are few things you can do in Python that can't also be done elsewhere!  If you already know one or more programming language, you'll have to decide where Python best fits or helps in your own workflows.</p>
-<h4><font color=red>Warning!</font></h4>
-<p>If you're already comfortable with basic programming concepts, you may find this workshop very simple.  Python II later in the day may be more helpful if you're already familiar with the concepts below and just need to learn new syntax, but both workshops will be focused on the basics.  You're welcome to stay, review, and help other attendees!</p>
-<h4 id="Python-2-vs-Python-3">Python 2 vs Python 3<a class="anchor-link" href="#Python-2-vs-Python-3">&#182;</a></h4><p>Both Python 2 and Python 3 are widely used in research.  Unfortunately, while both Python 2 and 3 are very similar, there are a few key syntax differences. Python 3 was released in 2008; nearly all important tools have been re-written or updated for Python 3.  <strong>Python 2 will not be maintained after January 1, 2020.</strong>  This workshop will focus on Python 3.</p>
-<h2 id="Integrated-Development-Environments-(IDEs)">Integrated Development Environments (IDEs)<a class="anchor-link" href="#Integrated-Development-Environments-(IDEs)">&#182;</a></h2><p>An IDE is software that groups together the many tools to ease development in a programming language, such as a code editor, compiler, and debugger in a convenient interface. There are many different IDEs to choose from.  IDEs are not necessary, but often good for beginners.</p>
+<h3><font color=red>Warning!</font></h3>
+<p>If you're already comfortable with basic programming concepts, you'll probably find this workshop very straightforward.  The later workshops in the sequence may be more helpful if you're already familiar with the concepts below and just need to learn new syntax.  Experienced attendees are more than welcome to stay, review, and help other attendees!</p>
+<h3 id="Python-2-vs-Python-3">Python 2 vs Python 3<a class="anchor-link" href="#Python-2-vs-Python-3">&#182;</a></h3><p>Both Python 2 and Python 3 are widely used in research.  Unfortunately, while both Python 2 and 3 are very similar, there are a few key syntax differences. Python 3 was released in 2008; nearly all important tools have been re-written or updated for Python 3.  <strong>Python 2 will not be maintained after January 1, 2020.</strong>  This workshop will focus on Python 3.</p>
+<h2 id="Getting-Started">Getting Started<a class="anchor-link" href="#Getting-Started">&#182;</a></h2><h3 id="Integrated-Development-Environments-(IDEs)">Integrated Development Environments (IDEs)<a class="anchor-link" href="#Integrated-Development-Environments-(IDEs)">&#182;</a></h3><p>An IDE is software that groups together the many tools to ease development in a programming language, such as a code editor, compiler, and debugger in a convenient interface. There are many different IDEs to choose from.  IDEs are not necessary, but often good for beginners.</p>
 <p>As you gain experience, you can choose whether an IDE is right for your uses and which one works best for you. For the purposes of this workshop, we will use Spyder, which comes packaged with Anaconda.</p>
 <p>Open Spyder:</p>
 <ul>
@@ -13174,7 +13190,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center> <h1>1. Entering code</h1> </center><p>We'll begin by using Python as a simple calculator.  The objective here is to introduce you to both how the windows in Spyder work together and some basic Python functionality.</p>
+<h3 id="Entering-code">Entering code<a class="anchor-link" href="#Entering-code">&#182;</a></h3><p>We'll begin by using Python as a simple calculator.  The objective here is to introduce you to both how the windows in Spyder work together and some basic Python functionality.</p>
 <p>For the purposes of this workshop, Python code will be presented in numbered grey cells as below.  Any output generated will also be displayed.</p>
 
 </div>
@@ -13182,7 +13198,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="mi">2</span><span class="o">+</span><span class="mi">2</span>
@@ -13198,7 +13214,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[2]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -13232,7 +13248,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="mi">3</span><span class="o">*</span><span class="mi">3</span>
@@ -13248,7 +13264,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -13273,7 +13289,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#1+2</span>
@@ -13290,7 +13306,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -13309,7 +13325,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <center>
-<h3>Exercises</h3>
+<h4>Exercises</h4>
 </center><ol>
 <li><p>What is 126544 squared? (Exponentiation is denoted <code>**</code>)</p>
 </li>
@@ -13323,15 +13339,15 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center> <h1>2. Variables</h1> </center><p>Ultimately, we need Python to store various values and objects for future re-use. Python has many default data types available.  We will focus on a few common examples.</p>
-<h2 id="Strings-and-Numbers">Strings and Numbers<a class="anchor-link" href="#Strings-and-Numbers">&#182;</a></h2><p>We assign a value to a variable using <code>=</code>.  We do not need to declare a type or give any other information.</p>
+<h2 id="Data-Types-and-Variables">Data Types and Variables<a class="anchor-link" href="#Data-Types-and-Variables">&#182;</a></h2><p>Ultimately, we need Python to store various values and objects for future re-use. Python has many default data types available.  We will focus on a few common examples.</p>
+<h3 id="Strings-and-Numbers">Strings and Numbers<a class="anchor-link" href="#Strings-and-Numbers">&#182;</a></h3><p>We assign a value to a variable using <code>=</code>.  We do not need to declare a type or give any other information.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Hello, World&quot;</span>
@@ -13355,7 +13371,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">notnumber</span><span class="o">=</span><span class="s2">&quot;42&quot;</span>
@@ -13376,7 +13392,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
@@ -13424,7 +13440,7 @@ In Python 3, you must include parentheses:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="o">+</span><span class="mi">58</span><span class="p">)</span>
@@ -13464,7 +13480,7 @@ In Python 3, you must include parentheses:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">notnumber</span><span class="p">)</span>
@@ -13495,7 +13511,7 @@ In Python 3, you must include parentheses:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
@@ -13534,7 +13550,7 @@ In Python 3, you must include parentheses:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">notnumber</span><span class="p">)</span>
@@ -13550,7 +13566,7 @@ In Python 3, you must include parentheses:
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -13576,7 +13592,7 @@ In Python 3, you must include parentheses:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">newnumber</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">notnumber</span><span class="p">)</span>
@@ -13605,7 +13621,7 @@ In Python 3, you must include parentheses:
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[12]:</div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
 
@@ -13630,7 +13646,7 @@ In Python 3, you must include parentheses:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">myfloat</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">newnumber</span><span class="p">)</span><span class="o">+</span><span class="mf">0.5</span>
@@ -13670,7 +13686,7 @@ In Python 3, you must include parentheses:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="o">+</span><span class="n">newnumber</span><span class="p">)</span>
@@ -13702,34 +13718,7 @@ In Python 3, you must include parentheses:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Getting-help-with-functions">Getting help with functions<a class="anchor-link" href="#Getting-help-with-functions">&#182;</a></h3><p>You can access documentation for functions in Python with <code>help</code>, for example <code>help(sum)</code>.  Base Python functions and those provided by packages also usually have online documentation that may be easier to read.</p>
-<center>
-<h2>Review: Data Types</h2>
-</center><table>
-<thead><tr>
-<th>Type</th>
-<th>Example</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>int</code></td>
-<td>1, 2, 3</td>
-<td>Integers (whole numbers)</td>
-</tr>
-<tr>
-<td><code>float</code></td>
-<td>1.5, 2.72, 3.14</td>
-<td>Floating point numbers (decimals)</td>
-</tr>
-<tr>
-<td><code>str</code></td>
-<td>"cat","dog","car"</td>
-<td>String, character, or text values</td>
-</tr>
-</tbody>
-</table>
+<h4 id="Getting-help-with-functions">Getting help with functions<a class="anchor-link" href="#Getting-help-with-functions">&#182;</a></h4><p>You can access documentation for functions in Python with <code>help</code>, for example <code>help(sum)</code>.  Base Python functions and those provided by packages also usually have online documentation that may be easier to read.</p>
 <center>
 <h3>Exercises</h3>
 </center><ol>
@@ -13737,14 +13726,14 @@ In Python 3, you must include parentheses:
 <li>What is the sum of <code>j</code> and <code>k</code>? The product?  Write code for each of these in the <strong>editor window</strong>, and run with the keyboard shortcut (refer back to Section 1. Entering Code).</li>
 <li>Now re-assign <code>j</code> and <code>k</code> to have the vales 8 and 3 respectively.  Re-use your code from the editor to determine their sum and product.</li>
 </ol>
-<h2 id="Lists">Lists<a class="anchor-link" href="#Lists">&#182;</a></h2><p>Python's lists store multiple objects in a sequence.  All of the data types we have seen so far (and indeed most data types in Python) can be placed in a list.  For example, we can save numbers and character strings together:</p>
+<h3 id="Lists">Lists<a class="anchor-link" href="#Lists">&#182;</a></h3><p>Python's lists store multiple objects in a sequence.  All of the data types we have seen so far (and indeed most data types in Python) can be placed in a list.  For example, we can save numbers and character strings together:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;four&quot;</span><span class="p">]</span>
@@ -13784,7 +13773,7 @@ In Python 3, you must include parentheses:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">obj0</span><span class="o">=</span><span class="mi">12</span>
@@ -13827,7 +13816,7 @@ In Python 3, you must include parentheses:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;dog&quot;</span><span class="p">)</span>
@@ -13861,7 +13850,7 @@ In Python 3, you must include parentheses:
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <center>
-<h3>Exercise</h3>
+<h4>Exercises</h4>
 </center><ol>
 <li><p>Create a list of:</p>
 <ul>
@@ -13884,7 +13873,7 @@ In Python 3, you must include parentheses:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;cat&quot;</span><span class="p">,</span><span class="s2">&quot;dog&quot;</span><span class="p">,</span><span class="s2">&quot;parrot&quot;</span><span class="p">]</span>
@@ -13924,7 +13913,7 @@ In Python 3, you must include parentheses:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#recall</span>
@@ -13966,7 +13955,7 @@ In Python 3, you must include parentheses:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list1</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
@@ -13982,7 +13971,7 @@ In Python 3, you must include parentheses:
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[20]:</div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -14007,7 +13996,7 @@ In Python 3, you must include parentheses:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">my_list1</span><span class="p">))</span>
@@ -14047,7 +14036,7 @@ In Python 3, you must include parentheses:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_indices1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">my_list1</span><span class="p">)))</span>
@@ -14088,7 +14077,7 @@ In Python 3, you must include parentheses:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_str</span><span class="o">=</span><span class="s2">&quot;The quick brown fox jumps over the lazy dog.&quot;</span>
@@ -14131,7 +14120,7 @@ quick
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">my_str</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:])</span>
@@ -14172,7 +14161,7 @@ The
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="s2">&quot;home&quot;</span><span class="p">,</span><span class="s2">&quot;away&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
@@ -14188,7 +14177,7 @@ The
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[25]:</div>
+    <div class="prompt output_prompt">Out[26]:</div>
 
 
 
@@ -14208,7 +14197,7 @@ The
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Unfortunately, not all data types are sequential - indices will not work on numeric values:</p>
 <center>
-<h3>Exercises</h3>
+<h4>Exercises</h4>
 </center><ol>
 <li>Try to use indexing to get the tenth digit of <code>my_pi</code> as defined below.  Does it work as defined?  Do we need to change the variable somehow?
 <pre><code>my_pi=3.141592653589793</code></pre>
@@ -14247,6 +14236,36 @@ The
 <li>What is the code for the twenty-third letter of the alphabet?</li>
 <li>What is the fourth letter of the code for the eighth letter of the alphabet?</li>
 </ul>
+<h3 id="Review:-Data-Types">Review: Data Types<a class="anchor-link" href="#Review:-Data-Types">&#182;</a></h3><table>
+<thead><tr>
+<th>Type</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>1, 2, 3</td>
+<td>Integers (whole numbers)</td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td>1.5, 2.72, 3.14</td>
+<td>Floating point numbers (decimals)</td>
+</tr>
+<tr>
+<td><code>str</code></td>
+<td>"cat","dog","car"</td>
+<td>String, character, or text values</td>
+</tr>
+<tr>
+<td><code>list</code></td>
+<td>[1,2,3],["cat","dog"],[1,[2,3]]</td>
+<td>One or more objects stored by order</td>
+</tr>
+</tbody>
+</table>
 <p>We will cover Python's dictionary (<code>dict</code>) and boolean (<code>bool</code>) types later on.</p>
 <p>Read more about Python's built-in data types <a href=https://docs.python.org/3/library/stdtypes.html>here</a>.</p>
 
@@ -14256,7 +14275,7 @@ The
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center> <h1>3. Conditionals</h1> </center><h2 id="Conditions-and-Booleans">Conditions and Booleans<a class="anchor-link" href="#Conditions-and-Booleans">&#182;</a></h2><p>Conditionals allow for more flexible instructions, letting our code react differently as our inputs change.</p>
+<h2 id="Flow-Control">Flow Control<a class="anchor-link" href="#Flow-Control">&#182;</a></h2><h3 id="Conditions-and-Booleans">Conditions and Booleans<a class="anchor-link" href="#Conditions-and-Booleans">&#182;</a></h3><p>Conditionals allow for more flexible instructions, letting our code react differently as our inputs change.</p>
 <p>Conditions often arise from comparisons:</p>
 
 <pre><code>    &lt;          strictly less than
@@ -14279,45 +14298,11 @@ The
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">num</span><span class="o">=</span><span class="mi">5</span>
 <span class="n">num</span><span class="o">&lt;</span><span class="mi">3</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[26]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">letter</span><span class="o">=</span><span class="s2">&quot;a&quot;</span>
-<span class="n">letter</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -14336,6 +14321,40 @@ The
 
 
 <div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">letter</span><span class="o">=</span><span class="s2">&quot;a&quot;</span>
+<span class="n">letter</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[28]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
 <pre>True</pre>
 </div>
 
@@ -14348,7 +14367,7 @@ The
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Conditional-Statements">Conditional Statements<a class="anchor-link" href="#Conditional-Statements">&#182;</a></h2><p>A conditional statement allows your code to branch and behave differently based on these conditions.</p>
+<h3 id="Conditional-Statements">Conditional Statements<a class="anchor-link" href="#Conditional-Statements">&#182;</a></h3><p>A conditional statement allows your code to branch and behave differently based on these conditions.</p>
 <p>A simple conditional statement takes the form:</p>
 
 <pre><code>if &lt;condition&gt;:
@@ -14369,7 +14388,7 @@ else
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">num</span><span class="o">=</span><span class="mi">5</span>
@@ -14402,7 +14421,7 @@ else
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">num</span><span class="o">=</span><span class="mi">3</span>
@@ -14425,7 +14444,7 @@ else
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">num</span><span class="o">=</span><span class="mi">3</span>
@@ -14468,7 +14487,7 @@ else
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">num</span><span class="o">=</span><span class="mi">8</span>
@@ -14523,14 +14542,14 @@ if &lt;condition using testword&gt;:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center> <h1>4. Loops</h1> </center><h2 id="For-Loops">For Loops<a class="anchor-link" href="#For-Loops">&#182;</a></h2><p>A "for loop" allows us to apply the same steps to each element in a list or other iterable.  In essence, loops let us automate tasks relative to some sequence that we might <em>otherwise</em> write like this:</p>
+<h3 id="For-Loops">For Loops<a class="anchor-link" href="#For-Loops">&#182;</a></h3><p>A "for loop" allows us to apply the same steps to each element in a list or other iterable.  In essence, loops let us automate tasks relative to some sequence that we might <em>otherwise</em> write like this:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sales</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
@@ -14587,7 +14606,7 @@ if &lt;condition using testword&gt;:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_nums</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
@@ -14634,7 +14653,7 @@ if &lt;condition using testword&gt;:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Nesting loops - indentation is key!</span>
@@ -14686,14 +14705,14 @@ if &lt;condition using testword&gt;:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="For-Loops-with-Conditionals">For Loops with Conditionals<a class="anchor-link" href="#For-Loops-with-Conditionals">&#182;</a></h2><p>Loops become even more useful when combined with conditionals, to perform different steps based on each value in the loop.</p>
+<h3 id="For-Loops-with-Conditionals">For Loops with Conditionals<a class="anchor-link" href="#For-Loops-with-Conditionals">&#182;</a></h3><p>Loops become even more useful when combined with conditionals, to perform different steps based on each value in the loop.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
@@ -14738,7 +14757,7 @@ if &lt;condition using testword&gt;:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span><span class="o">=</span><span class="p">[</span><span class="mi">95</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">66</span><span class="p">,</span><span class="mi">83</span><span class="p">,</span><span class="mi">71</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="mi">93</span><span class="p">,</span><span class="mi">81</span><span class="p">,</span><span class="mi">87</span><span class="p">,</span><span class="mi">81</span><span class="p">]</span>
@@ -14784,8 +14803,9 @@ if &lt;condition using testword&gt;:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Exercise:</strong></p>
-<ol>
+<center>
+<h4>Exercises</h4>
+</center><ol>
 <li>Why do I only specify <code>score&gt;=80</code> etc. in the <code>elif</code> statements? Can these conditionals be simplified?</li>
 <li>How many numbers between 1 and 100 are divisible by 7?</li>
 <li>Make a new list of NATO codes keeping only those that use the letter "a" in their <em>code</em>.</li>
@@ -14811,7 +14831,7 @@ if &lt;condition using testword&gt;:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">choices</span><span class="p">,</span><span class="n">seed</span> 
@@ -14847,7 +14867,7 @@ if &lt;condition using testword&gt;:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">total</span><span class="o">=</span><span class="mi">0</span>
@@ -14889,7 +14909,7 @@ if &lt;condition using testword&gt;:
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>What does the above loop do?  How would this run differently if we disabled the break by commenting (i.e. <code>#break</code>)?</p>
 <center>
-<h3>Exercise</h3>
+<h4>Exercise</h4>
 </center><ol>
 <li>Use the <code>choices</code> function above to generate a random list of 50 numbers in 0-99. Write a loop that will find the sum of only the first 6 even numbers.</li>
 </ol>
@@ -14900,7 +14920,79 @@ if &lt;condition using testword&gt;:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="More-Data-Objects">More Data Objects<a class="anchor-link" href="#More-Data-Objects">&#182;</a></h2><p>In Python I, we introduced a number of important data structures in Python: string and numeric types, as well as lists.  We used indexing to specify particular parts of the sequential objects - strings and lists.  Here we introduce dictionaries, which provide a useful alternative format for some types of information.  List and dictionary comprehensions provide a more succinct way to generate lists and dictionaries.</p>
+<h3 id="Try-/-Except---Making-your-code-robust">Try / Except - Making your code robust<a class="anchor-link" href="#Try-/-Except---Making-your-code-robust">&#182;</a></h3><p>Errors and warnings are a regular occurrence in coding, and an important part of the learning process.  In some cases, they can also be useful in designing an algorithm.  For example, suppose we have a stream of user entered data that is supposed to contain the user's age in years.  You might expect to get a few errors or nonsense entries.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_ages</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;34&quot;</span><span class="p">,</span><span class="s2">&quot;27&quot;</span><span class="p">,</span><span class="s2">&quot;54&quot;</span><span class="p">,</span><span class="s2">&quot;19&quot;</span><span class="p">,</span><span class="s2">&quot;giraffe&quot;</span><span class="p">,</span><span class="s2">&quot;15&quot;</span><span class="p">,</span><span class="s2">&quot;83&quot;</span><span class="p">,</span><span class="s2">&quot;61&quot;</span><span class="p">,</span><span class="s2">&quot;43&quot;</span><span class="p">,</span><span class="s2">&quot;91&quot;</span><span class="p">,</span><span class="s2">&quot;sixteen&quot;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It would be useful to convert these values to a numeric type to get the average age of our users, but we want to build something that can set non-numeric values aside.  We can attempt to convert to numeric and give Python instructions for errors with a <code>try</code>-<code>except</code> statement:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ages</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">problems</span><span class="o">=</span><span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="n">user_ages</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">a</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+        <span class="n">ages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="n">problems</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+        
+<span class="nb">print</span><span class="p">(</span><span class="n">ages</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">problems</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[34, 27, 54, 19, 15, 83, 61, 43, 91]
+[&#39;giraffe&#39;, &#39;sixteen&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="More-Data-Types">More Data Types<a class="anchor-link" href="#More-Data-Types">&#182;</a></h2><p>In Python I, we introduced a number of important data structures in Python: string and numeric types, as well as lists.  We used indexing to specify particular parts of the sequential objects - strings and lists.  Here we introduce dictionaries, which provide a useful alternative format for some types of information.  List and dictionary comprehensions provide a more succinct way to generate lists and dictionaries.</p>
 <h3 id="Dictionaries">Dictionaries<a class="anchor-link" href="#Dictionaries">&#182;</a></h3><p>Dictionaries provide a "mapping object"; instead of an index, they used named "keys" to organized data.  Dictionaries also benefit from faster performance than lists in most cases, due to their use of <a href="https://en.wikipedia.org/wiki/Hash_table">hash tables</a>.</p>
 <p>A dictionary is defined as follows:</p>
 
@@ -14909,7 +15001,7 @@ if &lt;condition using testword&gt;:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">class_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;course&quot;</span><span class="p">:</span><span class="s2">&quot;Python II&quot;</span><span class="p">,</span><span class="s2">&quot;location&quot;</span><span class="p">:</span><span class="s2">&quot;Davis Library&quot;</span><span class="p">,</span><span class="s2">&quot;time&quot;</span><span class="p">:</span><span class="s2">&quot;4pm&quot;</span><span class="p">}</span>
@@ -14926,7 +15018,7 @@ if &lt;condition using testword&gt;:
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[2]:</div>
+    <div class="prompt output_prompt">Out[42]:</div>
 
 
 
@@ -14951,7 +15043,7 @@ if &lt;condition using testword&gt;:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">class_dict</span><span class="p">[</span><span class="s2">&quot;location&quot;</span><span class="p">])</span>
@@ -14991,7 +15083,7 @@ if &lt;condition using testword&gt;:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">class_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
@@ -15030,7 +15122,7 @@ if &lt;condition using testword&gt;:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">squares</span><span class="o">=</span><span class="p">[]</span>
@@ -15072,7 +15164,7 @@ if &lt;condition using testword&gt;:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">squares</span><span class="o">=</span><span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">16</span><span class="p">)]</span>
@@ -15112,7 +15204,7 @@ if &lt;condition using testword&gt;:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">squaresdict</span><span class="o">=</span><span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">k</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">16</span><span class="p">)}</span>
@@ -15152,7 +15244,7 @@ if &lt;condition using testword&gt;:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sentence</span><span class="o">=</span><span class="s2">&quot;the quick brown fox jumped over the lazy dog&quot;</span>
@@ -15189,7 +15281,7 @@ if &lt;condition using testword&gt;:
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <center>
-<h3>Exercise</h3>
+<h4>Exercise</h4>
 </center><ol>
 <li>Write a list comprehension to create a list of just the values (i.e. the squares) from <code>squaresdict</code>.</li>
 </ol>
@@ -15200,22 +15292,93 @@ if &lt;condition using testword&gt;:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Next-Up:">Next Up:<a class="anchor-link" href="#Next-Up:">&#182;</a></h2><ul>
-<li>Reading and writing external files </li>
-<li>User-defined Functions</li>
-<li>Loading Packages</li>
+<h2 id="Defining-your-own-Functions">Defining your own Functions<a class="anchor-link" href="#Defining-your-own-Functions">&#182;</a></h2><p>While Python (and its available packages) provide a wide variety of functions, sometimes it's useful to create your own.  Python's syntax for defining a function is as follows:</p>
+
+<pre><code>def &lt;function_name&gt; ( &lt;arguments&gt; ):
+    &lt;code depending on arguments&gt;
+    return &lt;value&gt;</code></pre>
+<p>The <code>mean</code> function below returns the mean of a list of numbers.  (Base Python does not include a function for the mean.)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="n">number_list</span><span class="p">):</span>
+    <span class="n">s</span><span class="o">=</span><span class="nb">sum</span><span class="p">(</span><span class="n">number_list</span><span class="p">)</span>
+    <span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">number_list</span><span class="p">)</span>
+    <span class="n">m</span><span class="o">=</span><span class="n">s</span><span class="o">/</span><span class="n">n</span>
+    <span class="k">return</span> <span class="n">m</span>
+
+<span class="n">numbers</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">51</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mean</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>25.5
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<center>
+<h4>Exercises</h4>
+</center><p>Choose one of the following (or both if you're feeling ambitious!):</p>
+<ol>
+<li><p>Define a function, <code>median</code> to find the median of a list.  The median is the middle number of an odd-numbered list or the average of the middle two numbers in an even numbered list.  (Hint: Use <code>sorted(&lt;your_list&gt;)</code> to create a list sorted from low to high values.</p>
+</li>
+<li><p>Define your own function, <code>variance</code> to calculate the (population) variance, of a list of numbers:</p>
+</li>
+</ol>
+$$ \sigma^2 = \frac{1}{N} \sum_{i=1}^{N} (x_i-\mu)^2 $$<p>Where $N$ is the length of the list, $x_1, x_2, ... x_N$ are the values in the list, and $\mu$ is the sample average (you can re-use the <code>mean</code> function above).</p>
+<ol>
+<li>Test your function(s) with the lists below:</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Next-Time:">Next Time:<a class="anchor-link" href="#Next-Time:">&#182;</a></h2><ul>
+<li>Comments and Pseudocode</li>
+<li>Reading and writing external files</li>
+<li>Loading and Using Packages</li>
 <li>Survey of useful packages for Data Analysis<ul>
 <li>Pandas</li>
 </ul>
 </li>
 </ul>
-<h2 id="Getting-Ready:">Getting Ready:<a class="anchor-link" href="#Getting-Ready:">&#182;</a></h2><ul>
+<h3 id="Getting-Ready:">Getting Ready:<a class="anchor-link" href="#Getting-Ready:">&#182;</a></h3><ul>
 <li><p>If do not have Anaconda downloaded yet, please do so (see <a href="../Setup.html">Setup</a>) since some of the material in Python II cannot be completed using pyfiddle. If you are having trouble with installing or need to borrow a computer for the workshop, see one of the instructors!</p>
 </li>
 <li><p>I'm available for one-on-one consultations on Python if you need help.  <a href="http://guides.lib.unc.edu/mattjansen">Contact me here.</a></p>
 </li>
 </ul>
-<h2 id="Questions?">Questions?<a class="anchor-link" href="#Questions?">&#182;</a></h2><p>If you're planning to attend Python II next week, please feel free to share any ideas or topics you'd like to see covered.</p>
+<h3 id="Questions?">Questions?<a class="anchor-link" href="#Questions?">&#182;</a></h3><p>If you're planning to attend Python II next week, please feel free to share any ideas or topics you'd like to see covered.</p>
 <p>You can also share ideas while filling out our <a href="https://unc.libsurveys.com/davishubfeedback"><strong>Feedback Survey</strong></a>.</p>
 <p>Thanks for coming!</p>
 

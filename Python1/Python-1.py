@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# <center><h1>Python I</h1></center>
+# # Python
 # 
 # [*Matt Jansen, Davis Library Research Hub*](https://guides.lib.unc.edu/mattjansen)
 
@@ -19,7 +19,7 @@
 # **Goals:**
 # 
 # * Get the Anaconda Distribution of Python 3.7 downloaded and installed on your computer
-# * Learn to work with basic Python objects
+# * Learn to work with basic Python data types and objects
 # * Introduce Loops and Conditionals
 # 
 # ## Why Python?
@@ -30,26 +30,31 @@
 # 
 # ### Use Cases:
 # 
-# * Scripting: writing code to automate repeptitive tasks.  For example, extracting text from thousands of pdf files and sorting them into directories based on the information in the texts.
+# #### Scripting: 
+# Writing code to automate repeptitive tasks.  For example, extracting text from thousands of pdf files and sorting them into directories based on the whether the texts mention particular people or places.  To do this, we'll need to create instructions for how to find the pdfs (and skip any non-pdfs!), open them, somehow extract text, search for a key term, then depending on what we find, move the file to a location.   In this series, we'll learn about some of the fundamental building blocks for translating a manual process into instructions the computer can understand.  The other uses outlined below often involve some element of automation!
 # 
-# * Quantitative analysis: specialized tools and functions for everything from fitting deep learning models with `tensorflow` to creating interactive visualizations with `bokeh`.
+# #### Quantitative analysis:
+# Python has a well-developed ecosystem of specialized tools and functions for everything from fitting deep learning models with `tensorflow` to creating interactive visualizations with `bokeh`.  Most of this functionality isn't in base Python (our focus for Python 1), but we'll need base Python to bring together different packages and processes.
 # 
-# * Natural Language Processing: extracting text from different file formats and parsing and analyzing sentiment using tools from the `NLTK` package.
+# #### Natural Language Processing:
+# The `NLTK` package, among others, provides tools for dealing with unstructured text like parsing words and sentences, or tagging parts of speech.  
 # 
-# * Web development(`Django`), Image processing (`pillow`), Web scraping (`BeautifulSoup`), Acessing APIs, and many more.
+# #### Others:
+# Web development (`Django`), Image processing (`pillow`), Web scraping (`BeautifulSoup`), APIs, databases, and many more.
 # 
 # However, there are few things you can do in Python that can't also be done elsewhere!  If you already know one or more programming language, you'll have to decide where Python best fits or helps in your own workflows.
 # 
-# #### <font color=red>Warning!</font>
+# ### <font color=red>Warning!</font>
 # 
-# If you're already comfortable with basic programming concepts, you may find this workshop very simple.  Python II later in the day may be more helpful if you're already familiar with the concepts below and just need to learn new syntax, but both workshops will be focused on the basics.  You're welcome to stay, review, and help other attendees!
+# If you're already comfortable with basic programming concepts, you'll probably find this workshop very straightforward.  The later workshops in the sequence may be more helpful if you're already familiar with the concepts below and just need to learn new syntax.  Experienced attendees are more than welcome to stay, review, and help other attendees!
 # 
-# ####  Python 2 vs Python 3
+# ###  Python 2 vs Python 3
 # 
 # Both Python 2 and Python 3 are widely used in research.  Unfortunately, while both Python 2 and 3 are very similar, there are a few key syntax differences. Python 3 was released in 2008; nearly all important tools have been re-written or updated for Python 3.  **Python 2 will not be maintained after January 1, 2020.**  This workshop will focus on Python 3.
 # 
+# ## Getting Started
 # 
-# ## Integrated Development Environments (IDEs)
+# ### Integrated Development Environments (IDEs)
 # 
 # An IDE is software that groups together the many tools to ease development in a programming language, such as a code editor, compiler, and debugger in a convenient interface. There are many different IDEs to choose from.  IDEs are not necessary, but often good for beginners.
 # 
@@ -67,13 +72,13 @@
 # * The Console pane (bottom right) contains a console for executing code.
 # * The Explorer pane (top right) contains other helpful tools listing defined variables, files in the working directory, and other help.
 
-# <center> <h1>1. Entering code</h1> </center>
+# ### Entering code
 # 
 # We'll begin by using Python as a simple calculator.  The objective here is to introduce you to both how the windows in Spyder work together and some basic Python functionality.
 # 
 # For the purposes of this workshop, Python code will be presented in numbered grey cells as below.  Any output generated will also be displayed.
 
-# In[2]:
+# In[3]:
 
 
 2+2
@@ -94,7 +99,7 @@
 # 
 # Standard arithmetic operations are available in Python.
 
-# In[3]:
+# In[4]:
 
 
 3*3
@@ -102,7 +107,7 @@
 
 # **Note:** We can annotate our code with comments.  Python uses `#` to denote comments.  Anything typed after a `#` will be ignored on execution of the code.
 
-# In[4]:
+# In[5]:
 
 
 #1+2
@@ -110,22 +115,22 @@
 
 
 # <center>
-# <h3>Exercises</h3>
+# <h4>Exercises</h4>
 # </center>
 # 
 # 1. What is 126544 squared? (Exponentiation is denoted `**`)
 # 
 # 2. What is 5 divided by 0?
 
-# <center> <h1>2. Variables</h1> </center>
+# ## Data Types and Variables
 # 
 # Ultimately, we need Python to store various values and objects for future re-use. Python has many default data types available.  We will focus on a few common examples.
 # 
-# ## Strings and Numbers
+# ### Strings and Numbers
 # 
 # We assign a value to a variable using `=`.  We do not need to declare a type or give any other information.
 
-# In[5]:
+# In[6]:
 
 
 text="Hello, World"
@@ -138,7 +143,7 @@ number=42
 # 
 # For example:
 
-# In[6]:
+# In[7]:
 
 
 notnumber="42"
@@ -146,7 +151,7 @@ notnumber="42"
 
 # Once we have defined an object, we can use it again, most simply by printing it.
 
-# In[7]:
+# In[8]:
 
 
 print(text)
@@ -165,7 +170,7 @@ print(text)
 # 
 # We can also modify the contents of objects in various ways such as redefining them or changing their type. In some cases this is crucial to how Python can work with them.  For example:
 
-# In[8]:
+# In[9]:
 
 
 print(number+58)
@@ -174,13 +179,13 @@ print(number+58)
 
 # So we can add a value, 58, to our number object, but we can't add our notnumber object.  Let's double check what notnumber contains:
 
-# In[9]:
+# In[10]:
 
 
 print(notnumber)
 
 
-# In[10]:
+# In[11]:
 
 
 print(number)
@@ -188,7 +193,7 @@ print(number)
 
 # Even those these appear the same to our eye, Python uses them very differently.  Remember how we defined notnumber?  Let's check what data type Python is using with `type`.
 
-# In[11]:
+# In[12]:
 
 
 type(notnumber)
@@ -198,7 +203,7 @@ type(notnumber)
 # 
 # The `int` function takes an object as an argument and converts it to an `int` (integer) numeric object.  The usage is as follows:
 
-# In[12]:
+# In[13]:
 
 
 newnumber=int(notnumber)
@@ -208,7 +213,7 @@ type(newnumber)
 
 # `int` objects can only hold integer values.  If you have decimal values, use the `float` (floating decimal) type instead.
 
-# In[13]:
+# In[14]:
 
 
 myfloat=float(newnumber)+0.5
@@ -217,26 +222,15 @@ print(myfloat)
 
 # Now we can try adding objects again.
 
-# In[14]:
+# In[15]:
 
 
 print(number+newnumber)
 
 
-# ### Getting help with functions
+# #### Getting help with functions
 # 
 # You can access documentation for functions in Python with `help`, for example `help(sum)`.  Base Python functions and those provided by packages also usually have online documentation that may be easier to read.
-# 
-# 
-# <center>
-# <h2>Review: Data Types</h2>
-# </center>
-# 
-# |Type|Example|Description|
-# |------|---------|------------------------|
-# |`int`|1, 2, 3|Integers (whole numbers)|
-# |`float`|1.5, 2.72, 3.14|Floating point numbers (decimals)|
-# |`str`|"cat","dog","car"|String, character, or text values|
 # 
 # <center>
 # <h3>Exercises</h3>
@@ -246,11 +240,11 @@ print(number+newnumber)
 # 2. What is the sum of `j` and `k`? The product?  Write code for each of these in the **editor window**, and run with the keyboard shortcut (refer back to Section 1. Entering Code).
 # 3. Now re-assign `j` and `k` to have the vales 8 and 3 respectively.  Re-use your code from the editor to determine their sum and product.
 # 
-# ## Lists
+# ### Lists
 # 
 # Python's lists store multiple objects in a sequence.  All of the data types we have seen so far (and indeed most data types in Python) can be placed in a list.  For example, we can save numbers and character strings together:
 
-# In[15]:
+# In[16]:
 
 
 my_list=[1,2,3,"four"]
@@ -259,7 +253,7 @@ print(my_list)
 
 # We can also define lists using previously defined objects (including other lists!):
 
-# In[16]:
+# In[17]:
 
 
 obj0=12
@@ -271,7 +265,7 @@ print(my_list1)
 
 # Once we've defined a list, we can add more elements to it with the `.append` function.
 
-# In[17]:
+# In[18]:
 
 
 my_list1.append("dog")
@@ -279,7 +273,7 @@ print(my_list1)
 
 
 # <center>
-# <h3>Exercise</h3>
+# <h4>Exercises</h4>
 # </center>
 # 
 # 1. Create a list of:
@@ -301,7 +295,7 @@ print(my_list1)
 # 
 # Most importantly, **Python starts counting at zero**: The first element in your list is denoted `[0]`, the second `[1]`, the third `[2]` and so on.  This can take some getting used to!
 
-# In[18]:
+# In[19]:
 
 
 my_list2 = ["cat","dog","parrot"]
@@ -310,7 +304,7 @@ print(my_list2[2])
 
 # We can use multiple indices for lists within lists, one after the other:
 
-# In[19]:
+# In[20]:
 
 
 #recall
@@ -322,7 +316,7 @@ print(my_list1[2][1]) #i.e. the second element of the list held in the third ele
 # 
 # `[n:m]` retrieves the values from index `n` to index `m-1`. 
 
-# In[20]:
+# In[21]:
 
 
 my_list1[0:2]
@@ -330,7 +324,7 @@ my_list1[0:2]
 
 # The `len` function provides the length of an object in Python.
 
-# In[21]:
+# In[22]:
 
 
 print(len(my_list1))
@@ -340,7 +334,7 @@ print(len(my_list1))
 # 
 # We can use the `range` function with `len` to generate a list of indices.
 
-# In[22]:
+# In[23]:
 
 
 my_indices1 = list(range(len(my_list1)))
@@ -353,7 +347,7 @@ print(my_indices1)
 # 
 # For example:
 
-# In[23]:
+# In[24]:
 
 
 my_str="The quick brown fox jumps over the lazy dog."
@@ -365,7 +359,7 @@ print(my_str[4:9]) #4:9 indicates characters 4-8
 # 
 # We can also work from right to left using negative numbers.
 
-# In[24]:
+# In[25]:
 
 
 print(my_str[-4:])
@@ -374,7 +368,7 @@ print(my_str[:4])
 
 # We can still use multiple nested indices across sequential data types.  For instance, a list of strings:
 
-# In[25]:
+# In[26]:
 
 
 ["home","away"][0][0:3]
@@ -383,7 +377,7 @@ print(my_str[:4])
 # Unfortunately, not all data types are sequential - indices will not work on numeric values:  
 # 
 # <center>
-# <h3>Exercises</h3>
+# <h4>Exercises</h4>
 # </center>
 # 
 # 1. Try to use indexing to get the tenth digit of `my_pi` as defined below.  Does it work as defined?  Do we need to change the variable somehow?
@@ -424,13 +418,23 @@ print(my_str[:4])
 # * What is the code for the twenty-third letter of the alphabet?
 # * What is the fourth letter of the code for the eighth letter of the alphabet?
 # 
+# 
+# ### Review: Data Types
+# 
+# |Type|Example|Description|
+# |------|---------|------------------------|
+# |`int`|1, 2, 3|Integers (whole numbers)|
+# |`float`|1.5, 2.72, 3.14|Floating point numbers (decimals)|
+# |`str`|"cat","dog","car"|String, character, or text values|
+# |`list`|[1,2,3],["cat","dog"],[1,[2,3]]|One or more objects stored by order|
+# 
 # We will cover Python's dictionary (`dict`) and boolean (`bool`) types later on.
 # 
 # Read more about Python's built-in data types <a href=https://docs.python.org/3/library/stdtypes.html>here</a>.
 
-# <center> <h1>3. Conditionals</h1> </center>
+# ## Flow Control
 # 
-# ## Conditions and Booleans
+# ### Conditions and Booleans
 # 
 # Conditionals allow for more flexible instructions, letting our code react differently as our inputs change.
 # 
@@ -451,21 +455,21 @@ print(my_str[:4])
 # 
 # Each condition considered evaluates to a Boolean value - `True` or `False`.
 
-# In[26]:
+# In[27]:
 
 
 num=5
 num<3
 
 
-# In[27]:
+# In[28]:
 
 
 letter="a"
 letter in ["a","b","c"]
 
 
-# ## Conditional Statements
+# ### Conditional Statements
 # 
 # A conditional statement allows your code to branch and behave differently based on these conditions.
 # 
@@ -491,7 +495,7 @@ letter in ["a","b","c"]
 #     <do a third thing if neither condition is true>
 # ```
 
-# In[28]:
+# In[29]:
 
 
 num=5
@@ -499,7 +503,7 @@ if num>4:
     print("This number is greater than four")
 
 
-# In[29]:
+# In[30]:
 
 
 num=3
@@ -509,7 +513,7 @@ if num>4:
 
 # Adding `else` lets us give instructions if our condition is `False`.
 
-# In[30]:
+# In[31]:
 
 
 num=3
@@ -521,7 +525,7 @@ else:
 
 # Finally, the `elif` command lets us split the possible values of `num` into more groups.
 
-# In[31]:
+# In[32]:
 
 
 num=8
@@ -546,13 +550,11 @@ else:
 # ```
 # 
 
-# <center> <h1>4. Loops</h1> </center>
-# 
-# ## For Loops
+# ### For Loops
 # 
 # A "for loop" allows us to apply the same steps to each element in a list or other iterable.  In essence, loops let us automate tasks relative to some sequence that we might *otherwise* write like this:
 
-# In[32]:
+# In[33]:
 
 
 sales=[5,2,7,9,3]
@@ -577,7 +579,7 @@ print(total_sales)
 # * `<list>` is a pre-defined list or other iterable object.
 # * **Reminder: Indentation is very important in Python and must be used consistently across the loop(s)** Only the code indented under the loop will be run in each iteration.
 
-# In[33]:
+# In[34]:
 
 
 my_nums=list(range(6))
@@ -588,7 +590,7 @@ for n in my_nums:
 
 # We can also loop within loops.  Indentation is key to control which blocks of code are executed within which loop.
 
-# In[34]:
+# In[35]:
 
 
 #Nesting loops - indentation is key!
@@ -609,11 +611,11 @@ print(newList)
 # 
 # How could we write the code above with fewer lines? Is there a simpler way to find the length of each word?
 
-# ## For Loops with Conditionals
+# ### For Loops with Conditionals
 # 
 # Loops become even more useful when combined with conditionals, to perform different steps based on each value in the loop.
 
-# In[35]:
+# In[36]:
 
 
 for number in range(10):
@@ -623,7 +625,7 @@ for number in range(10):
 
 # Recall that we can combine multiple conditions with `and`.
 
-# In[36]:
+# In[37]:
 
 
 scores=[95,90,66,83,71,78,93,81,87,81]
@@ -643,7 +645,10 @@ for score in scores:
 print(grades)
 
 
-# **Exercise:**
+# <center>
+# <h4>Exercises</h4>
+# </center>
+# 
 # 1. Why do I only specify `score>=80` etc. in the `elif` statements? Can these conditionals be simplified?
 # 2. How many numbers between 1 and 100 are divisible by 7?
 # 3. Make a new list of NATO codes keeping only those that use the letter "a" in their *code*.
@@ -659,7 +664,7 @@ print(grades)
 # 
 # You can read more about the functions in the `random` package [here](https://docs.python.org/3/library/random.html).  We'll revisit packages next week!
 
-# In[37]:
+# In[38]:
 
 
 from random import choices,seed 
@@ -670,7 +675,7 @@ test=choices(population=range(100),k=50)
 print(test)
 
 
-# In[38]:
+# In[39]:
 
 
 total=0
@@ -685,13 +690,45 @@ print(total)
 
 # What does the above loop do?  How would this run differently if we disabled the break by commenting (i.e. `#break`)?
 # 
+# 
 # <center>
-# <h3>Exercise</h3>
+# <h4>Exercise</h4>
 # </center>
+# 
 # 
 # 1. Use the `choices` function above to generate a random list of 50 numbers in 0-99. Write a loop that will find the sum of only the first 6 even numbers.
 
-# ## More Data Objects
+# ### Try / Except - Making your code robust
+# 
+# Errors and warnings are a regular occurrence in coding, and an important part of the learning process.  In some cases, they can also be useful in designing an algorithm.  For example, suppose we have a stream of user entered data that is supposed to contain the user's age in years.  You might expect to get a few errors or nonsense entries.
+
+# In[40]:
+
+
+user_ages=["34","27","54","19","giraffe","15","83","61","43","91","sixteen"]
+
+
+# It would be useful to convert these values to a numeric type to get the average age of our users, but we want to build something that can set non-numeric values aside.  We can attempt to convert to numeric and give Python instructions for errors with a `try`-`except` statement:
+
+# In[41]:
+
+
+ages=[]
+problems=[]
+
+for age in user_ages:
+    try:
+        a=int(age)
+        ages.append(a)
+    except:
+        problems.append(age)
+        
+print(ages)
+print(problems)
+
+
+# ## More Data Types
+# 
 # 
 # In Python I, we introduced a number of important data structures in Python: string and numeric types, as well as lists.  We used indexing to specify particular parts of the sequential objects - strings and lists.  Here we introduce dictionaries, which provide a useful alternative format for some types of information.  List and dictionary comprehensions provide a more succinct way to generate lists and dictionaries. 
 # 
@@ -701,7 +738,7 @@ print(total)
 # 
 # A dictionary is defined as follows:
 
-# In[2]:
+# In[42]:
 
 
 class_dict = {"course":"Python II","location":"Davis Library","time":"4pm"}
@@ -710,7 +747,7 @@ type(class_dict)
 
 # In this case, `"course"`, `"location"`, and `"time"` serve as the "keys" for this dictionary.  Keys play a similar role to the indices we use for lists (or strings).  We can print a particular value by placing its key in the same square brackets `[]` used by list indices.
 
-# In[3]:
+# In[43]:
 
 
 print(class_dict["location"])
@@ -720,7 +757,7 @@ print(class_dict["location"])
 # 
 # We can also generate a list of all of the keys for a dictionary using the `.keys()` method. 
 
-# In[4]:
+# In[44]:
 
 
 print(class_dict.keys())
@@ -730,7 +767,7 @@ print(class_dict.keys())
 # 
 # Python provides some shortcuts to generating lists and dictionaries, especially those that you might (now) generate with a list.  For example, let's generate a list of the square of each number from 1 to 15.
 
-# In[5]:
+# In[45]:
 
 
 squares=[]
@@ -741,7 +778,7 @@ print(squares)
 
 # Using a "comprehension", we can shorten this to a single line, effectively bringing the loop inside the `[]` used to define the list.
 
-# In[6]:
+# In[46]:
 
 
 squares=[x**2 for x in range(1,16)]
@@ -750,7 +787,7 @@ print(squares)
 
 # The same general format holds for defining dictionaries.
 
-# In[7]:
+# In[47]:
 
 
 squaresdict={k:k**2 for k in range(1,16)}
@@ -759,7 +796,7 @@ print(squaresdict)
 
 # We can include conditional statements at the end of the comprehension to build more flexible comprehensions.
 
-# In[8]:
+# In[48]:
 
 
 sentence="the quick brown fox jumped over the lazy dog"
@@ -769,25 +806,69 @@ print([w for w in sentence if len(w)>4])
 
 
 # <center>
-# <h3>Exercise</h3>
+# <h4>Exercise</h4>
 # </center>
 # 
 # 1. Write a list comprehension to create a list of just the values (i.e. the squares) from `squaresdict`.
 
-# ## Next Up:
-# * Reading and writing external files 
-# * User-defined Functions
-# * Loading Packages
+# ## Defining your own Functions
+# 
+# While Python (and its available packages) provide a wide variety of functions, sometimes it's useful to create your own.  Python's syntax for defining a function is as follows:
+# 
+# ```
+# def <function_name> ( <arguments> ):
+#     <code depending on arguments>
+#     return <value>
+#         
+# ```
+# 
+# The `mean` function below returns the mean of a list of numbers.  (Base Python does not include a function for the mean.)
+
+# In[49]:
+
+
+def mean(number_list):
+    s=sum(number_list)
+    n=len(number_list)
+    m=s/n
+    return m
+
+numbers=list(range(1,51))
+print(mean(numbers))
+
+
+# <center>
+# <h4>Exercises</h4>
+# </center>
+# 
+# Choose one of the following (or both if you're feeling ambitious!):
+# 1. Define a function, `median` to find the median of a list.  The median is the middle number of an odd-numbered list or the average of the middle two numbers in an even numbered list.  (Hint: Use `sorted(<your_list>)` to create a list sorted from low to high values.
+# 
+# 2. Define your own function, `variance` to calculate the (population) variance, of a list of numbers:
+# 
+# $$ \sigma^2 = \frac{1}{N} \sum_{i=1}^{N} (x_i-\mu)^2 $$
+# 
+# Where $N$ is the length of the list, $x_1, x_2, ... x_N$ are the values in the list, and $\mu$ is the sample average (you can re-use the `mean` function above).  
+# 
+# 
+# 3. Test your function(s) with the lists below:
+# 
+
+# ## Next Time:
+# 
+# * Comments and Pseudocode
+# * Reading and writing external files
+# * Loading and Using Packages
 # * Survey of useful packages for Data Analysis
 #     + Pandas
 # 
-# ## Getting Ready:
+# ### Getting Ready:
 # 
 # * If do not have Anaconda downloaded yet, please do so (see [Setup](../Setup.html)) since some of the material in Python II cannot be completed using pyfiddle. If you are having trouble with installing or need to borrow a computer for the workshop, see one of the instructors!
 # 
 # * I'm available for one-on-one consultations on Python if you need help.  [Contact me here.](http://guides.lib.unc.edu/mattjansen)
 # 
-# ## Questions?
+# ### Questions?
 # 
 # If you're planning to attend Python II next week, please feel free to share any ideas or topics you'd like to see covered.  
 # 
