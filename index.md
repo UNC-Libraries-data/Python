@@ -1,6 +1,5 @@
 # Python
-*University Libraries* \
-*University of North Carolina at Chapel Hill*
+*University Libraries at the University of North Carolina at Chapel Hill*
 
 ## [Setup](Setup.html)
 
