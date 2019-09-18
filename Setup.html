@@ -13089,7 +13089,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13122,7 +13122,22 @@ div#notebook {
 <p><a href="https://docs.anaconda.com/anaconda/packages/pkg-docs">Read more here</a></p>
 <p><a href="https://www.anaconda.com/download/">Download Anaconda Python 3.7, 64-bit</a></p>
 <p><img src="https://github.com/UNC-Libraries-data/Python/raw/master/Python1/images/Conda_dl.png" alt="Download"></p>
-<h3 id="Miniconda">Miniconda<a class="anchor-link" href="#Miniconda">&#182;</a></h3><p>The full Anaconda download needs approximately 3GB of space on your computer.  If you don't have sufficient space, you can download <a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a>.  Miniconda includes Python and the same package manager systems as Anaconda, but does not come packaged with <em>any</em> additional packages.  You'll need to install them one by one as needed.  More information on installing packages is available in <a href="Python2/Python-2.html#Installation">Python II</a>.</p>
+<h3 id="Miniconda">Miniconda<a class="anchor-link" href="#Miniconda">&#182;</a></h3><p>The full Anaconda download needs approximately 3GB of space on your computer.  If you don't have sufficient space, you can download <a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a>, which is less than 100 MB.  Miniconda includes Python and the same package manager systems as Anaconda, but does not come packaged with <em>any</em> additional packages.  You'll need to install them one by one as needed.  For the purposes of these workshops, you'll need to do the following:</p>
+<ol>
+<li><p>Download and install miniconda (Choose the Python 3.x version in 64-bit for your operating system).</p>
+<ul>
+<li>Follow the steps for full Anaconda installation <a href="#PATH-Variables-and-Default-Installation">below</a> as appropriate.</li>
+</ul>
+</li>
+<li><p>Open (PC) Start Menu &gt; Anaconda3 &gt; Anaconda Prompt, or (Mac) Finder &gt; Applications &gt; Utilities &gt; Terminal. Run the following:</p>
+
+<pre><code>conda install spyder</code></pre>
+<ul>
+<li>When prompted, type <code>y</code> to Proceed.  This will install the Spyder IDE and all of its dependencies.</li>
+<li>You may also wish to install a graphical interface for conda by running <code>conda install -c anaconda anaconda-navigator</code>.</li>
+</ul>
+</li>
+</ol>
 <h4 id="PATH-Variables-and-Default-Installation">PATH Variables and Default Installation<a class="anchor-link" href="#PATH-Variables-and-Default-Installation">&#182;</a></h4><p>In most cases, it is best to leave the default settings for installation.</p>
 <p><img src="https://github.com/UNC-Libraries-data/Python/raw/master/Python1/images/Anaconda_install_settings.png" alt="Anaconda_install_settings.png"></p>
 <ol>
@@ -13161,19 +13176,6 @@ If you would like to use Python for the duration of this workshop without downlo
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
     </div>
   </div>
