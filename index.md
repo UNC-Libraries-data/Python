@@ -1,4 +1,5 @@
-# Python Workshops at UNC
+# Python
+*University Libraries at the University of North Carolina at Chapel Hill*
 
 ## [Setup](Setup.html)
 
