@@ -13122,23 +13122,8 @@ div#notebook {
 <p><a href="https://docs.anaconda.com/anaconda/packages/pkg-docs">Read more here</a></p>
 <p><a href="https://www.anaconda.com/download/">Download Anaconda Python 3.7, 64-bit</a></p>
 <p><img src="https://github.com/UNC-Libraries-data/Python/raw/master/Python1/images/Conda_dl.png" alt="Download"></p>
-<h3 id="Miniconda">Miniconda<a class="anchor-link" href="#Miniconda">&#182;</a></h3><p>The full Anaconda download needs approximately 3GB of space on your computer.  If you don't have sufficient space, you can download <a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a>, which is less than 100 MB.  Miniconda includes Python and the same package manager systems as Anaconda, but does not come packaged with <em>any</em> additional packages.  You'll need to install them one by one as needed.  For the purposes of these workshops, you'll need to do the following:</p>
-<ol>
-<li><p>Download and install miniconda (Choose the Python 3.x version in 64-bit for your operating system).</p>
-<ul>
-<li>Follow the steps for full Anaconda installation <a href="#PATH-Variables-and-Default-Installation">below</a> as appropriate.</li>
-</ul>
-</li>
-<li><p>Open (PC) Start Menu &gt; Anaconda3 &gt; Anaconda Prompt, or (Mac) Finder &gt; Applications &gt; Utilities &gt; Terminal. Run the following:</p>
-
-<pre><code>conda install spyder</code></pre>
-<ul>
-<li>When prompted, type <code>y</code> to Proceed.  This will install the Spyder IDE and all of its dependencies.</li>
-<li>You may also wish to install a graphical interface for conda by running <code>conda install -c anaconda anaconda-navigator</code>.</li>
-</ul>
-</li>
-</ol>
-<h4 id="PATH-Variables-and-Default-Installation">PATH Variables and Default Installation<a class="anchor-link" href="#PATH-Variables-and-Default-Installation">&#182;</a></h4><p>In most cases, it is best to leave the default settings for installation.</p>
+<h3 id="Miniconda">Miniconda<a class="anchor-link" href="#Miniconda">&#182;</a></h3><p>The full Anaconda download needs approximately 3GB of space on your computer.  If you don't have sufficient space, you can download <a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a>, which is less than 100 MB.  Miniconda includes Python and the same package manager systems as Anaconda, but does not come packaged with <em>any</em> additional packages.  You'll need to install them one by one as needed.  See <a href="#Miniconda-Package-Installation">Miniconda installation below</a>.</p>
+<h2 id="Installation">Installation<a class="anchor-link" href="#Installation">&#182;</a></h2><p>In most cases, it is best to leave the default settings for installation. Follow the steps below for PC users.</p>
 <p><img src="https://github.com/UNC-Libraries-data/Python/raw/master/Python1/images/Anaconda_install_settings.png" alt="Anaconda_install_settings.png"></p>
 <ol>
 <li><p><strong>PATH</strong></p>
@@ -13169,9 +13154,27 @@ div#notebook {
 <p><strong><font color=red>Note:</font></strong> 
 If you would like to use Python for the duration of this workshop without downloading anything (or have problems downloading Anaconda), we recommend using <a href="https://pyfiddle.io/">pyfiddle.io</a>.  Make sure you set Python version to 3.6 on the left side of the screen.</p>
 <p>If you would like to save your work and continue to use Python on your computer, we recommend downloading Anaconda.</p>
+<h3 id="Miniconda-Package-Installation">Miniconda Package Installation<a class="anchor-link" href="#Miniconda-Package-Installation">&#182;</a></h3><ol>
+<li><p><a href="https://docs.conda.io/en/latest/miniconda.html">Download and install miniconda</a> (Choose the Python 3.x version in 64-bit for your operating system).</p>
 <ul>
-<li>Please install Anaconda following the instructions in <a href="../Setup.html">Setup</a>  <strong>before</strong> the workshop if possible.</li>
-<li>If you haven't already installed Anaconda, please begin downloading the <a href="https://www.anaconda.com/download/">Anaconda distribution of Python</a> as soon as possible.  It's a large download and can be slow to download over wifi.  If needed, we also have a limited number of thumb drives with the Anaconda installers.  Please flag one of the staff if you need to copy the installer.</li>
+<li>Follow the steps for full Anaconda installation <a href="#PATH-Variables-and-Default-Installation">above</a> as appropriate.</li>
+</ul>
+</li>
+<li><p>Open (PC) Start Menu &gt; Anaconda3 &gt; Anaconda Prompt, or (Mac) Finder &gt; Applications &gt; Utilities &gt; Terminal. Run the following:</p>
+
+<pre><code>conda install spyder</code></pre>
+<ul>
+<li>When prompted, type <code>y</code> to Proceed.  This will install the Spyder IDE and all of its dependencies.</li>
+</ul>
+</li>
+<li><p>In the same window, run the following to install conda's graphical interface, Anaconda Navigator.</p>
+
+<pre><code>conda install -c anaconda anaconda-navigator
+`</code></pre>
+</li>
+</ol>
+<ul>
+<li>When prompted type <code>y</code> to Proceed.  You can open the Anaconda Navigator from Finder (Mac) or the Start Menu (PC).</li>
 </ul>
 
 </div>
