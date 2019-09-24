@@ -6,7 +6,8 @@
 Installing the Anaconda Distribution.
 
 ## [Introduction](Intro/Introduction.html)
-Fundamental Python syntax, using the Spyder IDE (Integrated Development Environment).  
+Fundamental Python syntax, using the Spyder IDE (Integrated Development Environment). 
+* [Alternative (without Table of Contents)](Intro/Introduction-nocontents.html)
 
 Note: Files and file paths are not included here.  This workshop can be run using online Python services like [pyfiddle.io](pyfiddle.io).
 
