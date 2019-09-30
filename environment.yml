@@ -1,0 +1,11 @@
+name: python-workshops
+channels:
+  - conda
+dependencies:
+  - python
+  - numpy
+  - pip
+  - pandas
+  - matplotlib
+  - bs4
+  - seaborn
