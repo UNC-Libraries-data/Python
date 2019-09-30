@@ -13,3 +13,7 @@ for fname in flist:
         for ingredient in seasons[s]:           
              if (ingredient in recipe.lower()):
                 shutil.copyfile(fname, os.path.join(s, fname))
+
+                
+                
+                
