@@ -13109,28 +13109,6 @@ div#notebook {
     });
     </script>
     <!-- End of mathjax configuration --></head>
-
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-
-<link rel="stylesheet" type="text/css" href="https://rawgit.com/ipython-contrib/jupyter_contrib_nbextensions/master/src/jupyter_contrib_nbextensions/nbextensions/toc2/main.css">
-
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<script src="https://rawgit.com/ipython-contrib/jupyter_contrib_nbextensions/master/src/jupyter_contrib_nbextensions/nbextensions/toc2/toc2.js"></script>
-
-<script>
-$( document ).ready(function(){
-
-            var cfg = {"base_numbering": 1, "nav_menu": {"height": "599px", "width": "483px"}, "number_sections": false, "sideBar": true, "skip_h1_title": true, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {}, "toc_section_display": true, "toc_window_display": true};
-
-            // fire the main function with these parameters
-            require(['nbextensions/toc2/toc2'], function (toc2) {
-                toc2.table_of_contents(cfg);
-            });
-    });
-</script>
 <body>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
@@ -13138,13 +13116,13 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Reading-and-Writing-Files-from-Python">Reading and Writing Files from Python<a class="anchor-link" href="#Reading-and-Writing-Files-from-Python">&#182;</a></h1><h2 id="Packages">Packages<a class="anchor-link" href="#Packages">&#182;</a></h2><h3 id="Installation">Installation<a class="anchor-link" href="#Installation">&#182;</a></h3><p>Packages provide additional tools and functions not present in base Python.  Python includes a number of packages to start with, and others can be installed using <code>pip install &lt;package name&gt;</code> and/or <code>conda install &lt;package name&gt;</code> commands <strong>in your terminal</strong>.</p>
+<h1 id="Reading-and-Writing-Files-from-Python">Reading and Writing Files from Python<a class="anchor-link" href="#Reading-and-Writing-Files-from-Python">&#182;</a></h1><h2 id="Packages">Packages<a class="anchor-link" href="#Packages">&#182;</a></h2><h3 id="Installation">Installation<a class="anchor-link" href="#Installation">&#182;</a></h3><p>Packages provide additional tools and functions not present in base Python. Python includes a number of packages to start with, and others can be installed using <code>pip install &lt;package name&gt;</code> and/or <code>conda install &lt;package name&gt;</code> commands in your terminal.</p>
 <p>Open your terminal by:</p>
 <ul>
 <li>(PC) Start &gt; Anaconda3(64-bit) &gt; Anaconda Prompt</li>
 <li>(Mac) Finder &gt; Applications &gt; Anaconda Navigator &gt; Environments Tab &gt; (play button listed next to "root") &gt; Open Terminal</li>
 </ul>
-<h3 id="Loading">Loading<a class="anchor-link" href="#Loading">&#182;</a></h3><p>Once you've installed a package, you can load it into your current Python session with the <code>import</code> function.  Otherwise these functions will not be available.</p>
+<h3 id="Loading">Loading<a class="anchor-link" href="#Loading">&#182;</a></h3><p>Once you've installed a package, you can load it into your current Python session with the import function. Otherwise these functions will not be available.</p>
 
 </div>
 </div>
@@ -13155,6 +13133,7 @@ $( document ).ready(function(){
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span> <span class="c1">#functions for working with your operating system</span>
+<span class="kn">import</span> <span class="nn">shutil</span> <span class="c1">#extra functions for working with files</span>
 </pre></div>
 
     </div>
@@ -13165,10 +13144,10 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Working-Directories">Working Directories<a class="anchor-link" href="#Working-Directories">&#182;</a></h2><p>To open a file with Python, you'll need to tell your computer where it's located on your computer.  You can specify the entire absolute filepath (starting with C:\ on PC or / on Mac), or you can set a working directory and work with relative file paths.</p>
+<h2 id="Working-Directories">Working Directories<a class="anchor-link" href="#Working-Directories">&#182;</a></h2><p>To open a file with Python, you'll need to tell your computer where it's located on your computer. You can specify the entire absolute filepath (starting with C:\ on PC or / on Mac), or you can set a working directory and work with relative file paths.</p>
 <p>You can determine where a file is located on your computer by:</p>
 <ul>
-<li>(PC) Navigate to your desired folder in Windows Explorer and click on it.  Click in the address bar at the top of the window to copy the path.</li>
+<li>(PC) Navigate to your desired folder in Windows Explorer and click on it. Click in the address bar at the top of the window to copy the path.</li>
 <li>(Mac) Right-click a file in your desired directory &gt; Click Get Info &gt; Highlight and copy the path listed next to "Where:"</li>
 </ul>
 <p>If a file is located in your working directory, its relative path is just the name of the file!</p>
@@ -13181,7 +13160,7 @@ $( document ).ready(function(){
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myfile</span><span class="o">=</span><span class="s2">&quot;C:/Users/mtjansen/Desktop/Python/Python2/Python_Sales/day1.txt&quot;</span> <span class="c1">#absolute path</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myfile</span><span class="o">=</span><span class="s2">&quot;/Users/tuesday/Desktop/Python/Recipes.zip&quot;</span> <span class="c1">#absolute path</span>
 <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">myfile</span><span class="p">)</span> <span class="c1">#check if Python can find my file </span>
 </pre></div>
 
@@ -13213,14 +13192,16 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Windows-Paths">Windows Paths<a class="anchor-link" href="#Windows-Paths">&#182;</a></h4><p>Windows filepaths use <code>\</code>, which Python interprets as <em>escape characters</em>.  This can be fixed in several ways:</p>
-<ol>
-<li>Replace <code>\</code> with <code>/</code>.</li>
-<li>Replace <code>\</code> with <code>\\</code>.</li>
-<li>Preface your path with <code>r</code>: 
-<pre><code>     r"C:\Users\mtjansen\Desktop"</code></pre>
+<p><strong>Windows Paths</strong></p>
+<p>Windows filepaths use \, which Python interprets as escape characters. This can be fixed in several ways:</p>
+<ul>
+<li>Replace \ with /.</li>
+<li>Replace \ with \.</li>
+<li><p>Preface your path with r:</p>
+
+<pre><code> r"C:\Users\mtjansen\Desktop"</code></pre>
 </li>
-</ol>
+</ul>
 
 </div>
 </div>
@@ -13230,8 +13211,8 @@ $( document ).ready(function(){
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;C:/Users/mtjansen/Desktop/Python/Python2/Python_Sales&quot;</span><span class="p">)</span> <span class="c1">#set working directory</span>
-<span class="n">myfile</span><span class="o">=</span><span class="s2">&quot;day1.txt&quot;</span> <span class="c1">#relative path</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;/Users/tuesday/Desktop/Python/&quot;</span><span class="p">)</span> <span class="c1">#set working directory</span>
+<span class="n">myfile</span><span class="o">=</span><span class="s2">&quot;Recipes.zip&quot;</span> <span class="c1">#relative path</span>
 <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">myfile</span><span class="p">)</span>
 </pre></div>
 
@@ -13263,7 +13244,7 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can get a list of all files in the working directory with <code>os.listdir(".")</code>.</p>
+<p>We can get a list of all files in the working directory with os.listdir(".").</p>
 
 </div>
 </div>
@@ -13274,7 +13255,7 @@ $( document ).ready(function(){
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;C:/Users/mtjansen/Desktop/Python/Python2/Python_Sales&quot;</span><span class="p">))</span> <span class="c1">#alternatively we can specify a folder</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;/Users/tuesday/Desktop/Python/&quot;</span><span class="p">))</span> <span class="c1">#alternatively we can specify a folder</span>
 </pre></div>
 
     </div>
@@ -13291,8 +13272,8 @@ $( document ).ready(function(){
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Day1.txt&#39;, &#39;Day1_TOTAL.txt&#39;, &#39;Day2.txt&#39;, &#39;Day3.txt&#39;, &#39;Python_Sales.zip&#39;]
-[&#39;Day1.txt&#39;, &#39;Day1_TOTAL.txt&#39;, &#39;Day2.txt&#39;, &#39;Day3.txt&#39;, &#39;Python_Sales.zip&#39;]
+<pre>[&#39;.DS_Store&#39;, &#39;.ipynb_checkpoints&#39;, &#39;Files_Packages.ipynb&#39;, &#39;getrecipes.py&#39;, &#39;RBK&#39;, &#39;Recipes&#39;, &#39;Recipes.zip&#39;, &#39;solution_files_packages.py&#39;]
+[&#39;.DS_Store&#39;, &#39;.ipynb_checkpoints&#39;, &#39;Files_Packages.ipynb&#39;, &#39;getrecipes.py&#39;, &#39;RBK&#39;, &#39;Recipes&#39;, &#39;Recipes.zip&#39;, &#39;solution_files_packages.py&#39;]
 </pre>
 </div>
 </div>
@@ -13304,15 +13285,20 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center>
-<h3>Exercise</h3>
-</center><ul>
-<li><p>Download the zipped data availalble <a href="https://github.com/UNC-Libraries-data/Python/raw/master/Python2/Python_Sales/Python_Sales.zip">here</a>. Unzip them somewhere on your computer.</p>
-</li>
-<li><p>Use <code>import os</code> and <code>os.chdir</code> to set your working directory to the unzipped folder "Python Sales".  Use <code>os.listdir</code> to check what files are stored there.</p>
-</li>
-</ul>
-<h2 id="Reading-and-Writing-Files">Reading and Writing Files<a class="anchor-link" href="#Reading-and-Writing-Files">&#182;</a></h2><p>Python requires you both open and close files explicitly.  If you forget to close a file, it can remain in use, preventing you from opening it later.</p>
+<center><h3>Exercise</h3></center><ol>
+<li>Download this zipped file: <a href="https://unc-libraries-data.github.io/Python/Files_Packages/Recipes.zip">Recipes.zip</a>. </li>
+<li>Unzip the file somewhere on your computer.</li>
+<li>Use <code>import os</code> and <code>os.chdir</code> to set your working directory to the unzipped folder "Recipes". </li>
+<li>Use <code>os.listdir</code> to check what files are stored in "Recipes".</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Reading-Files">Reading Files<a class="anchor-link" href="#Reading-Files">&#182;</a></h2><p>Python requires you both open and close files explicitly. If you forget to close a file, it can remain in use, preventing you from opening it later.</p>
 <p>Best practices for reading and writing files use the <code>with</code> function to make sure files are automatically closed.</p>
 
 </div>
@@ -13323,10 +13309,12 @@ $( document ).ready(function(){
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;Day1.txt&#39;</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">txtfile</span><span class="p">:</span> <span class="c1">#&quot;r&quot; indicates that we are reading the textfile and not writing to it</span>
-    <span class="n">raw</span><span class="o">=</span><span class="n">txtfile</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="c1">#read() retrieves raw text information from the file opened in txtfile</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;/Users/tuesday/Desktop/Python/Recipes&quot;</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;amaranth-stirfry.txt&quot;</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">txtfile</span><span class="p">:</span> <span class="c1">#&quot;r&quot; indicates that we are reading the textfile and not writing to it</span>
+    <span class="n">recipe</span><span class="o">=</span><span class="n">txtfile</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="c1">#.read() retrieves raw text information from the file we opened</span>
     
-<span class="nb">print</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">recipe</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13343,83 +13331,34 @@ $( document ).ready(function(){
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>19.6
-60.6
-67.9
-76.9
-44.6
-61.4
-39.5
-42.7
-48
-58.9
-</pre>
-</div>
-</div>
+<pre>AMARANTH STIR FRY
 
-</div>
-</div>
+1 c amaranth, uncooked
+1/8 ts sea salt
+1 tb olive oil
+1 c leeks, sliced
+1/2 c mushrooms, sliced
+1/2 c green peppers, sliced
+1 t soy sauce
+1/2 c whole wheat bread crumbs
+1/2 c scallions, sliced
+1/2 c pumpkin seeds, toasted
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rawlist</span><span class="o">=</span><span class="n">raw</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span> <span class="c1">#.splitlines() uses each new line to split the string into a list</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">rawlist</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
+Rinse and drain amaranth. Dry roast amaranth in a hevy skillet over
+medium heat for 5 minutes. Bring 3 cups water and salt to a boil.
+Stir in amaranth and return to a boil. Lower heat and place a flame
+deflector or heat diffuser under the pot. Cover and simmer for 35
+minutes or until all water is absorbed, stirring occasionally. Heat
+a skillet and brush generously with oil. Add leeks and saute for
+5 minutes. Add mushrooms and peppers and saute for 10 minutes,
+stirring often. Sprinkle with soy sauce and one teaspoon water.
+Sprinkle bread crumbs over top of vegetables. Place amaranth on
+top of crumbs. Cover and heat through. Stir to combine all ingredients,
+place in a serving dish and garnish with scallions and pumpkin
+seeds.
 
 
-<div class="output_area">
 
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;19.6&#39;, &#39;60.6&#39;, &#39;67.9&#39;, &#39;76.9&#39;, &#39;44.6&#39;, &#39;61.4&#39;, &#39;39.5&#39;, &#39;42.7&#39;, &#39;48&#39;, &#39;58.9&#39;]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total</span><span class="o">=</span><span class="mi">0</span>
-<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">rawlist</span><span class="p">:</span>
-    <span class="n">n</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="c1">#convert strings to decimal numbers (i.e. floats)</span>
-    <span class="n">total</span><span class="o">=</span><span class="n">total</span><span class="o">+</span><span class="n">n</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>520.1
 </pre>
 </div>
 </div>
@@ -13431,7 +13370,73 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Let's write a new file with the total.</p>
+<h2 id="Writing-Files">Writing Files<a class="anchor-link" href="#Writing-Files">&#182;</a></h2><p>The recipe above is missing a serving amount. Lets add one in, and then save the file.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">recipe</span> <span class="o">=</span> <span class="n">recipe</span> <span class="o">+</span> <span class="s2">&quot;Serves 4&quot;</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;amaranth-stirfry.txt&quot;</span><span class="p">,</span><span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">txtfile</span><span class="p">:</span> <span class="c1">#&quot;w&quot; specifies that we&#39;re writing to the file</span>
+    <span class="n">txtfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">recipe</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Working-with-Folders">Working with Folders<a class="anchor-link" href="#Working-with-Folders">&#182;</a></h2><p>The Amaranth Stir Fry looks like it would make a nice hearty meal for fall. Let's create a new folder called "Fall" in our "Recipes" folder and put a copy of the Amaranth Stir Fry recipe inside it.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s2">&quot;Fall&quot;</span><span class="p">)</span> <span class="c1">#os.mkdir() creates a new folder </span>
+<span class="n">shutil</span><span class="o">.</span><span class="n">copyfile</span><span class="p">(</span><span class="s2">&quot;amaranth-stirfry.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;Fall/amaranth-stirfry.txt&quot;</span><span class="p">)</span> <span class="c1">#shutil.copyfile() makes a copy</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[7]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Fall/amaranth-stirfry.txt&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Did it work?</p>
 
 </div>
 </div>
@@ -13441,9 +13446,75 @@ $( document ).ready(function(){
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">total</span><span class="p">)</span> <span class="c1">#we need to convert numerics to strings before writing</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;Day1_TOTAL.txt&quot;</span><span class="p">,</span><span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">txtfile</span><span class="p">:</span> <span class="c1">#like &quot;r&quot; above, &quot;w&quot; specifies that we&#39;re writing to the file</span>
-    <span class="n">txtfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s2">&quot;Fall/amaranth-stirfry.txt&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Great! We only have 199 more recipes to organize by season! Don't worry, though. This is a fast job for Python. We'll start by writing some psuedocode.</p>
+<p>To organize our recipes, we'll need to...</p>
+<ol>
+<li>Make a list that contains all of our recipe files.</li>
+<li>Create folders for each season.</li>
+<li>Create a dictionary with lists of ingredients for each season.</li>
+<li>Loop through the list of recipe files.<ul>
+<li>Open the file.</li>
+<li>Loop through each season in the dictionary.<ul>
+<li>Loop through the ingredients in each season.<ul>
+<li>If an ingredient appears in the recipe, copy the recipe to the correct folder.</li>
+<li>If none of our ingredients appear in the recipe, copy it to the "Any" folder.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Make a list that contains all of our recipe files:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#this list comprehension makes sure we&#39;re only getting a list of our text files and our folder is not included</span>
+<span class="n">flist</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;/Users/tuesday/Desktop/Python/Recipes&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="n">f</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span><span class="o">==</span><span class="s2">&quot;txt&quot;</span><span class="p">]</span> 
 </pre></div>
 
     </div>
@@ -13454,11 +13525,243 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center>
-<h3>Exercises</h3>
-</center><ul>
-<li>Use a loop to extend the above to get the total for each of the three files, Day1.txt, Day2.txt, and Day3.txt. Create a new file that contains the overall total.  There shouldn't be any sales over 100, so if you find any exclude them!</li>
+<p>Create folders for the remaining seasons:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s2">&quot;Spring&quot;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s2">&quot;Winter&quot;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s2">&quot;Summer&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Create lists of ingredients for each season:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">spring</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;asparagus&quot;</span><span class="p">,</span> <span class="s2">&quot;cabbage&quot;</span><span class="p">,</span> <span class="s2">&quot;cauliflower&quot;</span><span class="p">,</span> <span class="s2">&quot;chard&quot;</span><span class="p">,</span> <span class="s2">&quot;greens&quot;</span><span class="p">,</span> <span class="s2">&quot;kale&quot;</span><span class="p">,</span> <span class="s2">&quot;peas&quot;</span><span class="p">,</span> <span class="s2">&quot;radish&quot;</span><span class="p">,</span> <span class="s2">&quot;rhubarb&quot;</span><span class="p">,</span> <span class="s2">&quot;strawberries&quot;</span><span class="p">,</span> <span class="s2">&quot;turnip&quot;</span><span class="p">,</span> <span class="s2">&quot;artichoke&quot;</span><span class="p">]</span>
+
+<span class="n">summer</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;blackberries&quot;</span><span class="p">,</span> <span class="s2">&quot;blueberries&quot;</span><span class="p">,</span> <span class="s2">&quot;cantaloupe&quot;</span><span class="p">,</span> <span class="s2">&quot;cherries&quot;</span><span class="p">,</span> <span class="s2">&quot;cucumber&quot;</span><span class="p">,</span> <span class="s2">&quot;eggplant&quot;</span><span class="p">,</span> <span class="s2">&quot;beans&quot;</span><span class="p">,</span> <span class="s2">&quot;melon&quot;</span><span class="p">,</span> <span class="s2">&quot;okra&quot;</span><span class="p">,</span> <span class="s2">&quot;peach&quot;</span><span class="p">,</span> <span class="s2">&quot;plum&quot;</span><span class="p">,</span> <span class="s2">&quot;raspberries&quot;</span><span class="p">,</span> <span class="s2">&quot;strawberries&quot;</span><span class="p">,</span> <span class="s2">&quot;watermelon&quot;</span><span class="p">,</span> <span class="s2">&quot;zucchini&quot;</span><span class="p">,</span> <span class="s2">&quot;apricot&quot;</span><span class="p">,</span> <span class="s2">&quot;basil&quot;</span><span class="p">]</span>
+
+<span class="n">fall</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;brussels sprouts&quot;</span><span class="p">,</span> <span class="s2">&quot;cabbage&quot;</span><span class="p">,</span> <span class="s2">&quot;cauliflower&quot;</span><span class="p">,</span> <span class="s2">&quot;grapes&quot;</span><span class="p">,</span> <span class="s2">&quot;mushrooms&quot;</span><span class="p">,</span> <span class="s2">&quot;parsnip&quot;</span><span class="p">,</span> <span class="s2">&quot;pear&quot;</span><span class="p">,</span> <span class="s2">&quot;sweet potato&quot;</span><span class="p">,</span> <span class="s2">&quot;pumpkin&quot;</span><span class="p">,</span> <span class="s2">&quot;turnip&quot;</span><span class="p">,</span> <span class="s2">&quot;rutabaga&quot;</span><span class="p">,</span> <span class="s2">&quot;fig&quot;</span><span class="p">,</span> <span class="s2">&quot;quince&quot;</span><span class="p">,</span> <span class="s2">&quot;pomegranate&quot;</span><span class="p">,</span> <span class="s2">&quot;chard&quot;</span><span class="p">,</span> <span class="s2">&quot;greens&quot;</span><span class="p">,</span> <span class="s2">&quot;kale&quot;</span><span class="p">,</span> <span class="s2">&quot;butternut&quot;</span><span class="p">,</span> <span class="s2">&quot;acorn&quot;</span><span class="p">,</span> <span class="s2">&quot;cranberries&quot;</span><span class="p">]</span>
+
+<span class="n">winter</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;grapefruit&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;butternut&quot;</span><span class="p">,</span> <span class="s2">&quot;acorn&quot;</span><span class="p">,</span> <span class="s2">&quot;chestnut&quot;</span><span class="p">,</span> <span class="s2">&quot;cranberries&quot;</span><span class="p">,</span> <span class="s2">&quot;brussels sprouts&quot;</span><span class="p">,</span> <span class="s2">&quot;cabbage&quot;</span><span class="p">,</span> <span class="s2">&quot;cauliflower&quot;</span><span class="p">,</span> <span class="s2">&quot;sweet potato&quot;</span><span class="p">,</span> <span class="s2">&quot;pumpkin&quot;</span><span class="p">,</span> <span class="s2">&quot;turnip&quot;</span><span class="p">,</span> <span class="s2">&quot;rutabaga&quot;</span><span class="p">,</span> <span class="s2">&quot;pomegranate&quot;</span><span class="p">,</span> <span class="s2">&quot;chard&quot;</span><span class="p">,</span> <span class="s2">&quot;greens&quot;</span><span class="p">,</span> <span class="s2">&quot;kale&quot;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Notice that some ingredients fall into multiple seaons. Some of our recipes will also fall into multiple seasons.</p>
+<p>Next, we need to combine all of our ingredient lists into a single dictionary so that we can loop through them later on.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">seasons</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Spring&quot;</span><span class="p">:</span><span class="n">spring</span><span class="p">,</span> <span class="s2">&quot;Summer&quot;</span><span class="p">:</span><span class="n">summer</span><span class="p">,</span> <span class="s2">&quot;Fall&quot;</span><span class="p">:</span><span class="n">fall</span><span class="p">,</span> <span class="s2">&quot;Winter&quot;</span><span class="p">:</span><span class="n">winter</span><span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><br><br><center><b>Exercise</b></center></p>
+<ol>
+<li>Write a simple loop with two lines of code that will print out all of the ingredients for each season.
+<br><br></li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Before we tackle the fourth step in our psuedocode, let's take a look at the recipe for Apple Carrot Muffins. We'll practice classifying just this recipe first.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;apple-carrot-muffins.txt&quot;</span> <span class="c1">#Store the file name in a variable called &quot;fname&quot;</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">txtfile</span><span class="p">:</span> 
+    <span class="n">recipe</span><span class="o">=</span><span class="n">txtfile</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">recipe</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Apple-Carrot Muffins
+Servings 12
+ 
+2 1/2 cups whole wheat flour
+1/2 cup soy powder
+1 tsp. baking powder
+1/4 tsp. salt
+1/4 tsp. nutmeg
+1/4 tsp[. cinnamon
+1/8 cup oil
+3/4 cup honey
+1 tsp. vanilla
+1/2 cup grated apple
+1/2 cup grated carrot
+ 
+Preheat oven to 400 degrees F.  In a medium bowl, combine all the
+dry ingredients.  Combine all the liquid ingredients in a large
+bowl; stir in the apple and carrot.  Add the dry ingredients to
+the liquid mixture.  Oil one muffin tin; then spoon the batter into
+the cups until each is 2/3 full.  Bake for 20 minutes, or until a
+toothpick stuck in the center of the muffin comes out clean.
+
+
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>What season will this recipe fall into? To find out, we need to build some nested loops. Remember our psuedocode?</p>
+<ul>
+<li>Loop through each season in the dictionary.<ul>
+<li>Loop through the ingredients in each season.<ul>
+<li>If an ingredient appears in the recipe, copy the recipe to the correct folder.</li>
 </ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">seasons</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">ingredient</span> <span class="ow">in</span> <span class="n">seasons</span><span class="p">[</span><span class="n">s</span><span class="p">]:</span>           
+             <span class="k">if</span> <span class="p">(</span><span class="n">ingredient</span> <span class="ow">in</span> <span class="n">recipe</span><span class="o">.</span><span class="n">lower</span><span class="p">()):</span>  <span class="c1">#.lower() changes all text in the recipe to lowercase</span>
+                <span class="n">shutil</span><span class="o">.</span><span class="n">copyfile</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">fname</span><span class="p">))</span> <span class="c1">#os.path.join() joins the folder name with the file name</span>
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we can use <code>os.list()</code> to find out which folder the recipe was placed in.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">seasons</span><span class="p">:</span>      <span class="c1">#Loop through each season folder</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>           <span class="c1">#Print the folder name</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>  <span class="c1">#List the files in the folder.</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Spring
+[]
+Summer
+[]
+Fall
+[&#39;amaranth-stirfry.txt&#39;, &#39;apple-carrot-muffins.txt&#39;]
+Winter
+[]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<center><b>Exercise</b></center><ol>
+<li>Complete step 4 of the psuedocode for all of the recipes. Remember that you will need to loop through all files in <code>flist</code> and open each file.</li>
+</ol>
+<p>If you're having a lot of trouble with this exercise, one possible solution can be found <a href="https://github.com/UNC-Libraries-data/Python/blob/master/Files_Packages/solution_files_packages.py">here</a>.</p>
 
 </div>
 </div>
