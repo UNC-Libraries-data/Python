@@ -7,5 +7,7 @@ dependencies:
   - pip
   - pandas
   - matplotlib
-  - bs4
   - seaborn
+  - pip
+  - pip:
+    - beautifulsoup4
