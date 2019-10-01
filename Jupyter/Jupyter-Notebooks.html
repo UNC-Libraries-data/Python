@@ -13124,6 +13124,8 @@ div#notebook {
 </li>
 <li><p><strong>Education:</strong> This workshop series was created with literate programming via Jupyter Notebooks.</p>
 </li>
+<li><p><a href="https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks"><strong>Examples in Jupyter Notebooks</strong></a></p>
+</li>
 </ul>
 <h2 id="Jupyter-Notebooks">Jupyter Notebooks<a class="anchor-link" href="#Jupyter-Notebooks">&#182;</a></h2><p>The documentation for our series of Python workshops are an application of literate programming using a tool called Jupyter Notebooks.  If you installed Anaconda, you already have Jupyter Notebooks available:</p>
 <p>(PC) Start Menu &gt; Anaconda3 (64-bit) &gt; Jupyter Notebook<br>
@@ -13144,13 +13146,15 @@ div#notebook {
 <p>You'll need to navigate through the directories displayed (as in Finder(Mac) or Windows Explorer(PC)) to find existing files, or control where a new file is created.</p>
 <p>To create a new Jupyter Notebook, click the New button at the top right of the screen and choose Notebook:Python 3.</p>
 <p>Jupyter Notebooks save as <strong>.ipynb</strong> files (Jupyter Notebooks were previously called IPython Notebooks).</p>
-<h3 id="Binder"><a href="https://mybinder.org/">Binder</a><a class="anchor-link" href="#Binder">&#182;</a></h3><p>Binder is a free, non-profit, online service that hosts fully functional Jupyter Notebooks.</p>
+<h3 id="Binder"><a href="https://mybinder.org/">Binder</a><a class="anchor-link" href="#Binder">&#182;</a></h3><p>Binder is a free, non-profit, online service that hosts fully functional Jupyter Notebooks.  You can view this workbook at:
+<a href="https://mybinder.org/v2/gh/UNC-Libraries-data/Python/master?filepath=Jupyter">https://mybinder.org/v2/gh/UNC-Libraries-data/Python/master?filepath=Jupyter</a></p>
+<p>In the interface, choose "Jupyter-Notebooks.ipynb"</p>
 <h2 id="Cells">Cells<a class="anchor-link" href="#Cells">&#182;</a></h2><p>Each Jupyter Notebook is made up of individual cells of different types: "Markdown" for formatted text, and "Code" for Python.  Each type of cell needs to be "Run" to display formatted text or evaluate Python code.  Double click on formatted text to access its underlying Markdown.  Python cells can be edited by simply clicking into the cell.</p>
 <p>To add a cell (as appropriate):<br>
 Insert &gt; Cell Above<br>
 Insert &gt; Cell Below</p>
 <p>Inside each cell, use the dropdown menu on the toolbar to choose between "Markdown" and "Code".</p>
-<h3 id="Markdown">Markdown<a class="anchor-link" href="#Markdown">&#182;</a></h3><p>Markdown is a convenient shorthand way to write html.  A full introduction to the syntax is available <a href="https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html">here</a>.</p>
+<h3 id="Markdown">Markdown<a class="anchor-link" href="#Markdown">&#182;</a></h3><p>Markdown is a convenient shorthand way to write HTML.  A full introduction to the syntax is available <a href="https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html">here</a>.</p>
 <p>The most important are:</p>
 <ul>
 <li><p># ## ### ... represent ... level 1, 2, 3 headers respectively</p>
@@ -13227,7 +13231,7 @@ Insert &gt; Cell Below</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="mi">72</span><span class="o">*</span><span class="mi">3</span>
@@ -13243,7 +13247,7 @@ Insert &gt; Cell Below</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[1]:</div>
 
 
 
@@ -13289,22 +13293,63 @@ Insert &gt; Cell Below</p>
 <p>As usual, you'll want your notebook to contain all of the necessary statements importing packages and defining all variables used.  Cells need to be run in order!  Once run, each Python cell will be labeled like <code>In [&lt;number&gt;]</code> and each output will be labeled <code>Out [&lt;number&gt;]</code>.  This helps you keep track of the order cells have been run in.</p>
 <p>You can run cells individually as you develop a notebook, but once you're done it's good practice to use Kernel &gt; Restart &amp; Run All to reset your Python instance and make sure your code is actually self-contained.</p>
 <h4 id="Paths">Paths<a class="anchor-link" href="#Paths">&#182;</a></h4><p>Jupyter Notebooks automatically set your working directory to the folder where the .ipynb is saved.  You'll have to save the document at least once to set your directory.</p>
+<p>For example, the csv (comma separated values) file "CountyHealthData_2014-2015.csv" is stored in the same folder as this notebook, and it appears in <code>oslistdir(".")</code> without setting any working directory first.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;.ipynb&#39;,
+ &#39;.ipynb_checkpoints&#39;,
+ &#39;CountyHealthData_2014-2015.csv&#39;,
+ &#39;Jupyter-Notebooks.html&#39;,
+ &#39;Jupyter-Notebooks.ipynb&#39;,
+ &#39;Other-Packages.ipynb&#39;,
+ &#39;Pandas.html&#39;,
+ &#39;Pandas.ipynb&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We'll return to this csv file <a href="Pandas.html">when we introduce <code>pandas</code></a>, Python's leading data processing library.</p>
+<h2 id="Resources">Resources<a class="anchor-link" href="#Resources">&#182;</a></h2><p>Read more about Jupyter Notebooks:</p>
+<ul>
+<li><a href="https://jupyter-notebook.readthedocs.io/en/stable/index.html">Official Documentation</a></li>
+</ul>
+
+</div>
+</div>
 </div>
     </div>
   </div>

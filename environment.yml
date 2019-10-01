@@ -4,10 +4,10 @@ channels:
 dependencies:
   - python
   - numpy
-  - pip
   - pandas
   - matplotlib
   - seaborn
+  - plotnine
   - pip
   - pip:
     - beautifulsoup4
