@@ -13119,7 +13119,7 @@ div#notebook {
 <h2 id="Pandas">Pandas<a class="anchor-link" href="#Pandas">&#182;</a></h2><p>The <a href="https://pandas.pydata.org/"> `pandas` package</a> provides high-level data manipulation functionality, similar to that found by default in R.  That means new objects like data frames and time series, as well as new functions to manage missing values, merge, and/or reshape datasets.</p>
 <p>Notice that we load pandas with the usual <code>import pandas</code> and an extra <code>as pd</code> statement.  This allows us to call functions from <code>pandas</code> with <code>pd.&lt;function&gt;</code> instead of <code>pandas.&lt;function&gt;</code> for convenience.  <code>as pd</code> is <strong>not</strong> necessary to load the package.</p>
 <p>Download the csv file <a href="https://github.com/UNC-Libraries-data/Python/raw/master/Jupyter/CountyHealthData_2014-2015.csv"> 
-CountyHealthData_2014-2015.csv</a>.  I've stored my copy in the same folder as this Jupyter Notebook.</p>
+CountyHealthData_2014-2015.csv</a>.  I've stored my copy in the same folder as this Jupyter Notebook.  Remember that Jupyter Notebooks automatically set your working directory to the folder where the .ipynb is saved.  You'll have to save the document at least once to set your directory, but once there you can use relative paths.</p>
 <p><code>pd.read_csv</code> reads the tabular data from a Comma Separated Values (csv) file into a <code>DataFrame</code> object.</p>
 
 </div>
@@ -13128,6 +13128,121 @@ CountyHealthData_2014-2015.csv</a>.  I've stored my copy in the same folder as t
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;CountyHealthData_2014-2015.csv&quot;</span><span class="p">)</span>
+<span class="c1">#df = pd.read_csv(&quot;C:/Users/mtjansen/Desktop/Python/Jupyter/CountyHealthData_2014-2015.csv&quot;)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Alternative:-Reading-CSV-files-with-Python's-csv-package">Alternative: Reading CSV files with Python's <code>csv</code> package<a class="anchor-link" href="#Alternative:-Reading-CSV-files-with-Python's-csv-package">&#182;</a></h3><p>Python also comes packaged with package for reading Comma Separated Values (csv) files.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This package provides two major ways to read csv files:</p>
+<ul>
+<li><code>csv.reader</code>: reads the csv into a list of lists where each row is represented by a list within a master list object.</li>
+<li><code>csv.DictReader</code>: reads the csv into a list of <strong>dicts</strong> where each row is a dictionary with keys derived from the first row of the dataset.</li>
+</ul>
+<p>The syntax for each command is similar:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list_of_lists</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;CountyHealthData_2014-2015.csv&quot;</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
+    <span class="n">reader</span><span class="o">=</span><span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">csvfile</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+        <span class="n">list_of_lists</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list_of_dicts</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;CountyHealthData_2014-2015.csv&quot;</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
+    <span class="n">reader</span><span class="o">=</span><span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">csvfile</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+        <span class="n">list_of_dicts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Notice that each process reads the csv in row by row - this can be easily adapted with an <code>if</code> condition to filter out specific rows from a dataset that might be too large to open all at once.</p>
+<p>Let's take a look at the differences between the output from each of these processes.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#print(list_of_lists[1])</span>
+<span class="c1">#print(list_of_dicts[1])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Read more about the <code>csv</code> package here: <a href="https://docs.python.org/3/library/csv.html">https://docs.python.org/3/library/csv.html</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
@@ -13154,7 +13269,7 @@ CountyHealthData_2014-2015.csv</a>.  I've stored my copy in the same folder as t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">shape</span>
@@ -13170,7 +13285,7 @@ CountyHealthData_2014-2015.csv</a>.  I've stored my copy in the same folder as t
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[2]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -13203,7 +13318,7 @@ CountyHealthData_2014-2015.csv</a>.  I've stored my copy in the same folder as t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -13219,7 +13334,7 @@ CountyHealthData_2014-2015.csv</a>.  I've stored my copy in the same folder as t
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -13408,7 +13523,7 @@ CountyHealthData_2014-2015.csv</a>.  I've stored my copy in the same folder as t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -13424,7 +13539,7 @@ CountyHealthData_2014-2015.csv</a>.  I've stored my copy in the same folder as t
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -13697,7 +13812,7 @@ CountyHealthData_2014-2015.csv</a>.  I've stored my copy in the same folder as t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
@@ -13713,7 +13828,7 @@ CountyHealthData_2014-2015.csv</a>.  I've stored my copy in the same folder as t
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -13846,7 +13961,7 @@ CountyHealthData_2014-2015.csv</a>.  I've stored my copy in the same folder as t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;State&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
@@ -13862,7 +13977,7 @@ CountyHealthData_2014-2015.csv</a>.  I've stored my copy in the same folder as t
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -13890,7 +14005,7 @@ Name: State, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">4</span><span class="p">,:</span><span class="mi">4</span><span class="p">]</span>
@@ -13906,7 +14021,7 @@ Name: State, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -13985,7 +14100,7 @@ Name: State, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s2">&quot;State&quot;</span><span class="p">,</span><span class="s2">&quot;County&quot;</span><span class="p">,</span><span class="s2">&quot;Food environment index&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -14001,7 +14116,7 @@ Name: State, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
 
@@ -14081,7 +14196,7 @@ Name: State, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">15</span><span class="p">:</span><span class="mi">20</span><span class="p">,[</span><span class="s2">&quot;State&quot;</span><span class="p">,</span><span class="s2">&quot;County&quot;</span><span class="p">,</span><span class="s2">&quot;Food environment index&quot;</span><span class="p">]]</span>
@@ -14097,7 +14212,7 @@ Name: State, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -14187,7 +14302,7 @@ Name: State, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;State&quot;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;RI&quot;</span><span class="p">]</span>
@@ -14203,7 +14318,7 @@ Name: State, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -14523,7 +14638,7 @@ Name: State, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -14544,7 +14659,7 @@ Name: State, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -14568,7 +14683,7 @@ Name: State, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[12]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -14608,7 +14723,7 @@ Name: State, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
@@ -14626,13 +14741,13 @@ Name: State, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[13]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;seaborn.axisgrid.PairGrid at 0x2459de1c550&gt;</pre>
+<pre>&lt;seaborn.axisgrid.PairGrid at 0x24094438588&gt;</pre>
 </div>
 
 </div>
@@ -14670,7 +14785,7 @@ Name: State, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">plotnine</span> <span class="k">import</span> <span class="o">*</span> 
@@ -14707,13 +14822,13 @@ Name: State, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;ggplot: (-9223371880723579574)&gt;</pre>
+<pre>&lt;ggplot: (-9223371882076046967)&gt;</pre>
 </div>
 
 </div>
