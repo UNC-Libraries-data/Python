@@ -27,10 +27,10 @@ Installing and importing python packages and modules.  Working with file paths t
 
 Jupyter Notebooks implement "literate programming", blending plain English in Markdown/HTML with Python code for better documentation.
 
-## Pandas
+## [Pandas](Jupyter/Pandas.html)
 
 The `pandas` package provides a wide array of tools for working with tabular datasets in Python.  This lesson also surveys some of the major data visualization tools available in Python.
 
-## Other Packages
+## [Other Packages] (Jupyter/Other-Packages.html)
 
 A quick survey of other Python packages for webscraping, APIs, mathematical and statistical functionality, text analysis, and more.
