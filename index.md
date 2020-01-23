@@ -1,5 +1,14 @@
-# Python
+# Python Open Labs
 *University Libraries at the University of North Carolina at Chapel Hill*
+
+Python Open Labs are open to anyone!
+Join us this semester!  **Registration is required for each workshop**.  Follow the links below to register:
+
+* [Python Open Lab 1](https://calendar.lib.unc.edu/event/6111326?hs=a)
+* [Python Open Lab 2](https://calendar.lib.unc.edu/event/6111469?hs=a)
+* [Python Open Lab 3](https://calendar.lib.unc.edu/event/6111475?hs=a)
+* [Python Open Lab 4](https://calendar.lib.unc.edu/event/6111479?hs=a)
+* [Python Open Lab 5](https://calendar.lib.unc.edu/event/6111486?hs=a)
 
 ## [Setup](Setup.html)
 
