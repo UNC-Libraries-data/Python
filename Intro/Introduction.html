@@ -13146,7 +13146,7 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong><font color=red>Note:</font></strong> If you would like to use Python for the duration of this workshop without downloading anything (or have problems downloading Anaconda), we recommend using <a href="https://repl.it/">repl.it</a> or <a href="https://pyfiddle.io">https://pyfiddle.io/</a>.  Make sure you set Python version to 3.6 on the left side of the screen.</p>
+<p><strong><font color=red>Note:</font></strong> If you would like to use Python for the duration of this workshop without downloading anything (or have problems downloading Anaconda), we recommend using <a href="https://repl.it/">repl.it</a>.</p>
 <p>If you would like to save your work and continue to use Python on your computer, we recommend downloading Anaconda.</p>
 <ul>
 <li>Please install Anaconda, or Miniconda with Spyder, following the instructions in <strong><a href="../Setup.html">Setup</a></strong>  <strong>before</strong> the workshop if possible.</li>
@@ -13158,7 +13158,9 @@ $( document ).ready(function(){
 <li>Learn to work with basic Python data types and objects</li>
 <li>Introduce Loops and Conditionals</li>
 </ul>
-<h2 id="Why-Python?">Why Python?<a class="anchor-link" href="#Why-Python?">&#182;</a></h2><p>Python is a general-purpose programming language that has become popular for data and text analysis.  Python can be easier to learn than other languages because it emphasizes (human) readability and flexibility.  Python is <a href="https://octoverse.github.com/projects#languages">the third most used language on GitHub</a>; this means you'll find packages (sets of functionality developed by other users) to use Python for a wide variety of problems and tasks.</p>
+<h2 id="Why-Python?">Why Python?<a class="anchor-link" href="#Why-Python?">&#182;</a></h2><p><strong>What is a programming language?</strong></p>
+<p>Programming languages allow one to write instructions in human-readable form that can then be read and understood by a computer. "High level" languages like Python translate sets of commands or instructions (programs) created by people (programmers) to "low level" languages more readily understood by the computer. Once these instructions have been translated the computer can then follow the steps within to perform a specific task. (For more information on high- and low-level languages, please see this <a href="https://www.computerscience.gcse.guru/theory/high-low-level-languages">definition</a>.)</p>
+<p>Python is a general-purpose programming language that has become popular for data and text analysis.  Python can be easier to learn than other languages because it emphasizes (human) readability and flexibility.  Python is <a href="https://octoverse.github.com/#trends">the second most used language on GitHub</a>; this means you'll find packages (sets of functionality developed by other users) to use Python for a wide variety of problems and tasks.</p>
 <p>If you haven't worked with a programming language before, learning Python will introduce you to methods used in many programming languages, making it easier to learn other languages like Java and R later on.</p>
 <h3 id="Use-Cases">Use Cases<a class="anchor-link" href="#Use-Cases">&#182;</a></h3><h4 id="Scripting">Scripting<a class="anchor-link" href="#Scripting">&#182;</a></h4><p>Writing code to automate repeptitive tasks.  For example, you might need to extract text from thousands of pdf files and sort them into directories based on whether the texts mention particular phrases.  To do this, you would need to create instructions for how to find the pdfs (and skip any non-pdfs!), open them, extract text, search for the key terms, then move the file to the proper final location.   In this series, we'll learn about some of the fundamental building blocks for translating a such processes into instructions the computer can understand.  The other uses outlined below often involve some element of automation!</p>
 <h4 id="Natural-Language-Processing">Natural Language Processing<a class="anchor-link" href="#Natural-Language-Processing">&#182;</a></h4><p>The <code>NLTK</code> package provides tools for dealing with unstructured text such as parsing words and sentences, or tagging parts of speech.  <code>tesseract</code> applies optical character recognition (OCR) to transform images into machine readable text.  Other packages provide access to algorithms like topic modeling on text corpora.  Scripting to automate these steps is necessary to apply these algorithms to the vast corpora common in NLP (for example, <a href="https://eebo.chadwyck.com/about/about.htm">Early English Books Online</a> provides access to 130,000 works produced in English from 1473-1700).</p>
@@ -13169,7 +13171,7 @@ $( document ).ready(function(){
 <h3 id="Python-vs.-R">Python vs. R<a class="anchor-link" href="#Python-vs.-R">&#182;</a></h3><p>R is another popular language often compared to Python in the realm of data science.  Each has relative strengths and weaknesses, but in most cases Python and R can ultimately accomplish the same goals.  We also teach a series of workshops introducing the R language: <a href="http://ropenlabs.web.unc.edu/">R Open Labs</a>, however we usually recommend that you focus on one 
 language at a time to avoid confusion!</p>
 <h3 id="Python-2-vs.-Python-3">Python 2 vs. Python 3<a class="anchor-link" href="#Python-2-vs.-Python-3">&#182;</a></h3><p>Both Python 2 and Python 3 are widely used in research.  Unfortunately, while both Python 2 and 3 are very similar, there are a few key syntax differences: Python 3 cannot always run Python 2 code (or vice versa).</p>
-<p>Python 3 was released in 2008; since then, nearly all important tools have been re-written or updated for Python 3.  <strong>Python 2 will not be maintained after January 1, 2020.</strong>  This workshop will use <strong>Python 3</strong>.</p>
+<p>Python 3 was released in 2008; since then, nearly all important tools have been re-written or updated for Python 3.  <strong>Python 2 is not maintained as of January 1, 2020.</strong>  This workshop will use <strong>Python 3</strong>.</p>
 <h3><font color=red>Warning!</font></h3>
 <p>If you're already comfortable with basic programming concepts, you'll probably find this workshop very straightforward.  The later workshops in the series may be more helpful if you're already familiar with the concepts below and just need to learn new syntax.  Experienced attendees are more than welcome to stay, review, and help others!</p>
 <h2 id="Getting-Started">Getting Started<a class="anchor-link" href="#Getting-Started">&#182;</a></h2><h3 id="IDEs">IDEs<a class="anchor-link" href="#IDEs">&#182;</a></h3><p>An Integrated Development Environment (IDE) is software that combines many tools to help you use a programming language, such as a code editor, compiler, and debugger in a convenient interface. There are many different IDEs to choose from.  IDEs are not necessary, but are often good for beginners and useful for experienced users.</p>
@@ -13182,10 +13184,14 @@ language at a time to avoid confusion!</p>
 <p><img src="https://github.com/UNC-Libraries-data/Python/raw/master/Intro/images/SpyderIDE.png" alt="SpyderIDE.png"></p>
 <p>Spyder's default interface provides three panes:</p>
 <ul>
-<li>The Editor pane (left) is a scripting window for writing Python code.</li>
-<li>The Console pane (bottom right) contains a console for executing code.</li>
+<li>The Editor pane (left) is a scripting window for writing Python code for <em>reuse or sharing</em> later.<ul>
+<li>Scripts should be self contained to ensure easy reuse later on.  You should always be able to restart and run your script from scratch to make sure you haven't left anything important out.</li>
+</ul>
+</li>
+<li>The Console pane (bottom right) contains a console for executing code.  We'll use this to <em>test our code</em> interactively.</li>
 <li>The Explorer pane (top right) contains other helpful tools listing defined variables, files in the working directory, and other help.</li>
 </ul>
+<p><strong>Note:</strong> Code prepared in a simple text editor (not a formatted editor like Microsoft Word) can be executed (run) using your computer's command line or terminal.</p>
 
 </div>
 </div>
@@ -13211,31 +13217,11 @@ language at a time to avoid confusion!</p>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[1]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>4</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To execute this in Spyder, copy or type the code yourself into the Ipython console pane. Press <code>Enter</code> to execute.</p>
+<p><strong>To execute this in Spyder, copy or type the code yourself into the Ipython console pane. Press <code>Enter</code> to execute.</strong></p>
 <p><img src="https://github.com/UNC-Libraries-data/Python/raw/master/Intro/images/2+2_console.png" alt="2+2_console.png"></p>
 <p>You can also enter code into the Editor pane.  This is particularly useful when writing more complicated or reusable code.  The code you write in the Editor pane can be saved as a .py file to revisit or run later.</p>
 <p>To use the Editor pane to save and execute code, type the code in the Editor pane, highlight the line(s) you want to execute and click:</p>
@@ -13353,8 +13339,9 @@ language at a time to avoid confusion!</p>
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Hello, World&quot;</span>
-<span class="n">number</span><span class="o">=</span><span class="mi">42</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">42</span>
+
+<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Hello, World&quot;</span>
 </pre></div>
 
     </div>
@@ -13377,7 +13364,7 @@ language at a time to avoid confusion!</p>
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">notnumber</span><span class="o">=</span><span class="s2">&quot;42&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">notnumber</span> <span class="o">=</span> <span class="s2">&quot;42&quot;</span>
 </pre></div>
 
     </div>
@@ -13598,7 +13585,7 @@ In Python 3, you must include parentheses:
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">newnumber</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">notnumber</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">newnumber</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">notnumber</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">newnumber</span><span class="p">)</span>
 <span class="nb">type</span><span class="p">(</span><span class="n">newnumber</span><span class="p">)</span>
 </pre></div>
@@ -13642,46 +13629,6 @@ In Python 3, you must include parentheses:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>int</code> objects can only hold integer values.  If you have decimal values, use the <code>float</code> (floating decimal) type instead.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myfloat</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">newnumber</span><span class="p">)</span><span class="o">+</span><span class="mf">0.5</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">myfloat</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>42.5
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <p>Now we can try adding objects again.</p>
 
 </div>
@@ -13689,7 +13636,7 @@ In Python 3, you must include parentheses:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="o">+</span><span class="n">newnumber</span><span class="p">)</span>
@@ -13721,6 +13668,46 @@ In Python 3, you must include parentheses:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><code>int</code> objects can only hold integer values.  If you have decimal values, use the <code>float</code> (floating decimal) type instead.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myfloat</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">newnumber</span><span class="p">)</span><span class="o">+</span><span class="mf">0.5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myfloat</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>42.5
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Getting-help-with-functions">Getting help with functions<a class="anchor-link" href="#Getting-help-with-functions">&#182;</a></h4><p>You can access documentation for functions in Python with <code>help</code>, for example <code>help(sum)</code>.  Base Python functions and those provided by packages also usually have online documentation that may be easier to read.</p>
 <center>
 <h3>Exercises</h3>
@@ -13739,7 +13726,7 @@ In Python 3, you must include parentheses:
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;four&quot;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;four&quot;</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
 </pre></div>
 
@@ -13779,10 +13766,10 @@ In Python 3, you must include parentheses:
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">obj0</span><span class="o">=</span><span class="mi">12</span>
-<span class="n">obj1</span><span class="o">=</span><span class="s2">&quot;cat&quot;</span>
-<span class="n">obj2</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">]</span>
-<span class="n">my_list1</span><span class="o">=</span><span class="p">[</span><span class="n">obj0</span><span class="p">,</span><span class="n">obj1</span><span class="p">,</span><span class="n">obj2</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">obj0</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">obj1</span> <span class="o">=</span> <span class="s2">&quot;cat&quot;</span>
+<span class="n">obj2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">]</span>
+<span class="n">my_list1</span> <span class="o">=</span> <span class="p">[</span><span class="n">obj0</span><span class="p">,</span> <span class="n">obj1</span><span class="p">,</span> <span class="n">obj2</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list1</span><span class="p">)</span>
 </pre></div>
 
@@ -13860,7 +13847,7 @@ In Python 3, you must include parentheses:
 <li>your favorite color (str)</li>
 <li><p>your two favorite holidays (list)</p>
 <p>For example:
-<code>["red",["Halloween","New Years"]]</code></p>
+<code>["red", ["Halloween", "New Years"]]</code></p>
 </li>
 </ul>
 </li>
@@ -13879,7 +13866,7 @@ In Python 3, you must include parentheses:
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;cat&quot;</span><span class="p">,</span><span class="s2">&quot;dog&quot;</span><span class="p">,</span><span class="s2">&quot;parrot&quot;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">,</span> <span class="s2">&quot;parrot&quot;</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list2</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
 
@@ -13920,7 +13907,7 @@ In Python 3, you must include parentheses:
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#recall</span>
-<span class="n">my_list1</span><span class="o">=</span><span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]]</span>
+<span class="n">my_list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list1</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span> <span class="c1">#i.e. the second element of the list held in the third element of my_list1</span>
 </pre></div>
 
@@ -14083,7 +14070,7 @@ In Python 3, you must include parentheses:
 <div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_str</span><span class="o">=</span><span class="s2">&quot;The quick brown fox jumps over the lazy dog.&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_str</span> <span class="o">=</span> <span class="s2">&quot;The quick brown fox jumps over the lazy dog.&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_str</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_str</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">9</span><span class="p">])</span> <span class="c1">#4:9 indicates characters 4-8</span>
 </pre></div>
@@ -14167,7 +14154,7 @@ The
 <div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="s2">&quot;home&quot;</span><span class="p">,</span><span class="s2">&quot;away&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="s2">&quot;home&quot;</span><span class="p">,</span> <span class="s2">&quot;away&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -14208,7 +14195,7 @@ The
 <div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="s2">&quot;home&quot;</span><span class="p">,</span><span class="s2">&quot;away&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="s2">&quot;home&quot;</span><span class="p">,</span> <span class="s2">&quot;away&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -14244,35 +14231,35 @@ The
 <h4>Exercises</h4>
 </center><ol>
 <li>Try to use indexing to get the tenth digit of <code>my_pi</code> as defined below.  Does it work as defined?  Do we need to change the variable somehow?
-<pre><code>my_pi=3.141592653589793</code></pre>
+<pre><code>my_pi = 3.141592653589793</code></pre>
 </li>
 <li>Below is a list of lists containing the NATO phonetic codes for each letter of the alphabet.  Each list within <code>nato</code> contains a letter of the alphabet and its corresponding code.
-<pre><code>nato=[["A","Alfa"],
-       ["B","Bravo"],
-       ["C","Charlie"],
-       ["D","Delta"],
-       ["E","Echo"],
-       ["F","Foxtrot"],
-       ["G","Golf"],
-       ["H","Hotel"],
-       ["I","India"],
-       ["J","Juliett"],
-       ["K","Kilo"],
-       ["L","Lima"],
-       ["M","Mike"],
-       ["N","November"],
-       ["O","Oscar"],
-       ["P","Papa"],
-       ["Q","Quebec"],
-       ["R","Romeo"],
-       ["S","Sierra"],
-       ["T","Tango"],
-       ["U","Uniform"],
-       ["V","Victor"],
-       ["W","Whiskey"],
-       ["X","X-ray"],
-       ["Y","Yankee"],
-       ["Z","Zulu"]]</code></pre>
+<pre><code>nato = [["A", "Alfa"],
+       ["B", "Bravo"],
+       ["C", "Charlie"],
+       ["D", "Delta"],
+       ["E", "Echo"],
+       ["F", "Foxtrot"],
+       ["G", "Golf"],
+       ["H", "Hotel"],
+       ["I", "India"],
+       ["J", "Juliett"],
+       ["K", "Kilo"],
+       ["L", "Lima"],
+       ["M", "Mike"],
+       ["N", "November"],
+       ["O", "Oscar"],
+       ["P", "Papa"],
+       ["Q", "Quebec"],
+       ["R", "Romeo"],
+       ["S", "Sierra"],
+       ["T", "Tango"],
+       ["U", "Uniform"],
+       ["V", "Victor"],
+       ["W", "Whiskey"],
+       ["X", "X-ray"],
+       ["Y", "Yankee"],
+       ["Z", "Zulu"]]</code></pre>
 </li>
 </ol>
 <ul>
@@ -14300,18 +14287,18 @@ The
 </tr>
 <tr>
 <td><code>str</code></td>
-<td>"cat","dog","car"</td>
+<td>"cat", "dog", "car"</td>
 <td>String, character, or text values</td>
 </tr>
 <tr>
 <td><code>list</code></td>
-<td>[1,2,3],["cat","dog"],[1,[2,3]]</td>
+<td>[1, 2, 3], ["cat", "dog"], [1, [2, 3]]</td>
 <td>One or more objects stored by order</td>
 </tr>
 </tbody>
 </table>
 <p>We will cover Python's dictionary (<code>dict</code>) and boolean (<code>bool</code>) types later on.</p>
-<p>Read more about Python's built-in data types <a href=https://docs.python.org/3/library/stdtypes.html>here</a>.</p>
+<p><strong>Read more about Python's built-in data types <a href=https://docs.python.org/3/library/stdtypes.html>here</a>.</strong></p>
 
 </div>
 </div>
@@ -14435,8 +14422,8 @@ else
 <div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num</span><span class="o">=</span><span class="mi">5</span>
-<span class="k">if</span> <span class="n">num</span><span class="o">&gt;</span><span class="mi">4</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This number is greater than four&quot;</span><span class="p">)</span>
 </pre></div>
 
@@ -14468,8 +14455,8 @@ else
 <div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num</span><span class="o">=</span><span class="mi">3</span>
-<span class="k">if</span> <span class="n">num</span><span class="o">&gt;</span><span class="mi">4</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This number is greater than four&quot;</span><span class="p">)</span>
 </pre></div>
 
@@ -14491,8 +14478,8 @@ else
 <div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num</span><span class="o">=</span><span class="mi">3</span>
-<span class="k">if</span> <span class="n">num</span><span class="o">&gt;</span><span class="mi">4</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This number is greater than than four&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This number is less than or equal to four&quot;</span><span class="p">)</span>
@@ -14534,10 +14521,10 @@ else
 <div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num</span><span class="o">=</span><span class="mi">8</span>
-<span class="k">if</span> <span class="n">num</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="k">if</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This number is less than three&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">num</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">:</span>
+<span class="k">elif</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This number is greater than or equal to three and less than ten&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This number is greater than ten&quot;</span><span class="p">)</span>
@@ -14574,7 +14561,7 @@ else
 </center><ol>
 <li>Using indexing, write a conditional that print a word only if it ends with the letter 'e'.
 <pre><code>#Template:
-testword=&lt;your choice of word&gt;
+testword = &lt;your choice of word&gt;
 if &lt;condition using testword&gt;:
      print(testword)</code></pre>
 </li>
@@ -14596,13 +14583,13 @@ if &lt;condition using testword&gt;:
 <div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sales</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
-<span class="n">total_sales</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">total_sales</span><span class="o">=</span><span class="n">total_sales</span><span class="o">+</span><span class="n">sales</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">total_sales</span><span class="o">=</span><span class="n">total_sales</span><span class="o">+</span><span class="n">sales</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">total_sales</span><span class="o">=</span><span class="n">total_sales</span><span class="o">+</span><span class="n">sales</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">total_sales</span><span class="o">=</span><span class="n">total_sales</span><span class="o">+</span><span class="n">sales</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
-<span class="n">total_sales</span><span class="o">=</span><span class="n">total_sales</span><span class="o">+</span><span class="n">sales</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sales</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">total_sales</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">total_sales</span> <span class="o">=</span> <span class="n">total_sales</span> <span class="o">+</span> <span class="n">sales</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">total_sales</span> <span class="o">=</span> <span class="n">total_sales</span> <span class="o">+</span> <span class="n">sales</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">total_sales</span> <span class="o">=</span> <span class="n">total_sales</span> <span class="o">+</span> <span class="n">sales</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">total_sales</span> <span class="o">=</span> <span class="n">total_sales</span> <span class="o">+</span> <span class="n">sales</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">total_sales</span> <span class="o">=</span> <span class="n">total_sales</span> <span class="o">+</span> <span class="n">sales</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">total_sales</span><span class="p">)</span>
 </pre></div>
 
@@ -14654,7 +14641,7 @@ if &lt;condition using testword&gt;:
 <div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_nums</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_nums</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
 
 <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">my_nums</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
@@ -14807,20 +14794,20 @@ if &lt;condition using testword&gt;:
 <div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span><span class="o">=</span><span class="p">[</span><span class="mi">95</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">66</span><span class="p">,</span><span class="mi">83</span><span class="p">,</span><span class="mi">71</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="mi">93</span><span class="p">,</span><span class="mi">81</span><span class="p">,</span><span class="mi">87</span><span class="p">,</span><span class="mi">81</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span><span class="o">=</span><span class="p">[</span><span class="mi">95</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">81</span><span class="p">]</span>
 <span class="n">grades</span><span class="o">=</span><span class="p">[]</span>
 <span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">score</span><span class="o">&gt;=</span><span class="mi">90</span><span class="p">:</span>
-        <span class="n">grade</span><span class="o">=</span><span class="s2">&quot;A&quot;</span>
-    <span class="k">elif</span> <span class="n">score</span><span class="o">&gt;=</span><span class="mi">80</span><span class="p">:</span>
-        <span class="n">grade</span><span class="o">=</span><span class="s2">&quot;B&quot;</span>
-    <span class="k">elif</span> <span class="n">score</span><span class="o">&gt;=</span><span class="mi">70</span> <span class="ow">and</span> <span class="n">score</span><span class="o">&lt;</span><span class="mi">80</span><span class="p">:</span>
-        <span class="n">grade</span><span class="o">=</span><span class="s2">&quot;C&quot;</span>
-    <span class="k">elif</span> <span class="n">score</span><span class="o">&gt;=</span><span class="mi">60</span> <span class="ow">and</span> <span class="n">score</span><span class="o">&lt;</span><span class="mi">70</span><span class="p">:</span>
-        <span class="n">grade</span><span class="o">=</span><span class="s2">&quot;D&quot;</span>
+    <span class="k">if</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">:</span>
+        <span class="n">grade</span> <span class="o">=</span> <span class="s2">&quot;A&quot;</span>
+    <span class="k">elif</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">:</span>
+        <span class="n">grade</span> <span class="o">=</span> <span class="s2">&quot;B&quot;</span>
+    <span class="k">elif</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">70</span> <span class="ow">and</span> <span class="n">score</span> <span class="o">&lt;</span> <span class="mi">80</span><span class="p">:</span>
+        <span class="n">grade</span> <span class="o">=</span> <span class="s2">&quot;C&quot;</span>
+    <span class="k">elif</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">60</span> <span class="ow">and</span> <span class="n">score</span> <span class="o">&lt;</span> <span class="mi">70</span><span class="p">:</span>
+        <span class="n">grade</span> <span class="o">=</span> <span class="s2">&quot;D&quot;</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">grade</span><span class="o">=</span><span class="s2">&quot;F&quot;</span>
-    <span class="n">grades</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">score</span><span class="p">,</span><span class="n">grade</span><span class="p">])</span>       
+        <span class="n">grade</span> <span class="o">=</span> <span class="s2">&quot;F&quot;</span>
+    <span class="n">grades</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">score</span><span class="p">,</span> <span class="n">grade</span><span class="p">])</span>       
 <span class="nb">print</span><span class="p">(</span><span class="n">grades</span><span class="p">)</span>
 </pre></div>
 
@@ -14853,7 +14840,7 @@ if &lt;condition using testword&gt;:
 <center>
 <h4>Exercises</h4>
 </center><ol>
-<li>Why do I only specify <code>score&gt;=80</code> etc. in the <code>elif</code> statements? Can any of these conditionals be simplified?</li>
+<li>Why do I only specify <code>score &gt;= 80</code> etc. in the <code>elif</code> statements? Can any of these conditionals be simplified?</li>
 <li>How many numbers between 1 and 100 are divisible by 7?</li>
 <li>Make a new list of NATO codes keeping only those that use the letter "a" in their <em>code</em>.</li>
 </ol>
@@ -14868,7 +14855,7 @@ if &lt;condition using testword&gt;:
 <p>First, lets get some new functions from a package called <code>random</code>.</p>
 <ul>
 <li><code>from random import choices,seed</code> makes the functions <code>choices</code> and <code>seed</code> from the <code>random</code> package available in our Python session.  We already have <code>random</code> because it is part of the <a href="https://docs.python.org/3/library/index.html">Python Standard Library</a></li>
-<li><code>choices(population=range(100),k=50)</code> will sample 50 random numbers (with replacement) from the numbers 0-99.  </li>
+<li><code>choices(population=range(100), k=50)</code> will sample 50 random numbers (with replacement) from the numbers 0-99.  </li>
 <li><code>seed(1234)</code> locks the pseudo-random number generator so your results should match mine - try running this again without <code>seed</code>!</li>
 </ul>
 <p>You can read more about the functions in the <code>random</code> package <a href="https://docs.python.org/3/library/random.html">here</a>.  We'll revisit packages later on.</p>
@@ -14885,7 +14872,7 @@ if &lt;condition using testword&gt;:
 
 <span class="n">seed</span><span class="p">(</span><span class="mi">1234</span><span class="p">)</span>
 
-<span class="n">test</span><span class="o">=</span><span class="n">choices</span><span class="p">(</span><span class="n">population</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span><span class="n">k</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">test</span><span class="o">=</span><span class="n">choices</span><span class="p">(</span><span class="n">population</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="n">k</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
 </pre></div>
 
@@ -14917,9 +14904,9 @@ if &lt;condition using testword&gt;:
 <div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total</span><span class="o">=</span><span class="mi">0</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">test</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">number</span><span class="o">&gt;</span><span class="mi">10</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
         <span class="n">total</span><span class="o">=</span><span class="n">total</span><span class="o">+</span><span class="n">number</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This number is too low:&quot;</span><span class="p">,</span><span class="n">number</span><span class="p">)</span>
@@ -14977,7 +14964,7 @@ if &lt;condition using testword&gt;:
 <div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_ages</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;34&quot;</span><span class="p">,</span><span class="s2">&quot;27&quot;</span><span class="p">,</span><span class="s2">&quot;54&quot;</span><span class="p">,</span><span class="s2">&quot;19&quot;</span><span class="p">,</span><span class="s2">&quot;giraffe&quot;</span><span class="p">,</span><span class="s2">&quot;15&quot;</span><span class="p">,</span><span class="s2">&quot;83&quot;</span><span class="p">,</span><span class="s2">&quot;61&quot;</span><span class="p">,</span><span class="s2">&quot;43&quot;</span><span class="p">,</span><span class="s2">&quot;91&quot;</span><span class="p">,</span><span class="s2">&quot;sixteen&quot;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_ages</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;34&quot;</span><span class="p">,</span> <span class="s2">&quot;27&quot;</span><span class="p">,</span> <span class="s2">&quot;54&quot;</span><span class="p">,</span> <span class="s2">&quot;19&quot;</span><span class="p">,</span> <span class="s2">&quot;giraffe&quot;</span><span class="p">,</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span> <span class="s2">&quot;83&quot;</span><span class="p">,</span> <span class="s2">&quot;61&quot;</span><span class="p">,</span> <span class="s2">&quot;43&quot;</span><span class="p">,</span> <span class="s2">&quot;91&quot;</span><span class="p">,</span> <span class="s2">&quot;sixteen&quot;</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -14998,12 +14985,12 @@ if &lt;condition using testword&gt;:
 <div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ages</span><span class="o">=</span><span class="p">[]</span>
-<span class="n">problems</span><span class="o">=</span><span class="p">[]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ages</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">problems</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="n">user_ages</span><span class="p">:</span>
     <span class="k">try</span><span class="p">:</span>
-        <span class="n">a</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
         <span class="n">ages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
     <span class="k">except</span><span class="p">:</span>
         <span class="n">problems</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
@@ -15051,7 +15038,7 @@ if &lt;condition using testword&gt;:
 <div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">class_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;course&quot;</span><span class="p">:</span><span class="s2">&quot;Python II&quot;</span><span class="p">,</span><span class="s2">&quot;location&quot;</span><span class="p">:</span><span class="s2">&quot;Davis Library&quot;</span><span class="p">,</span><span class="s2">&quot;time&quot;</span><span class="p">:</span><span class="s2">&quot;4pm&quot;</span><span class="p">}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">class_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;course&quot;</span><span class="p">:</span><span class="s2">&quot;Python II&quot;</span><span class="p">,</span> <span class="s2">&quot;location&quot;</span><span class="p">:</span><span class="s2">&quot;Davis Library&quot;</span><span class="p">,</span> <span class="s2">&quot;time&quot;</span><span class="p">:</span><span class="s2">&quot;4pm&quot;</span><span class="p">}</span>
 <span class="nb">type</span><span class="p">(</span><span class="n">class_dict</span><span class="p">)</span>
 </pre></div>
 
@@ -15173,7 +15160,7 @@ if &lt;condition using testword&gt;:
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">squares</span><span class="o">=</span><span class="p">[]</span>
-<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">16</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">):</span>
     <span class="n">squares</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">squares</span><span class="p">)</span>
 </pre></div>
@@ -15214,7 +15201,7 @@ if &lt;condition using testword&gt;:
 <div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">squares</span><span class="o">=</span><span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">16</span><span class="p">)]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">squares</span><span class="o">=</span><span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">)]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">squares</span><span class="p">)</span>
 </pre></div>
 
@@ -15254,7 +15241,7 @@ if &lt;condition using testword&gt;:
 <div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">squaresdict</span><span class="o">=</span><span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">k</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">16</span><span class="p">)}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">squaresdict</span><span class="o">=</span><span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">k</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">)}</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">squaresdict</span><span class="p">)</span>
 </pre></div>
 
@@ -15355,12 +15342,12 @@ if &lt;condition using testword&gt;:
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="n">number_list</span><span class="p">):</span>
-    <span class="n">s</span><span class="o">=</span><span class="nb">sum</span><span class="p">(</span><span class="n">number_list</span><span class="p">)</span>
-    <span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">number_list</span><span class="p">)</span>
-    <span class="n">m</span><span class="o">=</span><span class="n">s</span><span class="o">/</span><span class="n">n</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">number_list</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">number_list</span><span class="p">)</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">s</span><span class="o">/</span><span class="n">n</span>
     <span class="k">return</span> <span class="n">m</span>
 
-<span class="n">numbers</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">51</span><span class="p">))</span>
+<span class="n">numbers</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">51</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">mean</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span>
 </pre></div>
 
@@ -15408,11 +15395,11 @@ if &lt;condition using testword&gt;:
 <div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
 
 <span class="c1">#Normally Distributed Data:</span>
 <span class="kn">from</span> <span class="nn">numpy.random</span> <span class="k">import</span> <span class="n">normal</span>
-<span class="n">data2</span> <span class="o">=</span> <span class="n">normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">scale</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span> <span class="c1">#scale=2 defines the standard deviation as 2</span>
+<span class="n">data2</span> <span class="o">=</span> <span class="n">normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span> <span class="c1">#scale=2 defines the standard deviation as 2</span>
 </pre></div>
 
     </div>
@@ -15499,17 +15486,17 @@ else:
               <span class="s2">&quot;holistic&quot;</span><span class="p">,</span> <span class="s2">&quot;reply&quot;</span><span class="p">,</span> <span class="s2">&quot;steady&quot;</span><span class="p">,</span> <span class="s2">&quot;event&quot;</span><span class="p">,</span> <span class="s2">&quot;house&quot;</span><span class="p">,</span> <span class="s2">&quot;amused&quot;</span><span class="p">,</span> 
               <span class="s2">&quot;soak&quot;</span><span class="p">,</span> <span class="s2">&quot;increase&quot;</span><span class="p">]</span>
 
-<span class="n">vowels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;e&quot;</span><span class="p">,</span><span class="s2">&quot;i&quot;</span><span class="p">,</span><span class="s2">&quot;o&quot;</span><span class="p">,</span><span class="s2">&quot;u&quot;</span><span class="p">,</span><span class="s2">&quot;y&quot;</span><span class="p">]</span>
+<span class="n">vowels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="s2">&quot;u&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">]</span>
 
 <span class="n">output</span><span class="o">=</span><span class="p">[]</span>
 
 <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">random_words</span><span class="p">:</span>
-    <span class="n">count</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">vowels</span><span class="p">:</span>
-            <span class="n">count</span><span class="o">=</span><span class="n">count</span><span class="o">+</span><span class="mi">1</span>
-    <span class="k">if</span> <span class="n">count</span><span class="o">&gt;=</span><span class="mi">3</span><span class="p">:</span>
-        <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">word</span><span class="p">,</span><span class="n">count</span><span class="p">])</span>
+            <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">word</span><span class="p">,</span> <span class="n">count</span><span class="p">])</span>
 </pre></div>
 
     </div>
