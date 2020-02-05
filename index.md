@@ -28,7 +28,7 @@ Including:
 * Functions
 * Comments and Psuedocode
 
-**[Exercises](Intro/Exercises.html)** \
+**[Exercises](Intro/Exercises.html)**  
 **[Solutions](Intro/Exercises_Solutions.html)**
 
 ## [Files and Packages](Files_Packages/Files_Packages.html)
