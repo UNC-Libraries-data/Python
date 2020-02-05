@@ -18,7 +18,7 @@ Installing the Anaconda Distribution.
 Fundamental Python syntax, using the Spyder IDE (Integrated Development Environment). 
 * [Alternative (without Table of Contents)](Intro/Introduction-nocontents.html)
 
-Note: Files and file paths are not included here.  This workshop can be run using online Python services like [repl.it](https://repl.it/) or  [pyfiddle.io](pyfiddle.io).
+Note: Files and file paths are not included here.  This workshop can be run using online Python services like [repl.it](https://repl.it/).
 
 Including:
 
@@ -27,6 +27,9 @@ Including:
 * Loops
 * Functions
 * Comments and Psuedocode
+
+**[Exercises](Intro/Exercises.html)** \
+**[Solutions](Intro/Exercises_Solutions.html)**
 
 ## [Files and Packages](Files_Packages/Files_Packages.html)
 
