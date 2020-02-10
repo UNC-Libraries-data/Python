@@ -13017,45 +13017,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-<style type="text/css">
-    
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-
-    </style>
 
 
 <style type="text/css">
@@ -13123,7 +13084,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Note:</strong> <span style="color: gray;">Exercises in gray are those that appear in the [Introduction](Introduction.ipynb). Feel free to skip these if you have already completed them.</span></p>
+<p><strong>Note:</strong> <span style="color: gray;">Exercises in gray are those that appear in the <a href="Introduction.html" target="_blank">Introduction</a>. Feel free to skip these if you have already completed them.</span></p>
 
 </div>
 </div>
@@ -13152,6 +13113,14 @@ div#notebook {
 <li>Write some code to calculate the number of minutes in a year with a comment that describes what your code does.</li>
 <li>What is the area of a square with a side length of 7? What is the volume of a cube with the same edge length?</li>
 </ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="Exercises_Solutions.html#entering_code" target="_blank">Solutions</a></p>
 
 </div>
 </div>
@@ -13213,6 +13182,14 @@ num10=...</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="Exercises_Solutions.html#strings_numbers" target="_blank">Solutions</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Lists">Lists<a class="anchor-link" href="#Lists">&#182;</a></h3>
 </div>
 </div>
@@ -13238,6 +13215,14 @@ num10=...</code></pre>
 </ul>
 </li>
 </ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="Exercises_Solutions.html#lists" target="_blank">Solutions</a></p>
 
 </div>
 </div>
@@ -13291,7 +13276,7 @@ num10=...</code></pre>
 <li><span style="color: gray;">What is the fourth letter of the code for the eighth letter of the alphabet?</span></li>
 </ul>
 </li>
-<li><p>Let's perform some more minutes-in-year calculations (<em>I bet you thought you were done with this by now - think again!</em>). Using the lists you created above, calculate and print the number of minutes in a normal year. Now calculate and print the number of minutes in a leap year. Print your results.</p>
+<li><p>Let's perform some more minutes-in-year calculations (<em>I bet you thought you were done with this by now - think again!</em>). Using the lists you created above, calculate and print the number of minutes in a normal year. Now calculate and print the number of minutes in a leap year.</p>
 </li>
 <li><p>Consider the following list of sentences:</p>
 
@@ -13315,11 +13300,19 @@ num10=...</code></pre>
 <li>Hint Hint: Use the <code>.join()</code> function to join elements of a list into a string. Let's use our earlier example, where <code>list=["I", "want", "pizza."]</code>. Here, the command <code>" ".join(list)</code> glues all of the elements in <code>list</code> together with whitespaces (<code>" "</code>) between them. As a result, using the command <code>str = " ".join(list)</code> will bring us back to where we started! <code>str = "I want pizza."</code></li>
 </ul>
 </li>
-<li><p>Can you create a "MyName" variable that stores your name using only elements from the <code>sentences</code> list above? In other words, create and print your name without typing any new bits of text.</p>
+<li><p>Can you create a "MyName" variable (str) that stores your name using only elements from the <code>sentences</code> list above? In other words, create and print your name without typing any new bits of text.</p>
 </li>
 </ul>
 </li>
 </ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="Exercises_Solutions.html#indexing" target="_blank">Solutions</a></p>
 
 </div>
 </div>
