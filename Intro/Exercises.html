@@ -13017,6 +13017,45 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
+<style type="text/css">
+    
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+
+    </style>
 
 
 <style type="text/css">
@@ -13171,7 +13210,7 @@ num9=...
 num10=...</code></pre>
 </li>
 <li>Use a single <code>print</code> statement to print all of the even numbers out of your newly defined variables with the following statement, "These are my even numbers:". </li>
-<li>Can you think of a way to write your output as a single complete sentence? (Hint: you'll probably need to use at least one type conversion function)</li>
+<li>The <code>+</code> operator in Python works with strings variables as well as numeric types - but it simply concatenates strings together one after the other.  Using <code>+</code> and the example below, write your output as a single complete sentence. (Hint: you'll probably need to use at least one type conversion function).</li>
 </ul>
 </li>
 </ol>
@@ -13179,13 +13218,38 @@ num10=...</code></pre>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="Exercises_Solutions.html#strings_numbers" target="_blank">Solutions</a></p>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;work&quot;</span><span class="o">+</span><span class="s2">&quot;shop&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3&quot;</span><span class="o">+</span><span class="s2">&quot;7&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>workshop
+37
+</pre>
+</div>
+</div>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13276,7 +13340,7 @@ num10=...</code></pre>
 <li><span style="color: gray;">What is the fourth letter of the code for the eighth letter of the alphabet?</span></li>
 </ul>
 </li>
-<li><p>Let's perform some more minutes-in-year calculations (<em>I bet you thought you were done with this by now - think again!</em>). Using the lists you created above, calculate and print the number of minutes in a normal year. Now calculate and print the number of minutes in a leap year.</p>
+<li><p>Let's perform some more minutes-in-year calculations. Using the lists you created above, calculate and print the number of minutes in a normal year. Now calculate and print the number of minutes in a leap year.</p>
 </li>
 <li><p>Consider the following list of sentences:</p>
 
@@ -13291,7 +13355,8 @@ num10=...</code></pre>
 "Boy oh boy am I glad to see you!",
 "Students in the hallway whispered loudly.",
 "You're learning Python!",
-"What is the capital of Florida?"
+"What is the capital of Florida?",
+"We went to the zoo."
 ]</code></pre>
 <ul>
 <li><p>Can you create the following sentence using only elements from this list? <code>sentence = "The boy yells loudly."</code> In other words, create and print this sentence without typing any new bits of text.</p>
@@ -13313,6 +13378,476 @@ num10=...</code></pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="Exercises_Solutions.html#indexing" target="_blank">Solutions</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Flow-Control">Flow Control<a class="anchor-link" href="#Flow-Control">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Conditions-and-Booleans-/-Conditional-Statements">Conditions and Booleans / Conditional Statements<a class="anchor-link" href="#Conditions-and-Booleans-/-Conditional-Statements">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li><span style="color: gray;">Write an if statement that prints a message if a person is old enough to get a driver’s license (teenagers can get their driver’s licenses at age 16). Next, add in an else statement that gives a different message.</span>
+<pre><code>#Template:
+age = &lt;your choice of age&gt;
+if &lt;condition using age&gt;:
+     print(“you are old enough to get a driver’s license.”)</code></pre>
+</li>
+<li><span style="color: gray;">Using indexing, write a conditional that print a word only if it ends with the letter 'e'.</span>
+<pre><code>#Template:
+testword=&lt;your choice of word&gt;
+if &lt;condition using testword&gt;:
+     print(testword)</code></pre>
+</li>
+<li><p>Now that we've learned conditionals, we can more easily account for a wide range of circumstances. Let's go back to our minutes-in-a-year example. Define the following variables:</p>
+
+<pre><code>DaysInYear=365
+HoursInDay=24
+MinutesInHour=60</code></pre>
+<ul>
+<li>Write a conditional statement that determines whether or not the year is a leap year. Print messages that tell the user whether or not it is a leap year as well as the number of minutes in the year.
+<pre><code>   #Template:
+   if &lt;condition to determine if a day is a leap year&gt;:
+           print(&lt;Minutes In Year calculation&gt;)
+           print("It's a leap year!")
+   else:
+       print(&lt;Minutes In Year calculation&gt;)
+       print("It's not a leap year!")</code></pre>
+</li>
+<li>Now change the DaysInYear variable. Does your code perform as expected? What happens if you set your variable equal to a number that isn't 365 or 366? Does this make any sense? Change your statements or add clauses to account for more entries than just these two.</li>
+</ul>
+</li>
+<li><p>Pick any word and declare it as a variable. Write a conditional statement (<code>if</code>, <code>elif</code>, <code>else</code>) that checks your word for the conditions below. Print different messagess that describe the word if it satisfies any of the individual conditions.</p>
+<ul>
+<li>Does your word not contain any text at all?</li>
+<li>Does your word contain the letter "i" or the letter "b"?</li>
+<li>Is your word longer than 5 characters?</li>
+<li>Did you simply use "word"?</li>
+<li>Did your word not satsify any of the above conditions?<ul>
+<li>For example:
+<pre><code>testword = "google"
+if testword &lt;condition concerning testword&gt;
+  print(&lt;message describing why that word satisfied the condition&gt;)
+elif testword &lt;condition concerning testword&gt;
+  print(&lt;message describing why that word satisfied the condition&gt;)
+#etc...</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="Exercises_Solutions.html#conditions_booleans" target="_blank">Solutions</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="For-Loops">For Loops<a class="anchor-link" href="#For-Loops">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Nesting loops - indentation is key!</span>
+<span class="n">listOfWords</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">]</span>
+<span class="n">newList</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1">#initialize an empty list</span>
+
+<span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">listOfWords</span><span class="p">:</span>
+    <span class="n">numLetters</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">#resets to zero each time the loop runs</span>
+    <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">color</span><span class="p">:</span>
+        <span class="n">numLetters</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">temporaryList</span> <span class="o">=</span> <span class="p">[</span><span class="n">color</span><span class="p">,</span> <span class="n">numLetters</span><span class="p">]</span>
+    <span class="n">newList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">temporaryList</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">newList</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[&#39;blue&#39;, 4], [&#39;yellow&#39;, 6], [&#39;red&#39;, 3], [&#39;green&#39;, 5]]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>(Un-numbered Exercise).</strong> <span style="color: gray;">How could we write the code above with fewer lines? Is there a simpler way to find the length of each word?</span></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="Exercises_Solutions.html#for_loops" target="_blank">Solutions</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="For-Loops-with-Conditionals">For Loops with Conditionals<a class="anchor-link" href="#For-Loops-with-Conditionals">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span><span class="o">=</span><span class="p">[</span><span class="mi">95</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">66</span><span class="p">,</span><span class="mi">83</span><span class="p">,</span><span class="mi">71</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="mi">93</span><span class="p">,</span><span class="mi">81</span><span class="p">,</span><span class="mi">87</span><span class="p">,</span><span class="mi">81</span><span class="p">]</span>
+<span class="n">grades</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">score</span><span class="o">&gt;=</span><span class="mi">90</span><span class="p">:</span>
+        <span class="n">grade</span><span class="o">=</span><span class="s2">&quot;A&quot;</span>
+    <span class="k">elif</span> <span class="n">score</span><span class="o">&gt;=</span><span class="mi">80</span><span class="p">:</span>
+        <span class="n">grade</span><span class="o">=</span><span class="s2">&quot;B&quot;</span>
+    <span class="k">elif</span> <span class="n">score</span><span class="o">&gt;=</span><span class="mi">70</span> <span class="ow">and</span> <span class="n">score</span><span class="o">&lt;</span><span class="mi">80</span><span class="p">:</span>
+        <span class="n">grade</span><span class="o">=</span><span class="s2">&quot;C&quot;</span>
+    <span class="k">elif</span> <span class="n">score</span><span class="o">&gt;=</span><span class="mi">60</span> <span class="ow">and</span> <span class="n">score</span><span class="o">&lt;</span><span class="mi">70</span><span class="p">:</span>
+        <span class="n">grade</span><span class="o">=</span><span class="s2">&quot;D&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">grade</span><span class="o">=</span><span class="s2">&quot;F&quot;</span>
+    <span class="n">grades</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">score</span><span class="p">,</span><span class="n">grade</span><span class="p">])</span>       
+<span class="nb">print</span><span class="p">(</span><span class="n">grades</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[95, &#39;A&#39;], [90, &#39;A&#39;], [66, &#39;D&#39;], [83, &#39;B&#39;], [71, &#39;C&#39;], [78, &#39;C&#39;], [93, &#39;A&#39;], [81, &#39;B&#39;], [87, &#39;B&#39;], [81, &#39;B&#39;]]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li><span style="color: gray;">Referencing the above code, why do I only specify `score>=80` etc. in the `elif` statements? Can any of these conditionals be simplified?</span></li>
+<li><span style="color: gray;">How many numbers between 1 and 100 are divisible by 7?</span></li>
+<li><span style="color: gray;">Make a new list of NATO codes keeping only those that use the letter "a" in their *code*.</span></li>
+<li>Consider the following list of years:
+<pre><code>years=[1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,
+     2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,
+     2012,2013,2014,2015,2016,2017,2018,2019,2020]</code></pre>
+<ul>
+<li>Knowing that 2020 is a leap year and that leap years only occur every four years, iterate through the list. Use conditionals to add all leap years to a separate list (Hint: use the modulo function to determine which years are leap years). Print your new list of leap years.</li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="Exercises_Solutions.html#for_loops_conditionals" target="_blank">Solutions</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Breaks">Breaks<a class="anchor-link" href="#Breaks">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li><span style="color: gray;">Use the `choices` function above to generate a random list of 50 numbers in 0-99. Write a loop that will find the sum of only the first 6 even numbers.</span></li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="Exercises_Solutions.html#breaks" target="_blank">Solutions</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="More-Data-Types">More Data Types<a class="anchor-link" href="#More-Data-Types">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Comprehensions">Comprehensions<a class="anchor-link" href="#Comprehensions">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">squaresdict</span><span class="o">=</span><span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">k</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">16</span><span class="p">)}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">squaresdict</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100, 11: 121, 12: 144, 13: 169, 14: 196, 15: 225}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>1.</strong> <span style="color: gray;">Considering the code above, write a list comprehension to create a list of just the values (i.e. the squares) from `squaresdict`.</span></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="Exercises_Solutions.html#comprehensions" target="_blank">Solutions</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Pseudocode-and-Comments">Pseudocode and Comments<a class="anchor-link" href="#Pseudocode-and-Comments">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Pseudocode">Pseudocode<a class="anchor-link" href="#Pseudocode">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">random_words</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;statement&quot;</span><span class="p">,</span> <span class="s2">&quot;toy&quot;</span><span class="p">,</span> <span class="s2">&quot;cars&quot;</span><span class="p">,</span> <span class="s2">&quot;shoes&quot;</span><span class="p">,</span> <span class="s2">&quot;ear&quot;</span><span class="p">,</span> <span class="s2">&quot;busy&quot;</span><span class="p">,</span> 
+              <span class="s2">&quot;magnificent&quot;</span><span class="p">,</span> <span class="s2">&quot;brainy&quot;</span><span class="p">,</span> <span class="s2">&quot;healthy&quot;</span><span class="p">,</span> <span class="s2">&quot;narrow&quot;</span><span class="p">,</span> <span class="s2">&quot;join&quot;</span><span class="p">,</span> 
+              <span class="s2">&quot;decay&quot;</span><span class="p">,</span> <span class="s2">&quot;dashing&quot;</span><span class="p">,</span> <span class="s2">&quot;river&quot;</span><span class="p">,</span> <span class="s2">&quot;gather&quot;</span><span class="p">,</span> <span class="s2">&quot;stop&quot;</span><span class="p">,</span> <span class="s2">&quot;satisfying&quot;</span><span class="p">,</span> 
+              <span class="s2">&quot;holistic&quot;</span><span class="p">,</span> <span class="s2">&quot;reply&quot;</span><span class="p">,</span> <span class="s2">&quot;steady&quot;</span><span class="p">,</span> <span class="s2">&quot;event&quot;</span><span class="p">,</span> <span class="s2">&quot;house&quot;</span><span class="p">,</span> <span class="s2">&quot;amused&quot;</span><span class="p">,</span> 
+              <span class="s2">&quot;soak&quot;</span><span class="p">,</span> <span class="s2">&quot;increase&quot;</span><span class="p">]</span>
+
+<span class="n">vowels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;e&quot;</span><span class="p">,</span><span class="s2">&quot;i&quot;</span><span class="p">,</span><span class="s2">&quot;o&quot;</span><span class="p">,</span><span class="s2">&quot;u&quot;</span><span class="p">,</span><span class="s2">&quot;y&quot;</span><span class="p">]</span>
+
+<span class="n">output</span><span class="o">=</span><span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">random_words</span><span class="p">:</span>
+    <span class="n">count</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">vowels</span><span class="p">:</span>
+            <span class="n">count</span><span class="o">=</span><span class="n">count</span><span class="o">+</span><span class="mi">1</span>
+    <span class="k">if</span> <span class="n">count</span><span class="o">&gt;=</span><span class="mi">3</span><span class="p">:</span>
+        <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">word</span><span class="p">,</span><span class="n">count</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li><span style="color: gray;">Write pseudocode to summarize the code above.</span></li>
+<li><span style="color: gray;">Write pseudocode to check an arbitrary list of numbers, `my_numbers`, to find all even numbers and convert them to odd numbers by adding one.  Put the resulting numbers into a new list `my_numbers2`.  (Recall `for` loops ,`if` conditions, and the modulo function `%` from Python 1.)</span></li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="Exercises_Solutions.html#pseudocode" target="_blank">Solutions</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Comments">Comments<a class="anchor-link" href="#Comments">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Example:</span>
+
+<span class="c1">#1. Get or define the list my_numbers</span>
+<span class="n">my_numbers</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+
+<span class="c1">#2. Create an empty list for the new all-odd numbers, called my_numbers2.</span>
+
+<span class="c1">#3. Use a loop to iterate through the list of numbers</span>
+
+    <span class="c1">#3a. For a given number check to see if it is even.</span>
+    
+    <span class="c1">#3b. If the number is even, add 1.</span>
+    
+    <span class="c1">#3c. Append the resulting number to the my_numbers2 list.</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li><span style="color: gray;">Use your own pseudocode or the example above as an outline to fill in with Python code.  Test your code with the `my_numbers` object defined above.</span></li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="Exercises_Solutions.html#comments" target="_blank">Solutions</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="User-defined-Functions">User-defined Functions<a class="anchor-link" href="#User-defined-Functions">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li><p><span style="color: gray;">Define a function, `median` to find the median of a list.  The median is the middle number of an odd-numbered list or the average of the middle two numbers in an even numbered list.  (Hint: Use `sorted(<your_list>)` to create a list sorted from low to high values.</span></p>
+</li>
+<li><p><span style="color: gray;">Test your function with the lists below:</span></p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">))</span>
+
+<span class="c1">#Normally Distributed Data:</span>
+<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="k">import</span> <span class="n">normal</span>
+<span class="n">data2</span> <span class="o">=</span> <span class="n">normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">scale</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span> <span class="c1">#scale=2 defines the standard deviation as 2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="Exercises_Solutions.html#user_defined_functions" target="_blank">Solutions</a></p>
 
 </div>
 </div>
