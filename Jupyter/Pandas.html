@@ -14846,6 +14846,55 @@ Name: Region, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Indexing-and-Assignment">Indexing and Assignment<a class="anchor-link" href="#Indexing-and-Assignment">&#182;</a></h3><p>When we want to assign a value into a cell or region of our DataFrame, it's best practice to use the <code>.loc</code> or <code>.iloc</code> attributes to select a region of our dataset.  This ensures that when changes are made, they will flow back into the original DataFrame and not into a copy.  This is a particularly common problem when using multiple indices stacked on top of each other.  Unfortunately this problem is inherently unpredictable in Pandas, and can best be avoided by using the <code>.loc</code> and <code>.iloc</code> attributes.</p>
+<p>Read more <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#why-does-assignment-fail-when-using-chained-indexing">here</a>.</p>
+<p>Try running the commented out code <code>ex["County"][0] = "New County"</code> below, after creating <code>ex</code>.  Both may work, but the commented version will throw a <code>SettingwithCopyWarning</code> warning and may sometimes fail.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ex</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1">#Do this:</span>
+<span class="n">ex</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;County&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;New County&quot;</span>
+
+<span class="c1">#NOT this:</span>
+<span class="c1">#ex[&quot;County&quot;][0] = &quot;New County&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;County&quot;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>New County
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>&nbsp;</p>
 <h3 id="Filtering">Filtering<a class="anchor-link" href="#Filtering">&#182;</a></h3>
 </div>
@@ -15177,6 +15226,27 @@ Name: Region, dtype: int64</pre>
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="SettingwithCopyWarning-and-filtered-data"><code>SettingwithCopyWarning</code> and filtered data<a class="anchor-link" href="#SettingwithCopyWarning-and-filtered-data">&#182;</a></h4><p>When we use the notation above to filter a DataFrame we may run into a <code>SettingwithCopyWarning</code> warning later on in our code if we save this object and then modify it later on.  That's because this notation creates a reference back to the original dataframe, <strong>not</strong> a copy of the original dataframe, unless we explicitly use the <strong><code>.copy()</code></strong> method.  If you want to use subset later on, you should create it as follows:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">RI_subset</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;State&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;RI&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -15800,7 +15870,7 @@ Name: Health care costs, dtype: float64</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="output_52_1.png"
+<img src="output_56_1.png"
 >
 </div>
 
@@ -15859,7 +15929,7 @@ Name: Health care costs, dtype: float64</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="output_54_1.png"
+<img src="output_58_1.png"
 >
 </div>
 
@@ -15930,7 +16000,7 @@ The iterable function was deprecated in Matplotlib 3.1 and will be removed in 3.
 
 
 <div class="output_png output_subarea ">
-<img src="output_56_1.png"
+<img src="output_60_1.png"
 >
 </div>
 
