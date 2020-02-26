@@ -13229,6 +13229,15 @@ div#notebook {
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Parallel-Processing-with-joblib">Parallel Processing with joblib<a class="anchor-link" href="#Parallel-Processing-with-joblib">&#182;</a></h2><p>As you move into more complicated processes in Python (or applying code to a wide variety of objects or files), processing time can become a major factor.  Fortunately, most modern laptops have multiple processor cores that can do separate things at the same time.  Python only uses <strong>one core</strong> by default.  If you have a set of loops that don't depend on each other (e.g. processing lots of files one after another), you could split up your many loop iterations between processors to greatly increase speed.</p>
+<p>The <a href="https://joblib.readthedocs.io/en/latest/"><code>joblib</code> package</a> provides a straightforward way to split loops up between your computers cores for faster performance on complicated code.  Note that parallelization may not benefit you much or may even hurt you for very quick jobs because setting up and consolidating information from separate cores creates overhead costs.</p>
+
+</div>
+</div>
+</div>
     </div>
   </div>
 </body>
