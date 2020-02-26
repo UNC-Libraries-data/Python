@@ -13017,6 +13017,45 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
+<style type="text/css">
+    
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+
+    </style>
 
 
 <style type="text/css">
@@ -13124,78 +13163,98 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>What are the 5 states with the highest average adult smoking rates? Show the states and their smoking rates.<ul>
+<p>1. What are the 5 states with the highest average adult smoking rates? Show the states and their smoking rates.</p>
+<ul>
 <li>You'll need to use the <code>.groupby()</code> and <code>.mean()</code> functions to reorganize your data to feature state-level statistics.</li>
 <li>The <code>.sort_values()</code> function can be used to sort your dataframe by column values like "Adult smoking". Becaue <code>sort_values()</code> scrambles the existing indices, you'll need to reset the indices of your dataframe using <code>.reset_index()</code> so that you can easily index your sorted rows later.</li>
 <li>Once your new smoking dataframe has been sorted and reset, you can index the top 5 rows  to find the top 5 smoking states. (Hint: use <code>.loc</code> to index specific areas of your dataframe)</li>
 </ul>
-</li>
-</ol>
-<ol>
-<li><p>Food Environment Index (FEI) measures access to food and food insecurity (0 is bad, 10 is good). According to <a href="https://www.countyhealthrankings.org/explore-health-rankings/measures-data-sources/county-health-rankings-model/health-factors/health-behaviors/diet-exercise/food-environment-index">countyhealthrankings.org</a>, "In 2019, the average FEI value for counties was 7.5 and most counties fell between about 6.9 and 8.2." (Caveat: our data is from 2014-2015)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>2. Food Environment Index (FEI) measures access to food and food insecurity (0 is bad, 10 is good). According to <a href="https://www.countyhealthrankings.org/explore-health-rankings/measures-data-sources/county-health-rankings-model/health-factors/health-behaviors/diet-exercise/food-environment-index">countyhealthrankings.org</a>, "In 2019, the average FEI value for counties was 7.5 and most counties fell between about 6.9 and 8.2." (Caveat: our data is from 2014-2015)</p>
 <ul>
 <li>Can you find all the counties with FEI values of 9 or higher? How many are there? (Hint: Use indexing and conditionals to select only the rows you need. You can use <code>.shape</code> to see how many rows you have left.)</li>
 <li>What are the 5 most represented states in this group of counties and how many counties from these 5 states are included in your new dataframe? (hint: use the <code>.value_counts()</code> function to output a ranked list of all the unique values in the column with the number of times each appears in your dataframe. In other words, this function will give you a list of the states in your new dataframe along with the number of times they appear.)
-<pre><code>#example:
-df['Column Name'].value_counts()</code></pre>
+<pre><code>  #example:
+  df['Column Name'].value_counts()</code></pre>
 </li>
 </ul>
-</li>
-<li><p>In many counties one can find more primary care physicians than dentists. However, in a few counties there are more than 5 times (!) as many dentists as there are primary care physicians.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>3. In many counties one can find more primary care physicians than dentists. However, in a few counties there are more than 5 times (!) as many dentists as there are primary care physicians.</p>
 <ul>
 <li><p>Which counties are these? (hint: Using conditionals, create a new dataframe <code>dfDent</code> with only these counties. Use <code>.loc</code> to show the relevant information - you'll need "County", "State", "Dentists", "Primary care physicians", and "2011 population estimate" for this exercise.)</p>
 <ul>
 <li><p>Note: It is important to use the <code>.copy()</code> method when creating new dataframes instead of using slices of existing dataframes. This will prevent certain assignment errors when you begin working with your new dataframe.</p>
 
-<pre><code># Example using .copy()
-dfNew = df['Column1'].copy()
+<pre><code>  # Example using .copy()
+  dfNew = df['Column1'].copy()
 
-#example using slices
-dfNew = df['Column1']</code></pre>
+  #example using slices
+  dfNew = df['Column1']</code></pre>
 </li>
 </ul>
 </li>
 <li>Which of these counties has the most dentists? (hint: use <code>.sort_values</code> on your new dataframe, <code>dfDent</code>)</li>
 <li>Which of these has the most dentists per capita? (hint: You can use <code>.loc</code> to add columns (and rows) to your dataframe. You can set the column based on values in other columns using simple operators. After adding a new column, you can sort using the <code>sort_values()</code> method.
-<pre><code># Example syntax: adding a column
-df.loc[:, "Column3"] = df[Column1]*df[Column2]
-#This adds a new column, "Column3," with values equal to the products of the values for Column1 and Column2 in each row.</code></pre>
+<pre><code>  # Example syntax: adding a column
+  df.loc[:, "Column3"] = df[Column1]*df[Column2]
+  #This adds a new column, "Column3," with values equal to the products of the values for Column1 and Column2 in each row.</code></pre>
 </li>
 </ul>
-</li>
-<li><p>Create a dataframe (again, use <code>.copy()</code>) that only includes counties in the state of North Carolina. (Hint: use the Rhode Island example from "Indexing" section to select the values for a single state)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>4. Create a dataframe (again, use <code>.copy()</code>) that only includes counties in the state of North Carolina. (Hint: use the Rhode Island example from "Indexing" section to select the values for a single state)</p>
 <ul>
 <li>Sort your new dataframe by "Adult obesity." Use <code>.loc</code> to display the County name, "State," "Adult obesity," and "Physical inactivity" for each county. Do you notice any patterns? How do "Pysical inactivity" values change as "Adult obesity" values go up or down?
-<pre><code>#sorting example:
-df.sortvalues(by="Column1", ascending=False)
-#the 'by' parameters tells the function which column to sort by, while the 'ascending' parameter lets the computer know to sort high-low or low-high</code></pre>
+<pre><code>  #sorting example:
+  df.sortvalues(by="Column1", ascending=False)
+  #the 'by' parameters tells the function which column to sort by, while the 'ascending' parameter lets the computer know to sort high-low or low-high</code></pre>
 </li>
 <li>Use <code>matplotlib</code> to visualize this relationship. Does your plot look the way you expected it to?
-<pre><code>#syntax example:
-plt.scatter(x=df["Coumn1"], y=df["Column2"])
-plt.xlabel("Column1")
-plt.ylabel("Column2")</code></pre>
+<pre><code>  #syntax example:
+  plt.scatter(x=df["Coumn1"], y=df["Column2"])
+  plt.xlabel("Column1")
+  plt.ylabel("Column2")</code></pre>
 </li>
 </ul>
-</li>
-<li><p>The "Some college" column denotes the percantage of the population that have taken any number of college classes.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>5. The "Some college" column denotes the percantage of the population that have taken any number of college classes.</p>
 <ul>
 <li>What is the "Some college" value for Orange County, North Carolina in 2015? (Hint: You can filter your dataframe using multiple columns using the <code>.isin()</code> function. To do so, declare a list for each column(s) you want to filter by. Populate that list with the values you wish to retain. You can then use one or multiple .<code>isin()</code> statements when indexing your data frame to filter based on column values. Note, all of the years in our sheet follow this format: "1/1/2015" or "1/1/2014.")
-<pre><code>#example syntax:
-Letters = ["X, Y, Z"]
-Numbers = ["1, 2, 3"]
-df[df.Column1.isin(Letters) &amp; df.Column2.isin(Numbers)]
-#this will return a dataframe with rows that have values for Column 1 and Column 2 that were in your Letters and Numbers lists, respectively</code></pre>
+<pre><code>  #example syntax:
+  Letters = ["X, Y, Z"]
+  Numbers = ["1, 2, 3"]
+  df[df.Column1.isin(Letters) &amp; df.Column2.isin(Numbers)]
+  #this will return a dataframe with rows that have values for Column 1 and Column 2 that were in your Letters and Numbers lists, respectively</code></pre>
 </li>
 <li>How does it compare to the "Some college" value for Orange County, California?</li>
 <li>How do the values for these two counties compare to the national average "Some college" value?
-<pre><code>#Hint: Use the .mean() function. Syntax:
-df["Column1"].mean()</code></pre>
+<pre><code>  #Hint: Use the .mean() function. Syntax:
+  df["Column1"].mean()</code></pre>
 </li>
 </ul>
-</li>
-</ol>
 
 </div>
 </div>
