@@ -10,6 +10,8 @@ Join us this semester!  **Registration is required for each workshop**.  Follow 
 * [Python Open Lab 4](https://calendar.lib.unc.edu/event/6111479?hs=a)
 * [Python Open Lab 5](https://calendar.lib.unc.edu/event/6111486?hs=a)
 
+## [Feedback Survey](https://unc.libsurveys.com/davishubfeedback)
+
 ## [Setup](Setup.html)
 
 Installing the Anaconda Distribution.
@@ -50,3 +52,4 @@ The `pandas` package provides a wide array of tools for working with tabular dat
 ## [Other Packages](Jupyter/Other-Packages.html)
 
 A quick survey of other Python packages for webscraping, APIs, mathematical and statistical functionality, text analysis, and more.
+
