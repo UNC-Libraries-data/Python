@@ -1,22 +1,20 @@
-# Python Open Labs
-*University Libraries at the University of North Carolina at Chapel Hill*
-
-Python Open Labs are open to anyone!
-Join us this semester!  **Registration is required for each workshop**.  Follow the links below to register:
-
-* [Python Open Lab 1](https://calendar.lib.unc.edu/event/6111326?hs=a)
-* [Python Open Lab 2](https://calendar.lib.unc.edu/event/6111469?hs=a)
-* [Python Open Lab 3](https://calendar.lib.unc.edu/event/6111475?hs=a)
-* [Python Open Lab 4](https://calendar.lib.unc.edu/event/6111479?hs=a)
-* [Python Open Lab 5](https://calendar.lib.unc.edu/event/6111486?hs=a)
-
-## [Feedback Survey](https://unc.libsurveys.com/davishubfeedback)
+# Python Crash Courses
+*University Libraries at the University of North Carolina at Chapel Hill*  
+*UNC Research Computing*
 
 ## [Setup](Setup.html)
 
 Installing the Anaconda Distribution.
 
+If you run into problems during installation, stop by one of our drop-in installation help sessions:  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Thursday, September 24, 2020, 11am-12pm](https://zoom.us/j/95225315369?from=msft) : Meeting ID: 952 2531 5369  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Monday, September 28, 2020, 11am-12pm](https://zoom.us/j/98323597820?from=msft) : Meeting ID: 983 2359 7820
+
+View our [introductory orientation to Python and Spyder (YouTube)](https://www.youtube.com/watch?v=mKjLHg85BJo) **before Week 1**.
+
+<!---
 ## [Introduction](Intro/Introduction.html)
+
 Fundamental Python syntax, using the Spyder IDE (Integrated Development Environment). 
 * [Alternative (without Table of Contents)](Intro/Introduction-nocontents.html)
 
@@ -32,6 +30,7 @@ Including:
 
 **[Exercises](Intro/Exercises.html)**<br/>
 **[Solutions](Intro/Exercises_Solutions.html)**
+
 
 ## [Files and Packages](Files_Packages/Files_Packages.html)
 
@@ -53,3 +52,4 @@ The `pandas` package provides a wide array of tools for working with tabular dat
 
 A quick survey of other Python packages for webscraping, APIs, mathematical and statistical functionality, text analysis, and more.
 
+-->
