@@ -13079,79 +13079,116 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <center> <h1>Setup</h1> </center><h3 id="Why-not-work-with-an-existing-installation?">Why not work with an existing installation?<a class="anchor-link" href="#Why-not-work-with-an-existing-installation?">&#182;</a></h3><p>If you use macOS or Linux, then you most likely already have Python on your computer!  Python does not come with Windows, but it may be on your machine as part of other software (e.g. ArcGIS Desktop).</p>
 <p>However, unless you've worked with Python already, your pre-existing installation may only include the bare minimum and may be an out of date version.  Therefore, we recommend installing a distribution, with Python and many useful add-ons already setup, for all operating systems.</p>
-<h2 id="Anaconda-distribution">Anaconda distribution<a class="anchor-link" href="#Anaconda-distribution">&#182;</a></h2><p>Anaconda packages the current version of Python 2 or 3 with over 150 packages included in the installation and supports hundreds of others.  This includes many of the most heavily used packages supporting data transformation and analysis, and software to manage and add new packages, create virtual environments, and more.</p>
-<p><a href="https://docs.anaconda.com/anaconda/packages/pkg-docs">Read more here</a></p>
-<p><a href="https://www.anaconda.com/download/">Download Anaconda Python 3.7, 64-bit</a></p>
+<h2 id="Anaconda-or-Miniconda">Anaconda or Miniconda<a class="anchor-link" href="#Anaconda-or-Miniconda">&#182;</a></h2><p>We'll install Anaconda <strong>or</strong> Miniconda depending on the space available on your computer.</p>
+<h3 id="Anaconda">Anaconda<a class="anchor-link" href="#Anaconda">&#182;</a></h3><p>Anaconda packages the current version of Python 2 or 3 with over 150 packages included in the installation and supports hundreds of others.  This includes many of the most heavily used packages supporting data transformation and analysis, and software to manage and add new packages, create virtual environments, and more. <a href="https://docs.anaconda.com/anaconda/packages/pkg-docs">Read more here</a>.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>The full Anaconda download needs approximately 3GB of space on your computer.</strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>See <a href="#Anaconda-Installation">Anaconda installation below</a>.</strong></p>
+<h3 id="Miniconda">Miniconda<a class="anchor-link" href="#Miniconda">&#182;</a></h3><p>If you don't have enough space for Anaconda, you can download <a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a>, which is less than <strong>100 MB</strong>.  Miniconda includes Python and the same package manager systems as Anaconda, but <em>does not come packaged with any additional packages</em>.  You'll need to install them one by one as needed.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>See <a href="#Miniconda-Installation">Miniconda installation below</a>.</strong></p>
+<h3 id="Alternative:-repl.it">Alternative: repl.it<a class="anchor-link" href="#Alternative:-repl.it">&#182;</a></h3><blockquote><p><strong><font color=red>Note:</font></strong> If you would like to use Python for the duration of this workshop without downloading anything (or have problems downloading Anaconda), we recommend using <a href="https://repl.it/">repl.it</a>. <br>If you would like to save your work and continue to use Python on your computer, we recommend downloading Anaconda.</p>
+</blockquote>
+<h2 id="Anaconda-Installation">Anaconda Installation<a class="anchor-link" href="#Anaconda-Installation">&#182;</a></h2><p><a href="https://www.anaconda.com/download/">Download Anaconda Python 3.7, 64-bit</a></p>
+<p><strong>Select your own operating system</strong> (it should be auto-detected by the Anaconda website - as shown below for a PC user).</p>
 <p><img src="https://github.com/UNC-Libraries-data/Python/raw/master/Intro/images/Conda_dl.png" alt="Download"></p>
-<h3 id="Miniconda">Miniconda<a class="anchor-link" href="#Miniconda">&#182;</a></h3><p>The full Anaconda download needs approximately 3GB of space on your computer.  If you don't have sufficient space, you can download <a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a>, which is less than 100 MB.  Miniconda includes Python and the same package manager systems as Anaconda, but does not come packaged with <em>any</em> additional packages.  You'll need to install them one by one as needed.  See <a href="#Miniconda-Package-Installation">Miniconda installation below</a>.</p>
-<h2 id="Installation">Installation<a class="anchor-link" href="#Installation">&#182;</a></h2><p>In most cases, it is best to leave the default settings for installation.</p>
-<h3 id="Mac">Mac<a class="anchor-link" href="#Mac">&#182;</a></h3><p>Leave the default settings and click through to install.  You do not need to install PyCharm IDE.</p>
-<h3 id="PC">PC<a class="anchor-link" href="#PC">&#182;</a></h3><p>Follow the steps below for PC users.</p>
-<p><img src="https://github.com/UNC-Libraries-data/Python/raw/master/Intro/images/Anaconda_install_settings.png" alt="Anaconda_install_settings.png"></p>
-<p>1. <strong>PATH</strong></p>
-<ul>
-<li>Do not add Anaconda to your PATH variable. This may interfere with any existing Python-dependent software on your computer.</li>
-</ul>
-<p>2. <strong>Registering Python</strong></p>
-<ul>
-<li><p>If you are installing Python for the first time, select "Register Anaconda as the system Python"</p>
-</li>
-<li><p>If you have Python-dependent software (e.g. ArcGIS, CAD software, etc), do not check "Register Anaconda as the system Python" or it may cause issues with your other programs.</p>
-<ul>
-<li>If you're unsure, open your PC's Command Line (Start&gt;Windows System&gt;Command Prompt) or Mac's Terminal (Applications&gt;Utilities&gt;Terminal) and type <code>python</code> and press Enter.  If you already have Python you should see something like the image below - do not check Register Anaconda as the system Python.</li>
-</ul>
-<p><img src="https://github.com/UNC-Libraries-data/Python/raw/master/Intro/images/Test_CMD.png" alt="Command Prompt Python"></p>
-</li>
-</ul>
-<p>3. <strong>PyCharm IDE</strong></p>
-<ul>
-<li>You do not need to install the PyCharm IDE.</li>
-</ul>
-<p><strong><font color=red>Note:</font></strong> If you would like to use Python for the duration of this workshop without downloading anything (or have problems downloading Anaconda), we recommend using <a href="https://repl.it/">repl.it</a>.</p>
-<p>If you would like to save your work and continue to use Python on your computer, we recommend downloading Anaconda.</p>
-<h3 id="Miniconda-Package-Installation">Miniconda Package Installation<a class="anchor-link" href="#Miniconda-Package-Installation">&#182;</a></h3><p>1. <a href="https://docs.conda.io/en/latest/miniconda.html">Download and install miniconda</a> (Choose the Python 3.x version in 64-bit for your operating system).</p>
-<h4 id="Mac">Mac<a class="anchor-link" href="#Mac">&#182;</a></h4><p>2. Open Finder &gt; Applications &gt; Utilities &gt; Terminal. Run the following:</p>
+<table>
+<tr>
+<th> <h3>Mac Installation</h3> </th>
+<th> <h3>PC Installation</h3> </th>
+</tr>
+<tr><td>
 
-<pre><code>conda install spyder</code></pre>
-<ul>
-<li>When prompted, type <code>y</code> to Proceed.  This will install the Spyder IDE and all of its dependencies.</li>
-</ul>
-<p>3. In the same window, run the following to install conda's graphical interface, Anaconda Navigator.</p>
+Leave the default settings and click through to install. You do not need to install PyCharm IDE.
 
-<pre><code>conda install -c anaconda anaconda-navigator
-`</code></pre>
-<ul>
-<li>When prompted type <code>y</code> to Proceed.  You can open the Anaconda Navigator from Finder (Mac) or the Start Menu (PC).</li>
-</ul>
-<h4 id="PC">PC<a class="anchor-link" href="#PC">&#182;</a></h4><ul>
-<li>Follow the steps for full Anaconda installation <a href="#PATH-Variables-and-Default-Installation">above</a> as appropriate.</li>
-</ul>
-<p>2. Open Start Menu &gt; Anaconda3 &gt; Anaconda Prompt. Run the following:</p>
+</td>
+<td>
+<strong>1. PATH</strong><br>
 
-<pre><code>conda install spyder</code></pre>
-<ul>
-<li>When prompted, type <code>y</code> to Proceed.  This will install the Spyder IDE and all of its dependencies.</li>
-</ul>
-<p>3. In the same window, run the following to install conda's graphical interface, Anaconda Navigator.</p>
+&nbsp;&nbsp;&nbsp;Do not add Anaconda to your PATH variable. This may interfere with any existing Python-dependent software on your computer.<br>
 
-<pre><code>conda install -c anaconda anaconda-navigator
-`</code></pre>
-<ul>
-<li>When prompted type <code>y</code> to Proceed.  You can open the Anaconda Navigator from Finder (Mac) or the Start Menu (PC).</li>
-</ul>
+&nbsp;&nbsp;&nbsp;<img src = "https://github.com/UNC-Libraries-data/Python/raw/master/Intro/images/Anaconda_install_settings.png" alt="Anaconda_install_settings" height = 388, width = 499/><br> 
 
+<strong>2. Registering Python</strong><br>
+
+&nbsp;&nbsp;&nbsp;If you are installing Python for the first time, select "Register Anaconda as the system Python"<br>
+
+&nbsp;&nbsp;&nbsp;If you have Python-dependent software (e.g. ArcGIS, CAD software, etc), do not check "Register Anaconda as the system Python" or it may cause issues.<br>
+
+<blockquote>If you're unsure, open your PC's Command Line (Start>Windows System>Command Prompt) or Mac's Terminal (Applications>Utilities>Terminal) and type `python` and press Enter.  If you already have Python you should see something like the image below - do not check Register Anaconda as the system Python.</blockquote>
+
+&nbsp;&nbsp;&nbsp;<img src = "https://github.com/UNC-Libraries-data/Python/raw/master/Intro/images/Test_CMD.png" alt="Command Prompt Python" height = 87, width = 781/><br>  
+
+<strong>3. PyCharm IDE</strong><br>
+
+&nbsp;&nbsp;&nbsp;You do not need to install the PyCharm IDE.<br>   
+
+
+</td>
+</tr>
+</table><h2 id="Miniconda-Installation">Miniconda Installation<a class="anchor-link" href="#Miniconda-Installation">&#182;</a></h2><p><a href="https://docs.conda.io/en/latest/miniconda.html">Download and install miniconda</a></p>
+<ul>
+<li>Leave the default settings and click through to install, <em>regardless of your operating system</em>.</li>
+<li>(Choose the Python 3.x version in 64-bit for your operating system).</li>
+</ul>
+<p>We need a couple of packages on top of Miniconda:</p>
+<table>
+<tr>
+<th> <h3>Mac Package Installation</h3> </th>
+<th> <h3>PC Package Installation</h3> </th>
+</tr>
+<tr><td>
+
+<strong>1. Open Finder > Applications > Utilities > Terminal. Run the following:</strong><br>
+<center><code>conda install spyder</code></center><br>
+&nbsp;&nbsp;&nbsp;When prompted, type `y` to Proceed.  This will install the Spyder IDE and all of its dependencies.<br>
+&nbsp;<br>
+
+<strong>2. In the same window, run the following to install conda's graphical interface, Anaconda Navigator.</strong><br>
+<center><code>conda install -c anaconda anaconda-navigator</code></center><br>
+&nbsp;&nbsp;&nbsp;When prompted type `y` to Proceed.  You can open the Anaconda Navigator from Finder (Mac) or the Start Menu (PC).
+
+</td>
+<td>
+
+Follow the steps for full Anaconda installation <a href="#PC-Installation">above</a> as appropriate.<br>
+
+<strong>1. Open Start Menu > Anaconda3 > Anaconda Prompt. Run the following:</strong><br>
+<center><code>conda install spyder</code></center><br>
+&nbsp;&nbsp;&nbsp;When prompted, type `y` to Proceed.  This will install the Spyder IDE and all of its dependencies.<br>
+&nbsp;<br>
+
+<strong>2. In the same window, run the following to install conda's graphical interface, Anaconda Navigator.</strong><br>
+<center><code>conda install -c anaconda anaconda-navigator</code></center><br>
+&nbsp;&nbsp;&nbsp;When prompted type `y` to Proceed.  You can open the Anaconda Navigator from Finder (Mac) or the Start Menu (PC).
+
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
 
-    </div>
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<style type="text/css"> 
+table td, table th, table tr { border: 1px black solid !important; color: black !important; } 
+table td, table tr {text-align:left !important;}
+table th {text-align:center !important; font-size:15px}
+</style> 
+
+</div>
+
+</div>
+
 </div>
 </div>
 
