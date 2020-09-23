@@ -12,6 +12,8 @@ If you run into problems during installation, stop by one of our drop-in install
 
 View our [introductory orientation to Python and Spyder (YouTube)](https://www.youtube.com/watch?v=mKjLHg85BJo) **before Week 1**.
 
+Watch this page for more updates!
+
 <!---
 ## [Introduction](Intro/Introduction.html)
 
