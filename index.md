@@ -12,6 +12,16 @@ If you run into problems during installation, stop by one of our drop-in install
 
 View our [introductory orientation to Python and Spyder (YouTube)](https://www.youtube.com/watch?v=mKjLHg85BJo) **before Week 1**.
 
+## Week 1
+
+We'll be quickly introducing fundamental Python concepts like variables, object types, and indexing, alongside a simple dataset example.
+
+The concepts are covered in more depth in our full-length [Introductory Materials](Intro/Introduction.html), if you'd like to review beforehand.
+
+## Practice Exercises (Introduction)
+**[Exercises](Intro/Exercises.html)**<br/>
+**[Solutions](Intro/Exercises_Solutions.html)**
+
 Watch this page for more updates!
 
 <!---
