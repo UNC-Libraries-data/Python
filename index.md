@@ -1,6 +1,6 @@
 # Python Crash Courses
-*University Libraries at the University of North Carolina at Chapel Hill*  
-*UNC Research Computing*
+*[University Libraries at the University of North Carolina at Chapel Hill](https://library.unc.edu/data/)*  
+*[UNC Research Computing](https://its.unc.edu/research-computing/)*
 
 ## [Setup](Setup.html)
 
