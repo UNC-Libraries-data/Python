@@ -12,7 +12,7 @@ If you run into problems during installation, stop by one of our drop-in install
 
 View our [introductory orientation to Python and Spyder (YouTube)](https://www.youtube.com/watch?v=mKjLHg85BJo) **before Week 1**.
 
-## Week 1
+## [Week 1](Intro/Introduction.fall2020.html)
 
 We'll be:
 * quickly introducing fundamental Python concepts like variables, object types, and indexing
@@ -23,6 +23,23 @@ The concepts are covered in more depth in our full-length [Introductory Material
 ## Practice Exercises (Introduction)
 **[Exercises](Intro/Exercises.html)**<br/>
 **[Solutions](Intro/Exercises_Solutions.html)**
+
+## Getting Help!
+
+* [Davis Library Research Hub](https://library.unc.edu/data/connect-with-us/)
+* [Odum Statistical Walk-in Help](https://odum.unc.edu/statistics-help-desk/)
+* [Research Computing (and UNC's clusters)](https://its.unc.edu/research-computing/)
+
+
+## References and Resources
+
+* [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
+* [Python Cheatsheets](https://ehmatthes.github.io/pcc/cheatsheets/README.html)
+* [Python Programming for the Humanities](http://www.karsdorp.io/python-course/)
+* [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)  This free ebook emphasizes Numpy, Scipy, Matplotlib, Pandas and other data analysis packages in Python, assuming some familiarity with the basic principles of the language.
+    + [Whirlwind Tour of Python](https://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/Index.ipynb)
+* [Stack Overflow](https://stackoverflow.com/questions/tagged/python-3.x?sort=frequent&pageSize=15)
+* [Google!](https://www.google.com/)
 
 Watch this page for more updates!
 
