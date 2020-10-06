@@ -20,6 +20,10 @@ We'll be:
 
 The concepts are covered in more depth in our full-length [Introductory Materials](Intro/Introduction.html), if you'd like to review beforehand.
 
+## [Week 2]
+
+We'll introduce [Jupyter Notebooks and literate programming](Jupyter/Jupyter-Notebooks.html).  Then we'll return to the [Introductory Materials](Intro/Introduction.fall2020.html#Pseudocode-and-Comments) to review fundamental concepts, packages, file paths, and a few important extensions.
+
 ## Practice Exercises (Introduction)
 **[Exercises](Intro/Exercises.html)**<br/>
 **[Solutions](Intro/Exercises_Solutions.html)**
