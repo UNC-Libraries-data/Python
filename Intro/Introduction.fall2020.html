@@ -15391,7 +15391,7 @@ Total Male Deaths:  92121
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x205e68e6fd0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x27db6777630&gt;</pre>
 </div>
 
 </div>
@@ -15503,7 +15503,13 @@ Total Male Deaths:  92121
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Try-/-Except---Robustness">Try / Except - Robustness<a class="anchor-link" href="#Try-/-Except---Robustness">&#182;</a></h2><p>Errors and warnings are very common while developing code, and an important part of the learning process.  In some cases, they can also be useful in designing an algorithm.  For example, suppose we have a stream of user entered data that is supposed to contain the user's age in years.  You might expect to get a few errors or nonsense entries.</p>
+<h2 id="Packages">Packages<a class="anchor-link" href="#Packages">&#182;</a></h2><h3 id="Installation">Installation<a class="anchor-link" href="#Installation">&#182;</a></h3><p>Packages provide additional tools and functions not present in base Python. Python includes a number of packages to start with, and others can be installed using <code>pip install &lt;package name&gt;</code> and/or <code>conda install &lt;package name&gt;</code> commands in your terminal.</p>
+<p>Open your terminal by:</p>
+<ul>
+<li>(PC) Start &gt; Anaconda3(64-bit) &gt; Anaconda Prompt</li>
+<li>(Mac) Finder &gt; Applications &gt; Anaconda Navigator &gt; Environments Tab &gt; (play button listed next to "root") &gt; Open Terminal</li>
+</ul>
+<h3 id="Loading">Loading<a class="anchor-link" href="#Loading">&#182;</a></h3><p>Once you've installed a package, you can load it into your current Python session with the import function. Otherwise these functions will not be available.</p>
 
 </div>
 </div>
@@ -15511,6 +15517,315 @@ Total Male Deaths:  92121
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span> <span class="c1">#functions for working with your operating system</span>
+<span class="kn">import</span> <span class="nn">shutil</span> <span class="c1">#extra functions for working with files</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Basic-File-Paths">Basic File Paths<a class="anchor-link" href="#Basic-File-Paths">&#182;</a></h2><p>To learn more about File Paths (including an exercise using loops and conditionals), check out the <a href="https://unc-libraries-data.github.io/Python/Files_Packages/Files_Packages.html">extended version of this section</a>.</p>
+<h3 id="Working-Directories">Working Directories<a class="anchor-link" href="#Working-Directories">&#182;</a></h3><p>To open a file with Python, you'll need to tell your computer where it's located on your computer. You can specify the entire absolute filepath (starting with C:\ on PC or / on Mac), or you can set a working directory and work with relative file paths.</p>
+<p>You can determine where a file is located on your computer by:</p>
+<ul>
+<li>(PC) Navigate to your desired folder in Windows Explorer and click on it. Click in the address bar at the top of the window to copy the path.</li>
+<li>(Mac) Right-click a file in your desired directory &gt; Click Get Info &gt; Highlight and copy the path listed next to "Where:"</li>
+<li>(Alternate Mac) Right-click a file in your desired directory &gt; Hold down the Option key &gt; Click Copy "file_name" as Pathname. </li>
+</ul>
+<p>If a file is located in your working directory, its relative path is just the name of the file!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myfile</span><span class="o">=</span><span class="s2">&quot;/Users/mtjansen/Desktop/Python/Files_Packages/Recipes.zip&quot;</span> <span class="c1">#absolute path</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">myfile</span><span class="p">)</span> <span class="c1">#check if Python can find my file </span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[53]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Note: Paths in Jupyter</strong></p>
+<p>Jupyter Notebooks automatically set your working directory to the folder where the .ipynb is saved.  You'll have to save the document at least once to set your directory.</p>
+<p>For example, the csv (comma separated values) file "Provisional_COVID-19_Death_Counts_by_Sex<strong>Age</strong>and_Week.csv" is stored in the same folder as this notebook, so we can find it <em>without any directory information</em>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s2">&quot;Provisional_COVID-19_Death_Counts_by_Sex__Age__and_Week.csv&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[54]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Windows Paths</strong></p>
+<p>Windows filepaths use \, which Python interprets as escape characters. This can be fixed in several ways:</p>
+<ul>
+<li>Replace \ with /.</li>
+<li>Replace \ with \\.</li>
+<li><p>Preface your path with r:</p>
+
+<pre><code> r"C:\Users\mtjansen\Desktop"</code></pre>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;/Users/mtjansen/Desktop/Python/Files_Packages&quot;</span><span class="p">)</span> <span class="c1">#set working directory</span>
+<span class="n">myfile</span><span class="o">=</span><span class="s2">&quot;Recipes.zip&quot;</span> <span class="c1">#relative path</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">myfile</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[55]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can get a list of all files in the working directory with os.listdir(".").</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;/Users/mtjansen/Desktop/Python/Files_Packages&quot;</span><span class="p">))</span> <span class="c1">#alternatively we can specify a folder</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;.ipynb_checkpoints&#39;, &#39;Files_Packages.html&#39;, &#39;Files_Packages.ipynb&#39;, &#39;Recipes.zip&#39;, &#39;solution_files_packages.py&#39;]
+[&#39;.ipynb_checkpoints&#39;, &#39;Files_Packages.html&#39;, &#39;Files_Packages.ipynb&#39;, &#39;Recipes.zip&#39;, &#39;solution_files_packages.py&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Basic-Reading-and-Writing-from-Files:">Basic Reading and Writing from Files:<a class="anchor-link" href="#Basic-Reading-and-Writing-from-Files:">&#182;</a></h3><p>We'll cover reading data in more depth next week!</p>
+<p>Let's start by creating a text file.</p>
+<p>Python requires you both open and close files explicitly. If you forget to close a file, it can remain "in use", preventing you from opening it later.</p>
+<p>Best practices for reading and writing files use the <code>with</code> function to make sure files are automatically closed.  Once the indentation under <code>with</code> ends, Python will automatically close the connection to your file.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;/Users/mtjansen/Desktop/Python/Intro&quot;</span><span class="p">)</span>
+
+<span class="n">my_str</span> <span class="o">=</span> <span class="s2">&quot;The quick brown fox jumps over the lazy dog.&quot;</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;myfile.txt&quot;</span><span class="p">,</span><span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">txtfile</span><span class="p">:</span> <span class="c1">#&quot;w&quot; specifies that we&#39;re writing to the file</span>
+    <span class="n">txtfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">my_str</span><span class="p">)</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s2">&quot;myfile.txt&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[57]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now lets retrieve that sentence by reading the file.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;myfile.txt&quot;</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">txtfile</span><span class="p">:</span> <span class="c1">#&quot;w&quot; specifies that we&#39;re reading from the file</span>
+    <span class="n">new_text</span> <span class="o">=</span> <span class="n">txtfile</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">new_text</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The quick brown fox jumps over the lazy dog.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There are specialized tools for reading other file types into Python!  Next week we'll see some tools for reading tabular data with <code>pandas</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Try-/-Except---Robustness">Try / Except - Robustness<a class="anchor-link" href="#Try-/-Except---Robustness">&#182;</a></h2><p>Errors and warnings are very common while developing code, and an important part of the learning process.  In some cases, they can also be useful in designing an algorithm.  For example, suppose we have a stream of user entered data that is supposed to contain the user's age in years.  You might expect to get a few errors or nonsense entries.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_ages</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;34&quot;</span><span class="p">,</span> <span class="s2">&quot;27&quot;</span><span class="p">,</span> <span class="s2">&quot;54&quot;</span><span class="p">,</span> <span class="s2">&quot;19&quot;</span><span class="p">,</span> <span class="s2">&quot;giraffe&quot;</span><span class="p">,</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span> <span class="s2">&quot;83&quot;</span><span class="p">,</span> <span class="s2">&quot;61&quot;</span><span class="p">,</span> <span class="s2">&quot;43&quot;</span><span class="p">,</span> <span class="s2">&quot;91&quot;</span><span class="p">,</span> <span class="s2">&quot;sixteen&quot;</span><span class="p">]</span>
@@ -15531,7 +15846,7 @@ Total Male Deaths:  92121
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ages</span> <span class="o">=</span> <span class="p">[]</span>
@@ -15587,7 +15902,7 @@ Total Male Deaths:  92121
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="n">number_list</span><span class="p">):</span>
