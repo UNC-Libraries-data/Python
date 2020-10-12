@@ -13109,7 +13109,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -13144,7 +13144,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">shape</span>
@@ -13160,7 +13160,7 @@ $( document ).ready(function(){
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -14168,67 +14168,17 @@ Name: State, dtype: object</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0         Aleutians West Census Area
-1         Aleutians West Census Area
-2                  Anchorage Borough
-3                  Anchorage Borough
-4                 Bethel Census Area
-5                 Bethel Census Area
-6             Dillingham Census Area
-7             Dillingham Census Area
-8       Fairbanks North Star Borough
-9       Fairbanks North Star Borough
-10                    Haines Borough
-11                    Haines Borough
-12                    Juneau Borough
-13                    Juneau Borough
-14           Kenai Peninsula Borough
-15           Kenai Peninsula Borough
-16         Ketchikan Gateway Borough
-17         Ketchikan Gateway Borough
-18             Kodiak Island Borough
-19             Kodiak Island Borough
-20        Lake and Peninsula Borough
-21        Lake and Peninsula Borough
-22         Matanuska-Susitna Borough
-23         Matanuska-Susitna Borough
-24                  Nome Census Area
-25                  Nome Census Area
-26               North Slope Borough
-27               North Slope Borough
-28          Northwest Arctic Borough
-29          Northwest Arctic Borough
-                    ...             
-6079              Hot Springs County
-6080              Hot Springs County
-6081                  Johnson County
-6082                  Johnson County
-6083                  Laramie County
-6084                  Laramie County
-6085                  Lincoln County
-6086                  Lincoln County
-6087                  Natrona County
-6088                  Natrona County
-6089                 Niobrara County
-6090                 Niobrara County
-6091                     Park County
-6092                     Park County
-6093                   Platte County
-6094                   Platte County
-6095                 Sheridan County
-6096                 Sheridan County
-6097                 Sublette County
-6098                 Sublette County
-6099               Sweetwater County
-6100               Sweetwater County
-6101                    Teton County
-6102                    Teton County
-6103                    Uinta County
-6104                    Uinta County
-6105                 Washakie County
-6106                 Washakie County
-6107                   Weston County
-6108                   Weston County
+<pre>0       Aleutians West Census Area
+1       Aleutians West Census Area
+2                Anchorage Borough
+3                Anchorage Borough
+4               Bethel Census Area
+                   ...            
+6104                  Uinta County
+6105               Washakie County
+6106               Washakie County
+6107                 Weston County
+6108                 Weston County
 Name: County, Length: 6109, dtype: object</pre>
 </div>
 
@@ -14816,7 +14766,7 @@ Name: Region, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ex</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -14876,7 +14826,7 @@ Name: Region, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;State&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;RI&quot;</span><span class="p">]</span>
@@ -14892,7 +14842,7 @@ Name: Region, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[17]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -15201,7 +15151,7 @@ Name: Region, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">RI_subset</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;State&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;RI&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -15230,7 +15180,7 @@ Name: Region, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">avgStCosts</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;State&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()[</span><span class="s2">&quot;Health care costs&quot;</span><span class="p">]</span>
@@ -15247,7 +15197,7 @@ Name: Region, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[18]:</div>
+    <div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -15279,7 +15229,7 @@ Name: Health care costs, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">avgStCosts</span> <span class="o">=</span> <span class="n">avgStCosts</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -15296,7 +15246,7 @@ Name: Health care costs, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[19]:</div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -15328,7 +15278,7 @@ Name: Health care costs, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="s2">&quot;Poor or fair health&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -15344,7 +15294,7 @@ Name: Health care costs, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[20]:</div>
+    <div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -15534,7 +15484,7 @@ Name: Health care costs, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="s2">&quot;Poor or fair health&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -15550,7 +15500,7 @@ Name: Health care costs, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[21]:</div>
+    <div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -15760,7 +15710,7 @@ Name: Health care costs, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -15782,7 +15732,7 @@ Name: Health care costs, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -15812,7 +15762,7 @@ Name: Health care costs, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -15852,7 +15802,7 @@ Name: Health care costs, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
@@ -15877,13 +15827,13 @@ Name: Health care costs, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[26]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;seaborn.axisgrid.PairGrid at 0x1a24f31438&gt;</pre>
+<pre>&lt;seaborn.axisgrid.PairGrid at 0x249d4187d68&gt;</pre>
 </div>
 
 </div>
@@ -15921,10 +15871,10 @@ Name: Health care costs, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">plotnine</span> <span class="k">import</span> <span class="o">*</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">plotnine</span> <span class="kn">import</span> <span class="o">*</span> 
 <span class="c1">#Using this syntax means we won&#39;t have to refer to functions from plotnine with plotnine.&lt;function&gt;</span>
 <span class="c1">#This makes plotnine code even more similar to R&#39;s ggplot functions</span>
 
@@ -15948,26 +15898,10 @@ Name: Health care costs, dtype: float64</pre>
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>//anaconda3/lib/python3.7/site-packages/plotnine/scales/scale.py:93: MatplotlibDeprecationWarning: 
-The iterable function was deprecated in Matplotlib 3.1 and will be removed in 3.3. Use np.iterable instead.
-  if cbook.iterable(self.breaks) and cbook.iterable(self.labels):
-//anaconda3/lib/python3.7/site-packages/plotnine/utils.py:553: MatplotlibDeprecationWarning: 
-The iterable function was deprecated in Matplotlib 3.1 and will be removed in 3.3. Use np.iterable instead.
-  return cbook.iterable(var) and not is_string(var)
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
 
 
 <div class="output_png output_subarea ">
-<img src="output_60_1.png"
+<img src="output_60_0.png"
 >
 </div>
 
@@ -15975,13 +15909,13 @@ The iterable function was deprecated in Matplotlib 3.1 and will be removed in 3.
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[27]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;ggplot: (-9223372029296766348)&gt;</pre>
+<pre>&lt;ggplot: (-9223371879592311338)&gt;</pre>
 </div>
 
 </div>
@@ -16002,7 +15936,7 @@ The iterable function was deprecated in Matplotlib 3.1 and will be removed in 3.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Create an empty list for storing chunks.</span>
@@ -16028,7 +15962,7 @@ The iterable function was deprecated in Matplotlib 3.1 and will be removed in 3.
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[26]:</div>
+    <div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -16218,7 +16152,7 @@ The iterable function was deprecated in Matplotlib 3.1 and will be removed in 3.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
@@ -16244,7 +16178,7 @@ The iterable function was deprecated in Matplotlib 3.1 and will be removed in 3.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">list_of_lists</span> <span class="o">=</span> <span class="p">[]</span>
@@ -16261,7 +16195,7 @@ The iterable function was deprecated in Matplotlib 3.1 and will be removed in 3.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">list_of_dicts</span> <span class="o">=</span> <span class="p">[]</span>
@@ -16287,7 +16221,7 @@ The iterable function was deprecated in Matplotlib 3.1 and will be removed in 3.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">list_of_lists</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
@@ -16318,7 +16252,7 @@ The iterable function was deprecated in Matplotlib 3.1 and will be removed in 3.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">list_of_dicts</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
