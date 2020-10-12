@@ -24,9 +24,17 @@ The concepts are covered in more depth in our full-length [Introductory Material
 
 We'll introduce [Jupyter Notebooks and literate programming](Jupyter/Jupyter-Notebooks.html).  Then we'll return to the [Introductory Materials](Intro/Introduction.fall2020.html#Pseudocode-and-Comments) to review fundamental concepts, packages, file paths, and a few important extensions.
 
+## [Week 3](Jupyter/Pandas.html)
+
+The `pandas` package provides a wide array of tools for working with tabular datasets in Python.  This lesson also surveys some of the major data visualization tools available in Python.
+
 ## Practice Exercises (Introduction)
 **[Exercises](Intro/Exercises.html)**<br/>
 **[Solutions](Intro/Exercises_Solutions.html)**
+
+## Pandas Exercises (Week 3)
+**[Exercises](Jupyter/PandasExercises.html)**<br/>
+**[Solutions](Jupyter/PandasSolutions.html)**
 
 ## Getting Help!
 
