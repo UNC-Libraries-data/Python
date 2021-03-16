@@ -6,33 +6,29 @@
 
 Installing the Anaconda Distribution.
 
-If you run into problems during installation, stop by one of our drop-in installation help sessions:  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Thursday, September 24, 2020, 11am-12pm](https://zoom.us/j/95225315369?from=msft) : Meeting ID: 952 2531 5369  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Monday, September 28, 2020, 11am-12pm](https://zoom.us/j/98323597820?from=msft) : Meeting ID: 983 2359 7820
+If you run into problems during installation, please come **30 minutes early** to the first session for help.
 
 View our [introductory orientation to Python and Spyder (YouTube)](https://www.youtube.com/watch?v=mKjLHg85BJo) **before Week 1**.
 
-## [Week 1](Intro/Introduction.fall2020.html)
+## [Week 1](Intro/Introduction_CrashCourse.html)
 
-We'll be:
-* quickly introducing fundamental Python concepts like variables, object types, and indexing
-* working through a simple programming example with a COVID-19 dataset
+We'll be quickly introducing fundamental Python concepts like variables, object types, and indexing.
 
 The concepts are covered in more depth in our full-length [Introductory Materials](Intro/Introduction.html), if you'd like to review beforehand.
 
 ## Week 2
 
-We'll introduce [Jupyter Notebooks and literate programming](Jupyter/Jupyter-Notebooks.html).  Then we'll return to the [Introductory Materials](Intro/Introduction.fall2020.html#Pseudocode-and-Comments) to review fundamental concepts, packages, file paths, and a few important extensions.
+We'll introduce [Jupyter Notebooks and literate programming](Jupyter/Jupyter-Notebooks.html).  Then we'll return to the [Introductory Materials](Intro/Introduction_CrashCourse.html#Pseudocode-and-Comments) to review fundamental concepts, packages, file paths, and a few important extensions.  Finally, we'll work through an example using data on COVID-19.
 
-## [Week 3](Jupyter/Pandas.html)
+## [Week 3/4](Jupyter/Pandas.html)
 
-The `pandas` package provides a wide array of tools for working with tabular datasets in Python.  This lesson also surveys some of the major data visualization tools available in Python.
+The `pandas` package provides a wide array of tools for working with tabular datasets in Python.  This lesson also covers working with files and file paths and surveys some of the major data visualization tools available in Python.
 
 ## Practice Exercises (Introduction)
 **[Exercises](Intro/Exercises.html)**<br/>
 **[Solutions](Intro/Exercises_Solutions.html)**
 
-## Pandas Exercises (Week 3)
+## Pandas Exercises (Week 3/4)
 **[Exercises](Jupyter/PandasExercises.html)**<br/>
 **[Solutions](Jupyter/PandasSolutions.html)**
 
