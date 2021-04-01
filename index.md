@@ -20,9 +20,13 @@ The concepts are covered in more depth in our full-length [Introductory Material
 
 We'll introduce [Jupyter Notebooks and literate programming](Jupyter/Jupyter-Notebooks.html).  Then we'll return to the [Introductory Materials](Intro/Introduction_CrashCourse.html#Pseudocode-and-Comments) to review fundamental concepts, packages, file paths, and a few important extensions.  Finally, we'll work through an example using data on COVID-19.
 
-## [Week 3/4](Jupyter/Pandas.html)
+## Week 3
 
-The `pandas` package provides a wide array of tools for working with tabular datasets in Python.  This lesson also covers working with files and file paths and surveys some of the major data visualization tools available in Python.
+We'll review [Jupyter Notebooks and literate programming](Jupyter/Jupyter-Notebooks.html), then move along to the basics of [working with packages and file paths in Python](Files_Packages/Files_Packages.html).  Finally we'll introduce one of Python's foundational data manipulation packages, [Pandas](Jupyter/Pandas.html).
+
+## [Week 4](Jupyter/Pandas.html)
+
+We'll continue working with Pandas, dealing with a real dataset, and extending into other packages for data visualization.
 
 ## Practice Exercises (Introduction)
 **[Exercises](Intro/Exercises.html)**<br/>

@@ -13105,6 +13105,23 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Both of the packages above, <code>os</code> and <code>shutil</code>, are part of the <a href="https://docs.python.org/3/library/">"Python Standard Library"</a> of packages and functions that come with every Python installation.</p>
+<p>We don't load all of these packages every time we start Python for a couple of major reasons:</p>
+<ol>
+<li>If we don't need the functions, it just takes up space.</li>
+<li>Many function names are re-used across packages.  When this happens, whichever function's module was loaded last wins!  Loading fewer packages often avoids this problem.</li>
+</ol>
+<p>Note: If you need two functions with the same name, for example, <code>fun</code>, from <code>pkg1</code> and <code>pkg2</code> we can always refer to them by their "full" names as: <code>package-name.function-name</code> :</p>
+
+<pre><code>pkg1.fun()
+pkg2.fun()</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Working-Directories">Working Directories<a class="anchor-link" href="#Working-Directories">&#182;</a></h2><p>To open a file with Python, you'll need to tell your computer where it's located on your computer. You can specify the entire absolute filepath (starting with C:\ on PC or / on Mac), or you can set a working directory and work with relative file paths.</p>
 <p>You can determine where a file is located on your computer by:</p>
 <ul>
@@ -13122,7 +13139,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myfile</span><span class="o">=</span><span class="s2">&quot;/Users/tuesday/Desktop/Python/Recipes.zip&quot;</span> <span class="c1">#absolute path</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myfile</span><span class="o">=</span><span class="s2">&quot;/Users/tuesday/Desktop/Python/Recipes.zip&quot;</span> <span class="c1">#Mac absolute path</span>
 <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">myfile</span><span class="p">)</span> <span class="c1">#check if Python can find my file </span>
 </pre></div>
 
@@ -13260,7 +13277,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Reading-Files">Reading Files<a class="anchor-link" href="#Reading-Files">&#182;</a></h2><p>Python requires you both open and close files explicitly. If you forget to close a file, it can remain in use, preventing you from opening it later.</p>
+<h2 id="Extra:-Reading-Files">Extra: Reading Files<a class="anchor-link" href="#Extra:-Reading-Files">&#182;</a></h2><p>Python requires you both open and close files explicitly. If you forget to close a file, it can remain in use, preventing you from opening it later.</p>
 <p>Best practices for reading and writing files use the <code>with</code> function to make sure files are automatically closed.</p>
 
 </div>
@@ -13332,7 +13349,7 @@ seeds.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Writing-Files">Writing Files<a class="anchor-link" href="#Writing-Files">&#182;</a></h2><p>The recipe above is missing a serving amount. Lets add one in, and then save the file.</p>
+<h2 id="Extra:-Writing-Files">Extra: Writing Files<a class="anchor-link" href="#Extra:-Writing-Files">&#182;</a></h2><p>The recipe above is missing a serving amount. Lets add one in, and then save the file.</p>
 
 </div>
 </div>
@@ -13356,7 +13373,7 @@ seeds.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Working-with-Folders">Working with Folders<a class="anchor-link" href="#Working-with-Folders">&#182;</a></h2><p>The Amaranth Stir Fry looks like it would make a nice hearty meal for fall. Let's create a new folder called "Fall" in our "Recipes" folder and put a copy of the Amaranth Stir Fry recipe inside it.</p>
+<h2 id="Extra:-Working-with-Folders">Extra: Working with Folders<a class="anchor-link" href="#Extra:-Working-with-Folders">&#182;</a></h2><p>The Amaranth Stir Fry looks like it would make a nice hearty meal for fall. Let's create a new folder called "Fall" in our "Recipes" folder and put a copy of the Amaranth Stir Fry recipe inside it.</p>
 
 </div>
 </div>
