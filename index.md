@@ -20,6 +20,20 @@ The concepts are covered in more depth in our full-length [Introductory Material
 
 We'll introduce [Jupyter Notebooks and literate programming](Jupyter/Jupyter-Notebooks.html).  Then we'll return to the [Introductory Materials](Intro/Introduction_CrashCourse.html#Pseudocode-and-Comments) to review fundamental concepts, packages, file paths, and a few important extensions.  Finally, we'll work through an example using data on COVID-19.
 
+## Practice Exercises (Introduction)
+**[Exercises](Intro/Exercises.html)**<br/>
+**[Solutions](Intro/Exercises_Solutions.html)**
+
+## Week 3-5: Data in Python
+
+* Jupyter Notebooks
+* File paths and Packages
+* Pandas
+* Visualization
+* Survey of other useful data packages
+
+
+<!---
 ## Week 3
 
 We'll review [Jupyter Notebooks and literate programming](Jupyter/Jupyter-Notebooks.html), then move along to the basics of [working with packages and file paths in Python](Files_Packages/Files_Packages.html).  Finally we'll introduce one of Python's foundational data manipulation packages, [Pandas](Jupyter/Pandas.html).
@@ -28,13 +42,11 @@ We'll review [Jupyter Notebooks and literate programming](Jupyter/Jupyter-Notebo
 
 We'll continue working with Pandas, dealing with a real dataset, and extending into other packages for data visualization.
 
-## Practice Exercises (Introduction)
-**[Exercises](Intro/Exercises.html)**<br/>
-**[Solutions](Intro/Exercises_Solutions.html)**
 
 ## Pandas Exercises (Week 3/4)
 **[Exercises](Jupyter/PandasExercises.html)**<br/>
 **[Solutions](Jupyter/PandasSolutions.html)**
+--->
 
 ## Getting Help!
 
