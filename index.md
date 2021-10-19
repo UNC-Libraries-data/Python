@@ -24,6 +24,10 @@ We'll return to the [Introductory Materials](Intro/Introduction_CrashCourse.html
 **[Exercises](Intro/Exercises.html)**<br/>
 **[Solutions](Intro/Exercises_Solutions.html)**
 
+## Week 3
+
+We'll finish out the last topics in [Introductory Materials](Intro/Introduction_CrashCourse.html#Packages), then introduce a new format for literate programming: [Jupyter Notebooks ](Jupyter/Jupyter-Notebooks.html).  Finally, we'll get started with [Pandas](Jupyter/Pandas.html) for Data in Python.
+
 ## Week 3-5: Data in Python
 
 * Jupyter Notebooks
