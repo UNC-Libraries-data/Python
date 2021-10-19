@@ -28,10 +28,8 @@ We'll return to the [Introductory Materials](Intro/Introduction_CrashCourse.html
 
 We'll finish out the last topics in [Introductory Materials](Intro/Introduction_CrashCourse.html#Packages), then introduce a new format for literate programming: [Jupyter Notebooks ](Jupyter/Jupyter-Notebooks.html).  Finally, we'll get started with [Pandas](Jupyter/Pandas.html) for Data in Python.
 
-## Week 3-5: Data in Python
+## Week 4-5: Data in Python
 
-* Jupyter Notebooks
-* File paths and Packages
 * Pandas
 * Visualization
 * Survey of other useful data packages
