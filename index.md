@@ -28,11 +28,18 @@ We'll return to the [Introductory Materials](Intro/Introduction_CrashCourse.html
 
 We'll finish out the last topics in [Introductory Materials](Intro/Introduction_CrashCourse.html#Packages), then introduce a new format for literate programming: [Jupyter Notebooks ](Jupyter/Jupyter-Notebooks.html).  Finally, we'll get started with [Pandas](Jupyter/Pandas.html) for Data in Python.
 
-## Week 4-5: Data in Python
+## Week 4
+
+We'll learn the basics of [Pandas](Jupyter/Pandas.html), then apply it to answer some simple research questions about a dataset.
+
+## Week 5
 
 * Pandas
-* Visualization
 * Survey of other useful data packages
+
+## Pandas Exercises (Week 4/5)
+**[Exercises](Jupyter/PandasExercises.html)**<br/>
+**[Solutions](Jupyter/PandasSolutions.html)**
 
 
 <!---
