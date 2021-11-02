@@ -34,8 +34,7 @@ We'll learn the basics of [Pandas](Jupyter/Pandas.html), then apply it to answer
 
 ## Week 5
 
-* Pandas
-* Survey of other useful data packages
+We'll finish up [Pandas](Jupyter/Pandas.html), and finally survey some [other useful tools](Jupyter/Other-Packages.html).
 
 ## Pandas Exercises (Week 4/5)
 **[Exercises](Jupyter/PandasExercises.html)**<br/>
