@@ -10,33 +10,38 @@ If you run into problems during installation, please come **30 minutes early** t
 
 View our [introductory orientation to Python and Spyder (YouTube)](https://www.youtube.com/watch?v=mKjLHg85BJo) **before Week 1**.
 
-## [Week 1](Intro/Introduction_CrashCourse.html)
+## Basics
+
+### [Week 1](Intro/Introduction_CrashCourse.html)
 
 We'll be quickly introducing fundamental Python concepts like variables, object types, and indexing.
 
 The concepts are covered in more depth in our full-length [Introductory Materials](Intro/Introduction.html), if you'd like to review beforehand.
 
-## Week 2
+### Week 2
 
 We'll return to the [Introductory Materials](Intro/Introduction_CrashCourse.html#Pseudocode-and-Comments) to review fundamental concepts, packages, file paths, and a few important extensions, then we'll work through an example using data on COVID-19.
 
-## Practice Exercises (Introduction)
+### Practice Exercises (Introduction)
 **[Exercises](Intro/Exercises.html)**<br/>
 **[Solutions](Intro/Exercises_Solutions.html)**
 
-## Week 3
 
-We'll finish out the last topics in [Introductory Materials](Intro/Introduction_CrashCourse.html#Packages), then introduce a new format for literate programming: [Jupyter Notebooks ](Jupyter/Jupyter-Notebooks.html).  Finally, we'll get started with [Pandas](Jupyter/Pandas.html) for Data in Python.
+## Intro to Data
 
-## Week 4
+### Week 3
 
-We'll learn the basics of [Pandas](Jupyter/Pandas.html), then apply it to answer some simple research questions about a dataset.
+We'll introduce format for literate programming: [Jupyter Notebooks](Jupyter/Jupyter-Notebooks.html).  Finally, we'll get started with [Pandas](Jupyter/Pandas.html) for Data in Python.
 
-## Week 5
+### Week 4
+
+We'll learn the basics of [Pandas](Jupyter/Pandas.html) and some visualization tools, then apply it to answer some simple research questions about a dataset.
+
+### Week 5
 
 We'll finish up [Pandas](Jupyter/Pandas.html), and finally survey some [other useful tools](Jupyter/Other-Packages.html).
 
-## Pandas Exercises (Week 4/5)
+### Pandas Exercises
 **[Exercises](Jupyter/PandasExercises.html)**<br/>
 **[Solutions](Jupyter/PandasSolutions.html)**
 
