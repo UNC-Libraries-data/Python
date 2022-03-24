@@ -14,9 +14,7 @@ View our [introductory orientation to Python and Spyder (YouTube)](https://www.y
 
 ### [Week 1](Intro/Introduction_CrashCourse.html)
 
-We'll be quickly introducing fundamental Python concepts like variables, object types, and indexing.
-
-The concepts are covered in more depth in our full-length [Introductory Materials](Intro/Introduction.html), if you'd like to review beforehand.
+We'll introduce fundamental Python concepts like variables, object types, and indexing.
 
 ### Week 2
 
