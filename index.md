@@ -18,7 +18,7 @@ We'll introduce fundamental Python concepts like variables, object types, and in
 
 ### Week 2
 
-We'll return to the [Introductory Materials](Intro/Introduction_CrashCourse.html#Pseudocode-and-Comments) to review fundamental concepts, packages, file paths, and a few important extensions, then we'll work through an example using data on COVID-19.
+We'll return to the [Introductory Materials](Intro/Introduction_CrashCourse.html#Review:-Data-Types) to review fundamental concepts, packages, file paths, and a few important extensions, then we'll work through an example using data on COVID-19.
 
 ### Practice Exercises (Introduction)
 **[Exercises](Intro/Exercises.html)**<br/>
