@@ -29,15 +29,15 @@ We'll return to the [Introductory Materials](Intro/Introduction_CrashCourse.html
 
 ### Week 3
 
-We'll introduce format for literate programming: [Jupyter Notebooks](Jupyter/Jupyter-Notebooks.html).  Then, we'll get started with [Pandas](Jupyter/Pandas.html) for Data in Python.
+We'll introduce a format for literate programming: [Jupyter Notebooks](Jupyter/Jupyter-Notebooks.html).  Then, we'll get started with [Pandas](Jupyter/Pandas.html) for Data in Python.
 
 ### Week 4
 
-We'll learn the basics of [Pandas](Jupyter/Pandas.html) and some visualization tools, then apply it to answer some simple research questions about a dataset.
+We'll continue with [Pandas](Jupyter/Pandas.html) and explore some visualization tools by applying them to some simple research questions about a dataset.
 
 ### Week 5
 
-We'll finish up [Pandas](Jupyter/Pandas.html), and finally survey some [other useful tools](Jupyter/Other-Packages.html).
+We'll finish up [Pandas](Jupyter/Pandas.html), and survey some [other useful tools](Jupyter/Other-Packages.html).
 
 ### Pandas Exercises
 **[Exercises](Jupyter/PandasExercises.html)**<br/>
