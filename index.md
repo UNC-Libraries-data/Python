@@ -29,7 +29,7 @@ We'll return to the [Introductory Materials](Intro/Introduction_CrashCourse.html
 
 ### Week 3
 
-We'll introduce format for literate programming: [Jupyter Notebooks](Jupyter/Jupyter-Notebooks.html).  Finally, we'll get started with [Pandas](Jupyter/Pandas.html) for Data in Python.
+We'll introduce format for literate programming: [Jupyter Notebooks](Jupyter/Jupyter-Notebooks.html).  Then, we'll get started with [Pandas](Jupyter/Pandas.html) for Data in Python.
 
 ### Week 4
 
@@ -64,6 +64,7 @@ We'll continue working with Pandas, dealing with a real dataset, and extending i
 * [Davis Library Research Hub](https://library.unc.edu/data/connect-with-us/)
 * [Odum Statistical Walk-in Help](https://odum.unc.edu/statistics-help-desk/)
 * [Research Computing (and UNC's clusters)](https://its.unc.edu/research-computing/)
+	+ [Open OnDemand (Longleaf Access Required)](https://its.unc.edu/research-computing/ondemand/)
 
 
 ## References and Resources
@@ -73,6 +74,7 @@ We'll continue working with Pandas, dealing with a real dataset, and extending i
 * [Python Programming for the Humanities](http://www.karsdorp.io/python-course/)
 * [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)  This free ebook emphasizes Numpy, Scipy, Matplotlib, Pandas and other data analysis packages in Python, assuming some familiarity with the basic principles of the language.
     + [Whirlwind Tour of Python](https://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/Index.ipynb)
+* [University Libraries' Text and Data Mining Guide](https://guides.lib.unc.edu/tdm)
 * [Stack Overflow](https://stackoverflow.com/questions/tagged/python-3.x?sort=frequent&pageSize=15)
 * [Google!](https://www.google.com/)
 
