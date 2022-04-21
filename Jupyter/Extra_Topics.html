@@ -14114,7 +14114,7 @@ a.anchor-link {
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">a0</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;StudentID&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
-                   <span class="s2">&quot;GPA_change&quot;</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)})</span>
+                   <span class="s2">&quot;GPA_change&quot;</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)})</span> <span class="c1">#np.random.normal(0,1,2) pulls 2 random values from a Normal(0,1) distribution</span>
 <span class="n">a0</span>
 </pre></div>
 
@@ -14162,12 +14162,12 @@ a.anchor-link {
     <tr>
       <th>0</th>
       <td>1</td>
-      <td>0.705357</td>
+      <td>0.466944</td>
     </tr>
     <tr>
       <th>1</th>
       <td>2</td>
-      <td>-0.771010</td>
+      <td>-2.255585</td>
     </tr>
   </tbody>
 </table>
@@ -14237,13 +14237,13 @@ a.anchor-link {
     <tr>
       <th>0</th>
       <td>3</td>
-      <td>1.154754</td>
+      <td>0.585135</td>
       <td>Spring</td>
     </tr>
     <tr>
       <th>1</th>
       <td>4</td>
-      <td>0.644623</td>
+      <td>1.628179</td>
       <td>Fall</td>
     </tr>
   </tbody>
@@ -14261,9 +14261,6 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>With the datasets above it seems clear that these DataFramea would be best combined by stacking them on top of eachother, or appending one to the other as additional rows or observations.  Panda's <a href="https://pandas.pydata.org/docs/reference/api/pandas.concat.html"><code>pd.concat</code></a> lets us concatenate a list of DataFramea into a single DataFrame.</p>
-<p>Note the <code>axis=0</code> - this indicates that we want to add the dataframes together row-wise.  What happens if you change to <code>axis=1</code>?</p>
-<p>As in indexing DataFrames,  Pandas thinks about dimensions as <em>rows</em> and <em>columns</em>, in that order!  In the axis argument, 0 refers to rows, whereas 1 refers to columns.</p>
-<p><code>ignore_index=True</code> ensure that our new DataFrame has an index that starts at 0 and runs to 3. Otherwise our row index would be 0 1 0 1, retaining the indices from the original two DataFrames.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14320,25 +14317,25 @@ a.anchor-link {
     <tr>
       <th>0</th>
       <td>1</td>
-      <td>0.705357</td>
+      <td>0.466944</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>1</th>
       <td>2</td>
-      <td>-0.771010</td>
+      <td>-2.255585</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>2</th>
       <td>3</td>
-      <td>1.154754</td>
+      <td>0.585135</td>
       <td>Spring</td>
     </tr>
     <tr>
       <th>3</th>
       <td>4</td>
-      <td>0.644623</td>
+      <td>1.628179</td>
       <td>Fall</td>
     </tr>
   </tbody>
@@ -14355,7 +14352,17 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Merging">Merging<a class="anchor-link" href="#Merging">&#182;</a></h4><p>When joining column-wise, we usually can't just concatenate our DataFrames together, instead we'll use certain key variables to make sure the same observations end up in the same row.</p>
+<ul>
+<li><code>axis=0</code> indicates that we want to add the dataframes together row-wise.  What happens if we change to <code>axis=1</code>?<br></li>
+<li>Pandas thinks about dimensions as <em>rows</em> and <em>columns</em>, in that order.  <code>axis=0</code> refers to rows, whereas <code>axis=1</code> refers to columns.<br></li>
+<li><code>ignore_index=True</code> resets the DataFrame index to start at 0 and run to 3. Otherwise our row index would be 0 1 0 1, from the indices of the original two DataFrames.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Merging">Merging<a class="anchor-link" href="#Merging">&#182;</a></h4><p>When joining column-wise, we usually can't just concatenate our DataFrames together, instead we use certain key variables to make sure the same observations end up in the same row.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14369,7 +14376,7 @@ a.anchor-link {
 <span class="n">b1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Crystal&quot;</span><span class="p">,</span> <span class="s2">&quot;Marcos&quot;</span><span class="p">],</span>
                    <span class="s2">&quot;proj_num&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">]})</span>
 
-<span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">b0</span><span class="p">,</span><span class="n">b1</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#notice that the names don&#39;t line up!</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">b0</span><span class="p">,</span><span class="n">b1</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> 
 </pre></div>
 
      </div>
@@ -14523,7 +14530,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><code>pd.merge</code> automatically uses any column names that appear in both datasets as key variables.  We can also specify varaibles:</p>
+<p><code>pd.merge</code> automatically uses all column names that appear in <strong>both</strong> datasets as keys.  We can also specify key variables:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14604,7 +14611,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Pandas also includes a <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.merge.html">DataFrame method</a> to merge:</p>
+<p>Pandas also includes a <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.merge.html">DataFrame method</a> version of <code>merge</code>:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14764,7 +14771,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In the example above, the two dataframes share the same key values in name, so there isn't much question of how to join them, however, when the values don't match there are decisions to be made about which values get kept and which values get dropped.</p>
+<p>In the examples above, the two DataFrames share the same "name" key values. However, when the values don't completely match, we can use <code>how</code> to choose which values get kept and which values get dropped.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -15128,6 +15135,12 @@ a.anchor-link {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The "cross" option joins every key value to every other key value (a Cartesian product): every possible pair of names appears.</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -15264,7 +15277,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Reshaping-Data">Reshaping Data<a class="anchor-link" href="#Reshaping-Data">&#182;</a></h3><p>Reshaping a DataFrame can have lots of benefits across the data cleanup, analysis, and communication lifecycles.  Merging dataframes as above is an example - our two dataframes need to have similar rows (e.g. City-level, Year-level, or City-Year level as we'll see below) to merge properly.</p>
+<h3 id="Reshaping-Data">Reshaping Data<a class="anchor-link" href="#Reshaping-Data">&#182;</a></h3><p>Reshaping a DataFrame can have lots of benefits across data cleanup, analysis, and communication. Here are three different ways to structure the same data.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15274,10 +15287,10 @@ a.anchor-link {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;City&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Raleigh&quot;</span><span class="p">,</span><span class="s2">&quot;Durham&quot;</span><span class="p">,</span><span class="s2">&quot;Chapel Hill&quot;</span><span class="p">],</span>
-                    <span class="s2">&quot;2000&quot;</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span>
-                    <span class="s2">&quot;2001&quot;</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span>
-                    <span class="s2">&quot;2002&quot;</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span>
-                    <span class="s2">&quot;2003&quot;</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)})</span>
+                    <span class="s2">&quot;2000&quot;</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+                    <span class="s2">&quot;2001&quot;</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+                    <span class="s2">&quot;2002&quot;</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+                    <span class="s2">&quot;2003&quot;</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)})</span>
 <span class="n">raw</span>
 </pre></div>
 
@@ -15328,26 +15341,26 @@ a.anchor-link {
     <tr>
       <th>0</th>
       <td>Raleigh</td>
-      <td>2.339522</td>
-      <td>-0.238756</td>
-      <td>-0.874004</td>
-      <td>0.658532</td>
+      <td>-0.29</td>
+      <td>0.04</td>
+      <td>0.57</td>
+      <td>-0.22</td>
     </tr>
     <tr>
       <th>1</th>
       <td>Durham</td>
-      <td>0.203001</td>
-      <td>2.654530</td>
-      <td>-0.455963</td>
-      <td>-0.962809</td>
+      <td>0.85</td>
+      <td>2.31</td>
+      <td>0.88</td>
+      <td>-0.01</td>
     </tr>
     <tr>
       <th>2</th>
       <td>Chapel Hill</td>
-      <td>0.490598</td>
-      <td>0.898418</td>
-      <td>-0.412574</td>
-      <td>-0.150039</td>
+      <td>0.70</td>
+      <td>0.02</td>
+      <td>-0.58</td>
+      <td>0.03</td>
     </tr>
   </tbody>
 </table>
@@ -15417,73 +15430,73 @@ a.anchor-link {
       <th>0</th>
       <td>Raleigh</td>
       <td>2000</td>
-      <td>2.339522</td>
+      <td>-0.29</td>
     </tr>
     <tr>
       <th>1</th>
       <td>Durham</td>
       <td>2000</td>
-      <td>0.203001</td>
+      <td>0.85</td>
     </tr>
     <tr>
       <th>2</th>
       <td>Chapel Hill</td>
       <td>2000</td>
-      <td>0.490598</td>
+      <td>0.70</td>
     </tr>
     <tr>
       <th>3</th>
       <td>Raleigh</td>
       <td>2001</td>
-      <td>-0.238756</td>
+      <td>0.04</td>
     </tr>
     <tr>
       <th>4</th>
       <td>Durham</td>
       <td>2001</td>
-      <td>2.654530</td>
+      <td>2.31</td>
     </tr>
     <tr>
       <th>5</th>
       <td>Chapel Hill</td>
       <td>2001</td>
-      <td>0.898418</td>
+      <td>0.02</td>
     </tr>
     <tr>
       <th>6</th>
       <td>Raleigh</td>
       <td>2002</td>
-      <td>-0.874004</td>
+      <td>0.57</td>
     </tr>
     <tr>
       <th>7</th>
       <td>Durham</td>
       <td>2002</td>
-      <td>-0.455963</td>
+      <td>0.88</td>
     </tr>
     <tr>
       <th>8</th>
       <td>Chapel Hill</td>
       <td>2002</td>
-      <td>-0.412574</td>
+      <td>-0.58</td>
     </tr>
     <tr>
       <th>9</th>
       <td>Raleigh</td>
       <td>2003</td>
-      <td>0.658532</td>
+      <td>-0.22</td>
     </tr>
     <tr>
       <th>10</th>
       <td>Durham</td>
       <td>2003</td>
-      <td>-0.962809</td>
+      <td>-0.01</td>
     </tr>
     <tr>
       <th>11</th>
       <td>Chapel Hill</td>
       <td>2003</td>
-      <td>-0.150039</td>
+      <td>0.03</td>
     </tr>
   </tbody>
 </table>
@@ -15566,30 +15579,30 @@ a.anchor-link {
     <tr>
       <th>0</th>
       <td>2000</td>
-      <td>0.490598</td>
-      <td>0.203001</td>
-      <td>2.339522</td>
+      <td>0.70</td>
+      <td>0.85</td>
+      <td>-0.29</td>
     </tr>
     <tr>
       <th>1</th>
       <td>2001</td>
-      <td>0.898418</td>
-      <td>2.654530</td>
-      <td>-0.238756</td>
+      <td>0.02</td>
+      <td>2.31</td>
+      <td>0.04</td>
     </tr>
     <tr>
       <th>2</th>
       <td>2002</td>
-      <td>-0.412574</td>
-      <td>-0.455963</td>
-      <td>-0.874004</td>
+      <td>-0.58</td>
+      <td>0.88</td>
+      <td>0.57</td>
     </tr>
     <tr>
       <th>3</th>
       <td>2003</td>
-      <td>-0.150039</td>
-      <td>-0.962809</td>
-      <td>0.658532</td>
+      <td>0.03</td>
+      <td>-0.01</td>
+      <td>-0.22</td>
     </tr>
   </tbody>
 </table>
