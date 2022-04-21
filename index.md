@@ -37,7 +37,7 @@ We'll continue with [Pandas](Jupyter/Pandas.html) and explore some visualization
 
 ### Week 5
 
-We'll finish up [Pandas](Jupyter/Pandas.html), and survey some [other useful tools](Jupyter/Other-Packages.html).
+We'll finish up [some topics in Pandas and base Python](Jupyter/Extra_Topics.html), and survey some [other useful tools](Jupyter/Other-Packages.html).
 
 ### Pandas Exercises
 **[Exercises](Jupyter/PandasExercises.html)**<br/>
