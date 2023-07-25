@@ -36,6 +36,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .m { color: var(--jp-mirror-editor-number-color) } /* Literal.Number */
 .highlight .s { color: var(--jp-mirror-editor-string-color) } /* Literal.String */
 .highlight .ow { color: var(--jp-mirror-editor-operator-color); font-weight: bold } /* Operator.Word */
+.highlight .pm { color: var(--jp-mirror-editor-punctuation-color) } /* Punctuation.Marker */
 .highlight .w { color: var(--jp-mirror-editor-variable-color) } /* Text.Whitespace */
 .highlight .mb { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Bin */
 .highlight .mf { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Float */
@@ -14559,12 +14560,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
                 },
                 displayAlign: 'center',
                 CommonHTML: {
-                    linebreaks: { 
-                    automatic: true 
+                    linebreaks: {
+                    automatic: true
                     }
                 }
             });
-        
+
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
     }
@@ -14591,7 +14592,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To start your own instance click "Start coding", choose "Python" as the language, then click "Create repl".<br>
 If you would like to save your work and continue to use Python on your computer, we recommend downloading Anaconda.</p>
 </blockquote>
-<h3 id="Alternative:-Open-OnDemand-(UNC-Research-Computing)">Alternative: Open OnDemand (UNC Research Computing)<a class="anchor-link" href="#Alternative:-Open-OnDemand-(UNC-Research-Computing)">&#182;</a></h3><blockquote><p>If you have access to UNC's <a href="https://its.unc.edu/research-computing/request-a-cluster-account/">Longleaf cluster</a>, you can use Python with the Spyder IDE or Jupyter Notebooks in a web browser on Research Computing's <a href="https://its.unc.edu/research-computing/ondemand/">Open OnDemand service</a>.  This service runs on the Longleaf cluster so it's a great option for complex or long-running Python scripts.</p>
+<h3 id="Alternative:-Open-OnDemand-(UNC-Research-Computing)">Alternative: Open OnDemand (UNC Research Computing)<a class="anchor-link" href="#Alternative:-Open-OnDemand-(UNC-Research-Computing)">&#182;</a></h3><blockquote><p>If you have access to UNC's <a href="https://help.rc.unc.edu/request-a-cluster-account/">Longleaf cluster</a>, you can use Python with the Spyder IDE or Jupyter Lab in a web browser on Research Computing's <a href="https://help.rc.unc.edu/ondemand/">Open OnDemand service</a>.  This service runs on the Longleaf cluster so it's a great option for complex or long-running Python scripts.</p>
 </blockquote>
 <h2 id="Anaconda-Installation">Anaconda Installation<a class="anchor-link" href="#Anaconda-Installation">&#182;</a></h2><p><a href="https://www.anaconda.com/products/individual#Downloads">Download Anaconda Python 3, 64-bit</a></p>
 <p><strong>Select your operating system</strong></p>
@@ -14640,8 +14641,8 @@ Leave the default settings and click through to install.
 <tr><td>
 
 <strong>1. Open Finder > Applications > Utilities > Terminal. Run the following:</strong><br>
-<center><code>conda install spyder</code></center><br>
-&nbsp;&nbsp;&nbsp;When prompted, type `y` to Proceed.  This will install the Spyder IDE and all of its dependencies.<br>
+<center><code>conda install -c conda-forge jupyterlab</code></center><br>
+&nbsp;&nbsp;&nbsp;When prompted, type `y` to Proceed.  This will install Jupyter Lab and all of its dependencies.<br>
 &nbsp;<br>
 
 <strong>2. In the same window, run the following to install conda's graphical interface, Anaconda Navigator.</strong><br>
@@ -14654,8 +14655,8 @@ Leave the default settings and click through to install.
 Follow the steps for full Anaconda installation <a href="#PC-Installation">above</a> as appropriate.<br>
 
 <strong>1. Open Start Menu > Anaconda3 > Anaconda Prompt. Run the following:</strong><br>
-<center><code>conda install spyder</code></center><br>
-&nbsp;&nbsp;&nbsp;When prompted, type `y` to Proceed.  This will install the Spyder IDE and all of its dependencies.<br>
+<center><code>conda install -c conda-forge jupyterlab</code></center><br>
+&nbsp;&nbsp;&nbsp;When prompted, type `y` to Proceed.  This will install Jupyter Lab and all of its dependencies.<br>
 &nbsp;<br>
 
 <strong>2. In the same window, run the following to install conda's graphical interface, Anaconda Navigator.</strong><br>
