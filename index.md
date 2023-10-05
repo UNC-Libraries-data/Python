@@ -7,15 +7,15 @@
 Installing the Anaconda Distribution.
 
 If you run into problems during installation, please come **30 minutes early** to the first session for help.
-
+<!---
 View our [introductory orientation to Python and Spyder (YouTube)](https://www.youtube.com/watch?v=mKjLHg85BJo) **before Week 1**.
-
-## Basics
+--->
+## Intro to Python
 
 ### [Week 1](Intro/Introduction_CrashCourse.html)
 
 We'll introduce fundamental Python concepts like variables, object types, and indexing.
-
+<!---
 ### Week 2
 
 We'll return to the [Introductory Materials](Intro/Introduction_CrashCourse.html#Review:-Data-Types) to review fundamental concepts, packages, file paths, and a few important extensions, then we'll work through an example using data on COVID-19.
@@ -23,26 +23,27 @@ We'll return to the [Introductory Materials](Intro/Introduction_CrashCourse.html
 ### Practice Exercises (Introduction)
 **[Exercises](Intro/Exercises.html)**<br/>
 **[Solutions](Intro/Exercises_Solutions.html)**
-
+--->
 
 ## Intro to Data
 
-### Week 3
+### Week 1
 
 We'll introduce a format for literate programming: [Jupyter Notebooks](Jupyter/Jupyter-Notebooks.html).  Then, we'll get started with [Pandas](Jupyter/Pandas.html) for Data in Python.
 
-### Week 4
+### Week 2
 
-We'll continue with [Pandas](Jupyter/Pandas.html) and explore some visualization tools by applying them to some simple research questions about a dataset.
+We'll continue with [Pandas](Jupyter/Pandas.html) and explore some visualization tools by applying them to some simple research questions about a dataset. Time allowing, we'll cover [some topics in Pandas and base Python](Jupyter/Extra_Topics.html).
 
+<!---
 ### Week 5
 
-We'll finish up [some topics in Pandas and base Python](Jupyter/Extra_Topics.html), and survey some [other useful tools](Jupyter/Other-Packages.html).
+, and survey some [other useful tools](Jupyter/Other-Packages.html).
 
 ### Pandas Exercises
 **[Exercises](Jupyter/PandasExercises.html)**<br/>
 **[Solutions](Jupyter/PandasSolutions.html)**
-
+--->
 
 <!---
 ## Week 3
