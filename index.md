@@ -7,14 +7,17 @@
 Installing the Anaconda Distribution.
 
 If you run into problems during installation, please come **30 minutes early** to the first session for help.
+
 <!--
 View our [introductory orientation to Python and Spyder (YouTube)](https://www.youtube.com/watch?v=mKjLHg85BJo) **before Week 1**.
 -->
+
 ## Intro to Python
 
 ### [Week 1](Intro/Introduction_CrashCourse.html)
 
 We'll introduce fundamental Python concepts like variables, object types, and indexing.
+
 <!--
 ### Week 2
 
