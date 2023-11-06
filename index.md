@@ -2,10 +2,6 @@
 *[University Libraries at the University of North Carolina at Chapel Hill](https://library.unc.edu/data/)*  
 *[UNC Research Computing](https://its.unc.edu/research-computing/)*
 
-## Table of Contents
-
-- [in progress]
-
 ## [Setup](Setup.html)
 
 Installing the Anaconda Distribution.
@@ -18,7 +14,9 @@ View our [introductory orientation to Python and Spyder (YouTube)](https://www.y
 
 ## Intro to Python
 
-### [Week 1](Intro/Introduction_CrashCourse.html)
+### Week 1
+
+- [placeholder](Intro/Introduction_CrashCourse.html)
 
 We'll introduce fundamental Python concepts like variables, object types, and indexing.
 
