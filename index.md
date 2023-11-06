@@ -16,7 +16,8 @@ View our [introductory orientation to Python and Spyder (YouTube)](https://www.y
 
 ### Week 1
 
-- [placeholder](Intro/Introduction_CrashCourse.html)
+- Why Python?
+    - [Use Cases](Intro/Introduction_CrashCourse.html#Why-Python?)
 
 We'll introduce fundamental Python concepts like variables, object types, and indexing.
 
