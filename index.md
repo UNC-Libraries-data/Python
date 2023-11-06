@@ -16,10 +16,18 @@ View our [introductory orientation to Python and Spyder (YouTube)](https://www.y
 
 ### Week 1
 
-- Why Python?
-    - [Use Cases](Intro/Introduction_CrashCourse.html#Why-Python?)
-
 We'll introduce fundamental Python concepts like variables, object types, and indexing.
+
+- [Why Python?](Intro/Introduction_CrashCourse.html#Why-Python?)
+- [IDEs](Intro/Introduction_CrashCourse.html#IDEs)
+- [Entering code](Intro/Introduction_CrashCourse.html#Entering-code)
+- [Data Types and Variables](Intro/Introduction_CrashCourse.html#Data-Types-and-Variables)
+- [Flow Control](Intro/Introduction_CrashCourse.html#Flow-Control)
+- [More Data Types](Intro/Introduction_CrashCourse.html#More-Data-Types)
+- [Review](Intro/Introduction_CrashCourse.html#Review)
+- [Pseudocode](Intro/Introduction_CrashCourse.html#Pseudocode-and-Comments)
+- [Try/Except](Intro/Introduction_CrashCourse.html#Try-/-Except---Robustness)
+- [User-defined Functions](Intro/Introduction_CrashCourse.html#User-defined-Functions)
 
 <!--
 ### Week 2
