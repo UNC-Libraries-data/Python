@@ -12,9 +12,7 @@ If you run into problems during installation, please come **30 minutes early** t
 View our [introductory orientation to Python and Spyder (YouTube)](https://www.youtube.com/watch?v=mKjLHg85BJo) **before Week 1**.
 -->
 
-## Intro to Python
-
-### Week 1
+## Intro to Python (2 weeks)
 
 We'll introduce fundamental Python concepts like variables, object types, and indexing.
 
@@ -23,7 +21,6 @@ We'll introduce fundamental Python concepts like variables, object types, and in
 - [Entering code](Intro/Introduction_CrashCourse.html#Entering-code)
 - [Data Types and Variables](Intro/Introduction_CrashCourse.html#Data-Types-and-Variables)
 - [Flow Control](Intro/Introduction_CrashCourse.html#Flow-Control)
-- [More Data Types](Intro/Introduction_CrashCourse.html#More-Data-Types)
 - [Review](Intro/Introduction_CrashCourse.html#Review)
 - [Pseudocode](Intro/Introduction_CrashCourse.html#Pseudocode-and-Comments)
 - [Try/Except](Intro/Introduction_CrashCourse.html#Try-/-Except---Robustness)
