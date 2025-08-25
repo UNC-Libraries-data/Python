@@ -7312,7 +7312,6 @@ a.anchor-link {
                     processEnvironments: true
                 },
                 displayAlign: 'center',
-                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -7547,7 +7546,37 @@ Mac: /Users/username/.condarc<br/>
 <th> <h3>PC Installation</h3> </th>
 </tr>
 <tr><td>
-<p>Leave the default settings and click through to install.</p>
+<ol>
+<li><p>Download the install script to your <code>Downloads</code> folder (default location)</p>
+</li>
+<li><p><strong>Open up your terminal</strong><br/>
+To open your terminal, you can either:</p>
+</li>
+</ol>
+<ol>
+<li>Navigate to <code>Applications&gt;Utilities&gt;Terminal</code> <br/>
+Or<br/></li>
+<li>Use Spotlight Search<ul>
+<li>Press <code>Command+Space</code> to open Spotlight Search</li>
+<li>Type <code>terminal</code> in Spotlight search</li>
+<li>Press enter/return</li>
+</ul>
+</li>
+</ol>
+<p>   <img alt="searching Terminal in MacOs' Spotlight Search" height="277," src="Intro/images/terminal-spotlight-search-mac.png" width="500/"/><br/></p>
+<ol start="3">
+<li><strong> Run Installation Script </strong><br/></li>
+</ol>
+<ul>
+<li>Within the terminal, type <code>cd Downloads</code> then press enter/return (this navigates you to the downloads folder)</li>
+<li>Type <code>sh Mini</code> then press the tab button, this should autocomplete the installation file (e.g. <code>sh Miniforge3-Darwin-arm64.sh</code>)</li>
+<li>press enter/return to run installation and follow installation steps</li>
+</ul>
+<p>   <img alt="Running the installation script on a MacOs terminal" height="277," src="Intro/images/terminal-run-installation-mac.png" width="500/"/><br/></p>
+<ol start="4">
+<li><strong> Recommended: Restart Machine </strong>
+Restart your machine after the installation has been complete. You should now be able to open your terminal again, type <code>which python</code> and see <code>/Users/&lt;USERNAME&gt;/miniforge3/bin/python</code></li>
+</ol>
 </td>
 <td>
 <strong>1. PATH</strong><br/>
@@ -7613,6 +7642,24 @@ The conda-compatible packages in the default channel and Anaconda Distribution a
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell celltag_hide-input">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">%%HTML</span>
+<span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/css"</span><span class="p">&gt;</span><span class="w"> </span>
+<span class="nt">table</span><span class="w"> </span><span class="nt">td</span><span class="o">,</span><span class="w"> </span><span class="nt">table</span><span class="w"> </span><span class="nt">th</span><span class="o">,</span><span class="w"> </span><span class="nt">table</span><span class="w"> </span><span class="nt">tr</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">black</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">black</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
+<span class="nt">table</span><span class="w"> </span><span class="nt">td</span><span class="o">,</span><span class="w"> </span><span class="nt">table</span><span class="w"> </span><span class="nt">tr</span><span class="w"> </span><span class="p">{</span><span class="k">text-align</span><span class="p">:</span><span class="kc">left</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span><span class="w"> </span><span class="k">font-size</span><span class="p">:</span><span class="mi">14</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">vertical-align</span><span class="p">:</span><span class="kc">top</span><span class="w"> </span><span class="cp">!important</span><span class="p">;}</span>
+<span class="nt">table</span><span class="w"> </span><span class="nt">th</span><span class="w"> </span><span class="p">{</span><span class="k">text-align</span><span class="p">:</span><span class="kc">center</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span><span class="w"> </span><span class="k">font-size</span><span class="p">:</span><span class="mi">15</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
@@ -7630,6 +7677,20 @@ table th {text-align:center !important; font-size:15px; }
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs celltag_hide-input">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># #convert with the following code in the anaconda prompt:</span>
+<span class="c1"># jupyter nbconvert Setup.ipynb --TagRemovePreprocessor.enabled=True  --TagRemovePreprocessor.remove_input_tags hide-input --to html</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </main>
 </body>
