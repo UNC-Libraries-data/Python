@@ -7312,6 +7312,7 @@ a.anchor-link {
                     processEnvironments: true
                 },
                 displayAlign: 'center',
+                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -7546,7 +7547,37 @@ Mac: /Users/username/.condarc<br/>
 <th> <h3>PC Installation</h3> </th>
 </tr>
 <tr><td>
-<p>Leave the default settings and click through to install.</p>
+<ol>
+<li><p>Download the install script to your <code>Downloads</code> folder (default location)</p>
+</li>
+<li><p><strong>Open up your terminal</strong><br/>
+To open your terminal, you can either:</p>
+</li>
+</ol>
+<ol>
+<li>Navigate to <code>Applications&gt;Utilities&gt;Terminal</code> <br/>
+Or<br/></li>
+<li>Use Spotlight Search<ul>
+<li>Press <code>Command+Space</code> to open Spotlight Search</li>
+<li>Type <code>terminal</code> in Spotlight search</li>
+<li>Press enter/return</li>
+</ul>
+</li>
+</ol>
+<p>   <img alt="searching Terminal in MacOs' Spotlight Search" height="277," src="Intro/images/terminal-spotlight-search-mac.png" width="500/"/><br/></p>
+<ol start="3">
+<li><strong> Run Installation Script </strong><br/></li>
+</ol>
+<ul>
+<li>Within the terminal, type <code>cd Downloads</code> then press enter/return (this navigates you to the downloads folder)</li>
+<li>Type <code>sh Mini</code> then press the tab button, this should autocomplete the installation file (e.g. <code>sh Miniforge3-Darwin-arm64.sh</code>)</li>
+<li>press enter/return to run installation and follow installation steps</li>
+</ul>
+<p>   <img alt="Running the installation script on a MacOs terminal" height="277," src="Intro/images/terminal-run-installation-mac.png" width="500/"/><br/></p>
+<ol start="4">
+<li><strong> Recommended: Restart Machine </strong>
+Restart your machine after the installation has been complete. You should now be able to open your terminal again, type <code>which python</code> and see <code>/Users/&lt;USERNAME&gt;/miniforge3/bin/python</code></li>
+</ol>
 </td>
 <td>
 <strong>1. PATH</strong><br/>
@@ -7588,9 +7619,9 @@ or<br>
 <p>type <code>Y</code> to accept the install if prompted</p>
 </li>
 <li><p>Optionally install these packages that we'll briefly cover in a survey during the final workshop:</p>
-<p><code>conda install nltk beautifulsoup4 scikit-learn pillow</code><br>
+<p><code>conda install nltk beautifulsoup4 scikit-learn pillow polars duckdb joblib</code><br>
 or<br>
-<code>mamba install nltk beautifulsoup4 scikit-learn pillow</code><br>
+<code>mamba install nltk beautifulsoup4 scikit-learn pillow polars duckdb joblib</code><br>
 then we'll install one package only available through <code>pip</code><br>
 <code>pip install noaa_sdk</code></br></br></br></br></p>
 </li>
@@ -7599,15 +7630,7 @@ then we'll install one package only available through <code>pip</code><br>
 <h3 id="Why-not-work-with-an-existing-installation?">Why not work with an existing installation?<a class="anchor-link" href="#Why-not-work-with-an-existing-installation?">¶</a></h3><p>If you use macOS or Linux, then you most likely already have Python on your computer!  Python does not come with Windows, but it may be on your machine as part of other software (e.g. ArcGIS Desktop).</p>
 <p>However, unless you've worked with Python already, your pre-existing installation may only include the bare minimum and may be an out of date version.  Therefore, we recommend a new installation with some extra tools for all operating systems.</p>
 <h3 id="Why-not-use-pip-+-venv?">Why not use <code>pip</code> + <code>venv</code>?<a class="anchor-link" href="#Why-not-use-pip-+-venv?">¶</a></h3><p>The <code>pip</code> and <code>venv</code> packages are usually included with a new Python installation and cover much of the functionality of <code>conda</code>/<code>mamba</code> - installing Python packages and creating and managing virtual environments.  However, <code>conda</code>/<code>mamba</code> can also install other programming languages and tools, while still using <code>pip</code> if needed.</p>
-<h3 id="Why-not-Anaconda?">Why not Anaconda?<a class="anchor-link" href="#Why-not-Anaconda?">¶</a></h3><p>The Anaconda distribution includes conda and Python along with a large curated collection of data science oriented packages.  However, Anaconda is only free to use for "curriculum-based courses".  Since many attendees are either working on academic research outside of the curriculum or planning on working outside of academia, we now avoid installing Anaconda.  Previous versions of this workshop did use Anaconda.</p>
-<blockquote>
-The conda-compatible packages in the default channel and Anaconda Distribution are free to use if:
-    Your organization has less than 200 people, or
-    Your organization has 200 or more people, but qualifies as an exempt organization in Anaconda’s terms of service:
-
-<p><em>Students and educational entities may use our free offerings in curriculum-based courses.</em></p>
-</blockquote>
-<p><a href="https://www.anaconda.com/blog/is-conda-free">Read more here</a></p>
+<h3 id="Why-not-Anaconda?">Why not Anaconda?<a class="anchor-link" href="#Why-not-Anaconda?">¶</a></h3><p>The Anaconda distribution includes conda and Python along with a large curated collection of data science oriented packages.  However, Anaconda is only free to use for certain types of users.  <a href="https://www.anaconda.com/legal">Read more here</a></p>
 </div>
 </div>
 </div>
