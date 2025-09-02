@@ -16,7 +16,7 @@ We'll work with more complex concepts like exception handling and user-defined f
 
 ## Getting Help!
 
-* [Davis Library Research Hub](https://library.unc.edu/data/connect-with-us/)
+* [Library Data Services](https://calendar.lib.unc.edu/appointments/data)
 * [Odum Statistical Walk-in Help](https://odum.unc.edu/statistics-help-desk/)
 * [Research Computing (and UNC's clusters)](https://its.unc.edu/research-computing/)
 	+ [Open OnDemand (Longleaf Access Required)](https://its.unc.edu/research-computing/ondemand/)
