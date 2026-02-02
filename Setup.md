@@ -152,7 +152,26 @@ The Anaconda distribution includes conda and Python along with a large curated c
 
 
 
-<table>
+<style>
+  /* Table appearance */
+  .install-table {
+    width: 100%;
+    border-collapse: collapse; /* ensures a single, clean border grid */
+    table-layout: fixed;       /* optional: keeps columns balanced */
+  }
+
+  /* Cell borders + spacing */
+  .install-table th,
+  .install-table td {
+    border: 2px solid #d0d7de;   /* GitHub-like neutral border */
+    padding: 0.75rem;
+    vertical-align: top;
+  }
+</style>
+
+
+
+<table class="install-table">
   <thead>
     <tr>
       <th>Mac Installation</th>
@@ -163,55 +182,47 @@ The Anaconda distribution includes conda and Python along with a large curated c
     <tr>
       <td markdown="1">
 
-1. Download the install script to your `Downloads` folder (default location)
+1. Download the install script to your `Downloads` folder (default location).
 
 2. **Open up your terminal**  
    To open your terminal, you can either:  
-   1) Navigate to `Applications>Utilities>Terminal`  
-   Or  
-   2) Use Spotlight Search
-      * Press `Command+Space` to open Spotlight Search
-      * Type `terminal` in Spotlight search
-      * Press Enter/Return
+   1. Navigate to `Applications > Utilities > Terminal`  
+   **Or**  
+   2. Use Spotlight Search  
+      - Press `Command+Space` to open Spotlight Search  
+      - Type `terminal` in Spotlight search  
+      - Press Enter/Return
 
-<img src="Intro/images/terminal-spotlight-search-mac.png"
-     alt="Searching Terminal in macOS Spotlight Search"
-     width="500" height="277" />
+![Searching Terminal in macOS Spotlight](Intro/images/terminal-spotlight-search-mac.png){: width="500" height="277" }
 
 3. **Run Installation Script**  
-   * Within the terminal, type `cd Downloads` then press Enter/Return (this navigates you to the Downloads folder)
-   * Type `sh Mini` then press the Tab key; this should autocomplete the installation file (e.g., `sh Miniforge3-Darwin-arm64.sh`)
-   * Press Enter/Return to run the installer and follow the prompts
+   - In the terminal, type `cd Downloads` then press Enter/Return (this navigates you to the Downloads folder).  
+   - Type `sh Mini` then press **Tab** to autocomplete the installer file (e.g., `sh Miniforge3-Darwin-arm64.sh`).  
+   - Press Enter/Return to run the installer and follow the prompts.
 
-<img src="Intro/images/terminal-run-installation-mac.png"
-     alt="Running the installation script on a macOS terminal"
-     width="500" height="277" />
+![Running the installation script on macOS Terminal](Intro/images/terminal-run-installation-mac.png){: width="500" height="277" }
 
 4. **Recommended: Restart Machine**  
-   Restart your machine after the installation is complete. You should now be able to open your terminal again, type `which python` and see `/Users/<USERNAME>/miniforge3/bin/python`.
+   Restart your machine after the installation is complete. You should now be able to open your terminal again, type `which python`, and see `/Users/<USERNAME>/miniforge3/bin/python`.
 
-      </td>
-      <td markdown="1">
+</td>
+<td markdown="1">
 
 **1. PATH**  
-Do not add Miniforge to your PATH variable. This may interfere with any existing Python-dependent software on your computer.
+Do **not** add Miniforge to your PATH variable. This may interfere with any existing Python‑dependent software on your computer.
 
-<img src="Intro/images/Miniforge_install_settings.png"
-     alt="Miniforge installer settings on Windows"
-     width="499" height="388" />
+![Miniforge install settings](Intro/images/Miniforge_install_settings.png){: width="499" height="388" }
 
 **2. Registering Python**  
-If you are installing Python for the first time, select “Register Miniforge as the system Python.”
+- If you are installing Python for the first time, select “Register Miniforge as the system Python.”  
+- If you have Python‑dependent software (e.g., ArcGIS, CAD software), **do not** check “Register Miniforge as the system Python,” or it may cause issues.
 
-If you have Python-dependent software (e.g., ArcGIS, CAD software, etc.), **do not** check “Register Miniforge as the system Python,” or it may cause issues.
+> If you're unsure, open your PC’s Command Prompt (Start > Windows System > Command Prompt) or Mac’s Terminal (Applications > Utilities > Terminal), type `python`, and press Enter. If you already have Python you should see something like the image below — **do not** check “Register Anaconda as the system Python.”
 
-> If you're unsure, open your PC's Command Prompt (Start > Windows System > Command Prompt) or Mac's Terminal (Applications > Utilities > Terminal), type `python`, and press Enter. If you already have Python you should see something like the image below — **do not** check “Register Anaconda as the system Python.”
-
-<img src="Intro/images/Test_CMD.png"
-     alt="Windows Command Prompt showing Python"
-     width="781" height="87" />
+![Windows Command Prompt showing Python](Intro/images/Test_CMD.png){: width="781" height="87" }
 
       </td>
     </tr>
   </tbody>
 </table>
+
