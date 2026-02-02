@@ -41,6 +41,7 @@ If you're moving from Anaconda to Miniforge, you'll need to do a little bit of p
 
 
 <table>
+    
 <tr>
 <th> <h3>Mac Installation</h3> </th>
 <th> <h3>PC Installation</h3> </th>
@@ -89,9 +90,9 @@ Restart your machine after the installation has been complete. You should now be
     
 &nbsp;&nbsp;&nbsp;<img src = "Intro/images/Test_CMD.png" alt="Command Prompt Python" height = 87, width = 781/><br>  
 
- 
 </td>
 </tr>
+
 </table>
   
 ## Installing Python packages
