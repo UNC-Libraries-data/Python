@@ -221,8 +221,10 @@ Do **not** add Miniforge to your PATH variable. This may interfere with any exis
 
 ![Windows Command Prompt showing Python](Intro/images/Test_CMD.png){: width="781" height="87" }
 
-      </td>
-    </tr>
-  </tbody>
+</td>
+</tr>
+
+</tbody>
+
 </table>
 
