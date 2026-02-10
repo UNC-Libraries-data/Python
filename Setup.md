@@ -10,15 +10,19 @@ We currently recommend the miniforge installer, which includes:
 * Defaults to install packages from the conda-forge repository
 
 
-### Alternative: JupyterLite via Jupyter.org
+### Local Install Alternatives: 
+
+#### JupyterLite via Jupyter.org
 
 > If you would like to use Python for the duration of this workshop without downloading anything (or have problems downloading Miniforge), we recommend using [JupyterLite](https://jupyter.org/try-jupyter/lab/). JupyterLite runs completely inside your browser using WebAssembly and Pyodide and provides an identical interface to the JupyterLab IDE we'll be using for the workshop.  You can drag and drop files to upload example data later on, and you can right click on any files to download them for later use. <br>[Read more about JupyterLite](https://jupyterlite.readthedocs.io/en/latest/index.html) <br> **Note:** If you run into issues with JupyterLite hanging or being unable to run code, try running it in a "Private" browser window, or try clearing your browser cache.  This will reset the service, so **make sure to save any files** you need before clearing the cache!
 
-
-### Alternative: Open OnDemand (UNC Research Computing)
+#### Open OnDemand (UNC Research Computing)
 
 > If you have access to UNC's [Longleaf cluster](https://help.rc.unc.edu/request-a-cluster-account/), you can use Python with the Spyder IDE or Jupyter Lab in a web browser on Research Computing's [Open OnDemand service](https://help.rc.unc.edu/ondemand/).  This service runs on the Longleaf cluster so it's a great option for complex or long-running Python scripts.
 
+#### Cloud environments
+
+Two of the most popular Cloud-based development environments are [Google Colab](https://colab.research.google.com/) and [GitHub Codespaces](https://github.com/codespaces).  Both have Jupyter-style notebooks available that should allow you to follow along, and may have additional compute time available for student/academic accounts.  You should be hesitant to use these services with any senstive data.
 
 ## Installation
 
@@ -146,6 +150,10 @@ Miniconda does not include all of the Python packages we'll be using in the work
     `mamba install nltk beautifulsoup4 scikit-learn pillow polars duckdb joblib`\
     then we'll install one package only available through `pip`\
     `pip install noaa_sdk`
+
+## Integrated Development Environments (IDEs)
+
+We'll primarily teach in JupyterLab since it is easily installed with conda.  If you're already familiar with a different development environment (VS Code, Spyder, PyCharm, Google Colab etc.), you're welcome to use it.  It will be easiest to follow along if your environment supports Jupyter Notebooks or a similar notebook format.  Our ability to troubleshoot other environments may be limited.
 
 ## FAQs
 
