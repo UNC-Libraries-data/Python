@@ -2,7 +2,7 @@
 *[UNC University Library](https://library.unc.edu/data/)*  
 *[UNC Research Computing](https://its.unc.edu/research-computing/)*
 
-## [Setup](Setup.html)
+## [Setup](../Setup)
 
 Installing the Anaconda Distribution.
 If you run into problems during installation, please come **30 minutes early** to the first session for help.
