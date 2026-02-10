@@ -1,8 +1,8 @@
 # Python Crash Courses: Intro to Data
 
 ***Brought to you by...***
-*[UNC University Library](https://library.unc.edu/data/)*  
-*[UNC Research Computing](https://its.unc.edu/research-computing/)*
+* [UNC University Library](https://library.unc.edu/data/)
+* [UNC Research Computing](https://its.unc.edu/research-computing/)
 
 ## Before the Crash Courses: Getting Started
 * [Follow these instructions](Setup) to install Anaconda **before the crash courses begin**.
