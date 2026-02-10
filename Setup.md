@@ -153,7 +153,7 @@ Miniconda does not include all of the Python packages we'll be using in the work
 
 ## Integrated Development Environments (IDEs)
 
-We'll primarily teach in JupyterLab since it is easily installed with conda.  If you're already familiar with a different development environment (VS Code, Spyder, PyCharm, Google Colab etc.), you're welcome to use it.  It will be easiest to follow along if your environment supports Jupyter Notebooks or a similar notebook format.  Our ability to troubleshoot other environments may be limited.
+We'll primarily teach in JupyterLab since it is easily installed with conda.  If you're already familiar with a different development environment (VS Code, Spyder, PyCharm, Google Colab, Positron etc.), you're welcome to use it.  It will be easiest to follow along if your environment supports Jupyter Notebooks or a similar notebook format.  Our ability to troubleshoot other environments during the workshop may be limited.
 
 ## FAQs
 
