@@ -1,40 +1,31 @@
 # Python Crash Courses: Intro to Data
-*[UNC University Library](https://library.unc.edu/data/)*  
-*[UNC Research Computing](https://its.unc.edu/research-computing/)*
 
-## [Setup](../Setup)
+***Brought to you by...***
+* [UNC University Library](https://library.unc.edu/data/)
+* [UNC Research Computing](https://its.unc.edu/research-computing/)
 
-Installing the Anaconda Distribution.
-If you run into problems during installation, please come **30 minutes early** to the first session for help.
+## Before the Crash Courses: Getting Started
+* [Follow these instructions](Setup) to install Anaconda **before the crash courses begin**.
+* If you run into problems during installation, please come **30 minutes early** to the first session for help.
 
-### Week 1
+## During the Crash Courses: What We Will Cover
+* [Juputer Notebooks](https://unc-libraries-data.github.io/Python/Data/Data.html#Jupyter-Notebooks)
+* [Pandas](https://unc-libraries-data.github.io/Python/Data/Data.html#Pandas)
+* [Data Visualization](https://unc-libraries-data.github.io/Python/Data/Data.html#Data-Visualization)
+* [Other Packages](https://unc-libraries-data.github.io/Python/Data/Data.html#Other-Helpful-Packages)
 
-We'll introduce a format for literate programming: [Jupyter Notebooks](Jupyter/Jupyter-Notebooks.html).  Then, we'll get started with [Pandas](Jupyter/Pandas.html) for Data in Python.
-
-### Week 2
-
-We'll continue with [Pandas](Jupyter/Pandas.html) and explore some visualization tools by applying them to some simple research questions about a dataset.
-
-### Week 3
-
-We'll cover [some topics in Pandas and base Python](Jupyter/Extra_Topics.html), then explore some [other useful packages](Jupyter/Other-Packages.html).
-
-
-## Pandas Exercises
-**[Exercises](Jupyter/PandasExercises.html)**<br/>
-**[Solutions](Jupyter/PandasSolutions.html)**
-
+## After the Crash Courses: Practice on Your Own
+**Pandas Exercises**
+* **[Exercises](PandasExercises.html)**
+* **[Solutions](PandasSolutions.html)**
 
 ## Getting Help!
-
 * [Davis Library Research Hub](https://library.unc.edu/data/connect-with-us/)
 * [Odum Statistical Walk-in Help](https://odum.unc.edu/statistics-help-desk/)
 * [Research Computing (and UNC's clusters)](https://its.unc.edu/research-computing/)
 	+ [Open OnDemand (Longleaf Access Required)](https://its.unc.edu/research-computing/ondemand/)
 
-
 ## References and Resources
-
 * [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
 * [Python Cheatsheets](https://ehmatthes.github.io/pcc/cheatsheets/README.html)
 * [Python Programming for the Humanities](http://www.karsdorp.io/python-course/)
