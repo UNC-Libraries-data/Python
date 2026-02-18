@@ -9,7 +9,7 @@
 * If you run into problems during installation, please come **30 minutes early** to the first session for help.
 
 ## During the Crash Courses: What We Will Cover
-* [Juputer Notebooks](https://unc-libraries-data.github.io/Python/Data/Data.html#Jupyter-Notebooks)
+* [Jupyter Notebooks](https://unc-libraries-data.github.io/Python/Data/Data.html#Jupyter-Notebooks)
 * [Pandas](https://unc-libraries-data.github.io/Python/Data/Data.html#Pandas)
 * [Data Visualization](https://unc-libraries-data.github.io/Python/Data/Data.html#Data-Visualization)
 * [Other Packages](https://unc-libraries-data.github.io/Python/Data/Data.html#Other-Helpful-Packages)
