@@ -2,16 +2,16 @@
 *[University Libraries at the University of North Carolina at Chapel Hill](https://library.unc.edu/data/)*  
 *[UNC Research Computing](https://its.unc.edu/research-computing/)*
 
-## [Setup](Setup.html)
+## [Setup](Setup.md)
 
 Installing the Anaconda Distribution.
 
 If you run into problems during installation, please come **30 minutes early** to the first session for help.
 
-## [Session 1](Session1/Session1_CrashCourse.html)
+## [Session 1](Intro/Session1_CrashCourse.html)
 We'll introduce fundamental Python concepts like variables, object types, and indexing.
 
-## [Session 2](Session2/Session2_CrashCourse.html)
+## [Session 2](Intro/Session2_CrashCourse.html)
 We'll work with more complex concepts like exception handling and user-defined functions. Then, we'll explore some third party packages.
 
 ## Getting Help!

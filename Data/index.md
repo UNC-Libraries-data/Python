@@ -5,7 +5,7 @@
 * [UNC Research Computing](https://its.unc.edu/research-computing/)
 
 ## Before the Crash Courses: Getting Started
-* [Follow these instructions](Setup) to install Anaconda **before the crash courses begin**.
+* [Follow these instructions](Setup.md) to install Anaconda **before the crash courses begin**.
 * If you run into problems during installation, please come **30 minutes early** to the first session for help.
 
 ## During the Crash Courses: What We Will Cover
