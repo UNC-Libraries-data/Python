@@ -71,16 +71,18 @@ Adding packages automatically installs Python, the packages we've requested, and
 #### Moving to VS Code
 
 We'll run a couple of commands in our Powershell or Terminal window:<br>
-`code --install-extension ms-python.python`
+`code --install-extension ms-python.python`<br>
 `code --install-extension ms-toolsai.jupyter`
 
 These commands will install the Jupyter and Python extensions in our code environment.  Once these have installed, we can make sure we're in our project folder:<br>
 `cd ~/Desktop/python_workshop`
 
 Then we can run:<br>
-`code`
+`code .`
 
 to start VS Code.  If that does not work, you can start VS code from the Start Menu (PC) or Launcher (Mac), then use File>Open Folder to graphically open your project folder.
+
+**Note**: If VS Code shows an error starting with "No Python found.", feel free to click Install Python.  This is about installing a *default* Python interpreter for VS Code.  This is not the environment we'll use today but VS Code can use uv to quickly install a default Python and prevent this error in the future.
 
 By default, VS Code opens new folders in restricted mode.  Since we'll be working in this folder, we'll want to make it Trusted.  To do this we can click the blue "Restricted Mode" button at the bottom left of the VS code window, then click Trust.
 
