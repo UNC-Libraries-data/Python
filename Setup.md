@@ -1,61 +1,56 @@
 <center> <h1>Setup</h1> </center>
 
-## Miniforge
-
-We currently recommend the miniforge installer, which includes:
-
-* Python  
-* Conda helps manage and install Python packages and other tools and creates and manages virtual environments.
-* Mamba is a C++ version of conda that can be faster for some tasks.  You can usually use the two interchangeably.
-* Defaults to install packages from the conda-forge repository
-
-
-### Local Install Alternatives: 
-
-#### JupyterLite via Jupyter.org
-
-> If you would like to use Python for the duration of this workshop without downloading anything (or have problems downloading Miniforge), we recommend using [JupyterLite](https://jupyter.org/try-jupyter/lab/). JupyterLite runs completely inside your browser using WebAssembly and Pyodide and provides an identical interface to the JupyterLab IDE we'll be using for the workshop.  You can drag and drop files to upload example data later on, and you can right click on any files to download them for later use. <br>[Read more about JupyterLite](https://jupyterlite.readthedocs.io/en/latest/index.html) <br> **Note:** If you run into issues with JupyterLite hanging or being unable to run code, try running it in a "Private" browser window, or try clearing your browser cache.  This will reset the service, so **make sure to save any files** you need before clearing the cache!
-
-#### Open OnDemand (UNC Research Computing)
-
-> If you have access to UNC's [Longleaf cluster](https://help.rc.unc.edu/request-a-cluster-account/), you can use Python with the Spyder IDE or Jupyter Lab in a web browser on Research Computing's [Open OnDemand service](https://help.rc.unc.edu/ondemand/).  This service runs on the Longleaf cluster so it's a great option for complex or long-running Python scripts.
-
-#### Cloud environments
-
-Two of the most popular Cloud-based development environments are [Google Colab](https://colab.research.google.com/) and [GitHub Codespaces](https://github.com/codespaces).  Both have Jupyter-style notebooks available that should allow you to follow along, and may have additional compute time available for student/academic accounts.  You should be hesitant to use these services with any senstive data.
-
 ## Installation
+
+We'll use the uv package manager with VS Code for this workshop.  These are relatively common tools for Python that will set you up to work with Python locally.
+
+If you already have a working Python installation with Jupyter Notebooks, you're welcome to use that instead.  Below we have alternative installation instructions for [Miniforge](#downloading-and-installing-miniforge) and a list of available [cloud options](#local-install-alternatives) for working with Python.
 
 ### VS Code
 
 [Download and install VS Code](https://code.visualstudio.com/download).  Leave defaults and click through.
 
-### uv
+### Automated uv install inside VS Code
 
-We'll use uv to manage virtual environments and package installs today.  We'll follow the [uv installation instructions](https://docs.astral.sh/uv/getting-started/installation/#installing-uv) for your operating system.
+* Open VS code and click **File>New File>Jupyter Notebook**.
+  * If you're starting VS Code for the first time, it may ask you to sign into GitHub. If you connect your GitHub account, you'll get some added GitHub functionality *and* an allotment of inline completions turned on by default.  To disable AI features, go to **File>Preferences>Settings**, then search for "Chat: Disable AI Features".
+* In the top right of the new ipynb window, click **Select Kernel**.
+* Click **Install/Enable suggested extentions Python + Jupyter**. Note that this make take a moment to install.
+* You should get a pop up: "No Python found. Would you like to install uv and use it to install Python?".  Click **Install uv and Python**.
+* Run the provided command in your terminal (bottom of the screen) to add uv to your PATH.  Alternatively, restart VS Code.
+* Continue to **Project setup in uv** below.
 
-For Mac:
-Open the Terminal and run:<br>
- `curl -LsSf https://astral.sh/uv/install.sh | sh`<br>or<br> `wget -qO- https://astral.sh/uv/install.sh | sh`
+If you have issues with this process you can try the manual installation process below.
 
-For PC:
-Open Powershell and run:<br>
+### Manual uv install outside of VS Code
+
+Follow the [uv installation instructions](https://docs.astral.sh/uv/getting-started/installation/#installing-uv) for your operating system.
+
+* For Mac:
+  * Open the Terminal and run:<br>
+     `curl -LsSf https://astral.sh/uv/install.sh | sh`<br>or<br> `wget -qO- https://astral.sh/uv/install.sh | sh`
+
+* For PC:
+  * Open Powershell and run:<br>
 `powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"`
 
-Restart your Terminal or Powershell and type `uv -h` to see the help documentation (and ensure installation was successful).
+* Restart your Terminal or Powershell and type `uv -h` to see the help documentation (and ensure installation was successful).
 
-### Getting started in uv and VS Code
+* We'll also run a couple of commands in our Powershell or Terminal window to install necessary VS Code extensions:<br>
+`code --install-extension ms-python.python`<br>
+`code --install-extension ms-toolsai.jupyter`
 
-We'll work through the following instructions in the workshop, but feel free to try them out ahead of time!
+## Project setup in uv
 
-#### uv setup
+Use Finder (Mac) or File Explorer (PC) to create a folder for the workshop.  For example we could create a folder called "python_workshop" on the desktop.
 
-Create a folder for the workshop.  For example we could create a folder called "python_workshop" on the desktop.
+Open VS Code and click File > Open Folder and navigate to the folder you created.
 
-In Terminal or Powershell we need to move to this new folder:<br>
-`cd ~/Desktop/python_workshop`
+* If you're starting VS Code for the first time, it may ask you to sign into GitHub. If you connect your GitHub account, you'll get some added GitHub functionality *and* an allotment of inline completions turned on by default.  To disable AI features, go to **File>Preferences>Settings**, then search for "Chat: Disable AI Features".
 
-We can create a new uv project with the following command:<br>
+Click Terminal > New Terminal to open a terminal inside your VS Code session.  We'll use this terminal for future uv commands.
+
+We can create a new uv project with the following command in the VS Code terminal:<br>
 `uv init --bare`
 
 * The `--bare` option above tells uv to forgo creating other files that aren't usually going to be useful in scientific compute settings.
@@ -68,30 +63,19 @@ Adding packages automatically installs Python, the packages we've requested, and
 * The new `.venv` folder contains all of the packages and the python executable we'll use for this project.  
 * At the top level, our `pyproject.toml` file is updated to reflect the newly required packages, and the `uv.lock` file records what we're actually using.  (You generally won't need to edit your .toml file and you **should not** modify your .lock file.)  These files are the essential ingredients to reproducing your environment somewhere else!
 
-#### Moving to VS Code
 
-We'll run a couple of commands in our Powershell or Terminal window:<br>
-`code --install-extension ms-python.python`<br>
-`code --install-extension ms-toolsai.jupyter`
+**Notes**: 
 
-These commands will install the Jupyter and Python extensions in our code environment.  Once these have installed, we can make sure we're in our project folder:<br>
-`cd ~/Desktop/python_workshop`
+* If VS Code shows an error starting with "No Python found.", feel free to click Install Python.  This is about installing a *default* Python interpreter for VS Code.  This is not the environment we'll use today but VS Code can use uv to quickly install a default Python and prevent this error in the future.
 
-Then we can run:<br>
-`code .`
+* By default, VS Code opens new folders in restricted mode.  Since we'll be working in this folder, we'll want to make it Trusted.  To do this we can click the blue "Restricted Mode" button at the bottom left of the VS code window, then click Trust.
 
-to start VS Code.  If that does not work, you can start VS code from the Start Menu (PC) or Launcher (Mac), then use File>Open Folder to graphically open your project folder.
+### Jupyter Notebook
 
-**Note**: If VS Code shows an error starting with "No Python found.", feel free to click Install Python.  This is about installing a *default* Python interpreter for VS Code.  This is not the environment we'll use today but VS Code can use uv to quickly install a default Python and prevent this error in the future.
-
-By default, VS Code opens new folders in restricted mode.  Since we'll be working in this folder, we'll want to make it Trusted.  To do this we can click the blue "Restricted Mode" button at the bottom left of the VS code window, then click Trust.
-
-#### Jupyter Notebook
-
-Use File>New File>Jupyter Notebook to create a new Jupyter Notebook file.  In the top right of your new ipynb window, you'll see "Detecting Kernels" - this may successfully map to the Python kernel we've set up with uv, but if not, you can click "Select Kernel", then choose Python Environments, and choose the "python-workshop" kernel with the path `.venv\Scripts\python.exe` (PC) or `.venv/bin/python` (Mac).
+Use **File>New File>Jupyter Notebook** to create a new Jupyter Notebook file.  In the top right of your new ipynb window, you'll see "Detecting Kernels" - this may successfully map to the Python kernel we've set up with uv, but if not, you can click "Select Kernel", then choose Python Environments, and choose the "python-workshop" kernel with the path `.venv\Scripts\python.exe` (PC) or `.venv/bin/python` (Mac).
 
 
-#### Troubleshooting:
+### Troubleshooting:
 
 If you have trouble finding the kernel, here are three things to check.
 1. Make sure that the folder is trusted - you should *not* see "Restricted Mode" in the bottom left of your VS code window.
@@ -104,11 +88,14 @@ If you have trouble finding the kernel, here are three things to check.
 
 
 
-### Adding and managing packages
+## Adding and managing packages
 
-There are three ways we'll work with python packages.
+There are three ways we'll work with python packages.  We can run the following snippets in three main locations:
+1. Back in your Terminal or Powershell window
+2. Inside VS Code: use **Terminal>New Terminal** to open a terminal inside our VS Code session.  
+3. Inside our Jupyter Notebook: create a code block and start the code block with `! `, for example `! uv add pandas`.
 
-#### `uv add`
+### `uv add`
 
 The simplest way to add a pacakge is to run:<br>
 `uv add <package-name>`
@@ -117,7 +104,7 @@ For example:<br>
 `uv add pandas matplotlib`<br>
 installs two packages and their required dependencies.
 
-#### `uv pip install`
+### `uv pip install`
 
 We can similarly use the `pip` package manager within `uv` with `uv pip install`.
 
@@ -126,11 +113,14 @@ For example:<br>
 
 However, this process does not update the "project files" - the .toml and .lock files, therefore can be less reproducible.
 
-#### .toml (and .lock) files
+### .toml (and .lock) files
 
 Finally, if we're picking up a project from someone else (or our own older work), we can use `uv sync` to recreate the same environment when a .toml file (and if available, .lock file) is present in the folder.  
 
-## OLD: Miniforge Instructions
+## Alternative: Miniforge Instructions
+
+If you don't want to try uv, you can also use miniforge to manage your python environment.  See below.
+
 ### If you're coming from an Anaconda installation
 
 If you're moving from Anaconda to Miniforge, you'll need to do a little bit of preparation first.
@@ -224,7 +214,7 @@ Do **not** add Miniforge to your PATH variable. This may interfere with any exis
 
 </table>
 
-## Installing Python packages
+### Miniforge: Installing Python packages
 
 Miniconda does not include all of the Python packages we'll be using in the workshops.  We'll need to install them manually.
 
@@ -242,7 +232,7 @@ Miniconda does not include all of the Python packages we'll be using in the work
 
 3. Run the following to install some key packages:
 
-    `conda install jupyterlab pandas seaborn matplotlib bokeh`\
+    `conda install jupyterlab pandas  `\
     or\
     `mamba install jupyterlab pandas seaborn matplotlib bokeh`
 
@@ -256,15 +246,42 @@ Miniconda does not include all of the Python packages we'll be using in the work
     then we'll install one package only available through `pip`\
     `pip install noaa_sdk`
 
+
+### Local Install Alternatives
+
+#### JupyterLite via Jupyter.org
+
+> If you would like to use Python for the duration of this workshop without downloading anything (or have problems downloading Miniforge), we recommend using [JupyterLite](https://jupyter.org/try-jupyter/lab/). JupyterLite runs completely inside your browser using WebAssembly and Pyodide and provides an identical interface to the JupyterLab IDE we'll be using for the workshop.  You can drag and drop files to upload example data later on, and you can right click on any files to download them for later use. <br>[Read more about JupyterLite](https://jupyterlite.readthedocs.io/en/latest/index.html) <br> **Note:** If you run into issues with JupyterLite hanging or being unable to run code, try running it in a "Private" browser window, or try clearing your browser cache.  This will reset the service, so **make sure to save any files** you need before clearing the cache!
+
+#### Open OnDemand (UNC Research Computing)
+
+> If you have access to UNC's [Longleaf cluster](https://help.rc.unc.edu/request-a-cluster-account/), you can use Python with the Spyder IDE or Jupyter Lab in a web browser on Research Computing's [Open OnDemand service](https://help.rc.unc.edu/ondemand/).  This service runs on the Longleaf cluster so it's a great option for complex or long-running Python scripts.
+
+#### Cloud environments
+
+Two of the most popular Cloud-based development environments are [Google Colab](https://colab.research.google.com/) and [GitHub Codespaces](https://github.com/codespaces).  Both have Jupyter-style notebooks available that should allow you to follow along, and may have additional compute time available for student/academic accounts.  You should be hesitant to use these services with any senstive data.
+
+<!--
+
+## Miniforge
+
+We currently recommend the miniforge installer, which includes:
+
+* Python  
+* Conda helps manage and install Python packages and other tools and creates and manages virtual environments.
+* Mamba is a C++ version of conda that can be faster for some tasks.  You can usually use the two interchangeably.
+* Defaults to install packages from the conda-forge repository
+
+
+
+
 ## Integrated Development Environments (IDEs)
 
 We'll primarily teach in JupyterLab since it is easily installed with conda.  If you're already familiar with a different development environment (VS Code, Spyder, PyCharm, Google Colab, Positron etc.), you're welcome to use it.  It will be easiest to follow along if your environment supports Jupyter Notebooks or a similar notebook format.  Our ability to troubleshoot other environments during the workshop may be limited.
 
 ## FAQs
 
-### What's the difference between `conda` and `mamba`?
-
-`mamba` translates most `conda` functionality from Python into C++, which can make some tasks a little faster.  They're usually interchangeable!
+<---
 
 ### Why not work with an existing installation?
 
@@ -274,8 +291,16 @@ However, unless you've worked with Python already, your pre-existing installatio
 
 ### Why not use `pip` + `venv`?
 
-The `pip` and `venv` packages are usually included with a new Python installation and cover much of the functionality of `conda`/`mamba` - installing Python packages and creating and managing virtual environments.  However, `conda`/`mamba` can also install other programming languages and tools, while still using `pip` if needed.
+The `pip` and `venv` packages are usually included with a new Python installation and cover much of the functionality of `uv` or `conda`/`mamba` - installing Python packages and creating and managing virtual environments.  However, `uv` has better cross-platform support and runs much faster. `conda`/`mamba` (or `pixi`) can also install other programming languages and tools.
+
+### What's the difference between `conda` and `mamba`?
+
+`mamba` translates most `conda` functionality from Python into C++, which can make some tasks a little faster.  They're usually interchangeable!
 
 ### Why not Anaconda?
 
 The Anaconda distribution includes conda and Python along with a large curated collection of data science oriented packages.  However, Anaconda is only free to use for certain types of users.  [Read more here](https://www.anaconda.com/legal)
+
+### What about `pixi`?
+
+-->
