@@ -18,7 +18,7 @@ If you already have a working Python installation with Jupyter Notebooks, you're
 * Click **Install/Enable suggested extentions Python + Jupyter**. Note that this make take a moment to install.
 * You should get a pop up: "No Python found. Would you like to install uv and use it to install Python?".  Click **Install uv and Python**.
 * Run the provided command in your terminal (bottom of the screen) to add uv to your PATH.  Alternatively, restart VS Code.
-* Continue to **Project setup in uv** below.
+* Continue to [**Project setup in uv**](#project-setup-in-uv) below.
 
 If you have issues with this process you can try the manual installation process below.
 
@@ -115,13 +115,26 @@ However, this process does not update the "project files" - the .toml and .lock 
 
 ### .toml (and .lock) files
 
-Finally, if we're picking up a project from someone else (or our own older work), we can use `uv sync` to recreate the same environment when a .toml file (and if available, .lock file) is present in the folder.  
+Finally, if we're picking up a project from someone else (or our own older work), we can use `uv sync` to recreate the same environment when a .toml file (and if available, .lock file) is present in the folder.
 
-## Alternative: Miniforge Instructions
+You can try this with our [example toml](pyproject.toml).  If you create folder, copy this file in and then run:<br>
+`uv sync`
+
+This will install an environment with all of the packages that we'll use or survey in the course of the workshop!
+
+## Alternative tools:
+
+### Miniforge
+
+The miniforge installer gives you access to the conda package management system which includes python packages and other, often data-related, tools.  We've used this in previous iterations of the workshop.
+
+<details>
+
+<summary> <h3>Miniforge Installation</h3> </summary>
 
 If you don't want to try uv, you can also use miniforge to manage your python environment.  See below.
 
-### If you're coming from an Anaconda installation
+#### If you're coming from an Anaconda installation
 
 If you're moving from Anaconda to Miniforge, you'll need to do a little bit of preparation first.
 
@@ -132,7 +145,7 @@ If you're moving from Anaconda to Miniforge, you'll need to do a little bit of p
     (replace "username" with your username)
 
 
-### Downloading and Installing Miniforge
+#### Downloading and Installing Miniforge
 
 [Download the installer here.](https://conda-forge.org/download/).
 
@@ -214,7 +227,7 @@ Do **not** add Miniforge to your PATH variable. This may interfere with any exis
 
 </table>
 
-### Miniforge: Installing Python packages
+#### Miniforge: Installing Python packages
 
 Miniconda does not include all of the Python packages we'll be using in the workshops.  We'll need to install them manually.
 
@@ -232,7 +245,7 @@ Miniconda does not include all of the Python packages we'll be using in the work
 
 3. Run the following to install some key packages:
 
-    `conda install jupyterlab pandas  `\
+    `conda install jupyterlab pandas seaborn matplotlib bokeh`\
     or\
     `mamba install jupyterlab pandas seaborn matplotlib bokeh`
 
@@ -246,6 +259,15 @@ Miniconda does not include all of the Python packages we'll be using in the work
     then we'll install one package only available through `pip`\
     `pip install noaa_sdk`
 
+</details>
+
+### pixi
+
+[Pixi](https://pixi.prefix.dev/latest/) uses uv for Python package management but also integrates the conda-forge channels from conda to provide non-Python tools.  It's similarly fast, but a bit more complicated than uv.
+
+### Pip and Venv
+
+These are packaged with Python by default. They don't have quite as many features as uv or conda, but they can work well for some users!
 
 ### Local Install Alternatives
 
