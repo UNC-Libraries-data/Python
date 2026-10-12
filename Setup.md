@@ -48,6 +48,8 @@ Open VS Code and click File > Open Folder and navigate to the folder you created
 
 * If you're starting VS Code for the first time, it may ask you to sign into GitHub. If you connect your GitHub account, you'll get some added GitHub functionality *and* an allotment of inline completions turned on by default.  To disable AI features, go to **File>Preferences>Settings**, then search for "Chat: Disable AI Features".
 
+* By default, VS Code opens new folders in restricted mode.  Since we'll be working in this folder, we'll want to make it Trusted.  To do this we can click the blue "Restricted Mode" button at the bottom left of the VS code window, then click Trust.
+
 Click Terminal > New Terminal to open a terminal inside your VS Code session.  We'll use this terminal for future uv commands.
 
 We can create a new uv project with the following command in the VS Code terminal:<br>
@@ -68,7 +70,6 @@ Adding packages automatically installs Python, the packages we've requested, and
 
 * If VS Code shows an error starting with "No Python found.", feel free to click Install Python.  This is about installing a *default* Python interpreter for VS Code.  This is not the environment we'll use today but VS Code can use uv to quickly install a default Python and prevent this error in the future.
 
-* By default, VS Code opens new folders in restricted mode.  Since we'll be working in this folder, we'll want to make it Trusted.  To do this we can click the blue "Restricted Mode" button at the bottom left of the VS code window, then click Trust.
 
 ### Jupyter Notebook
 
