@@ -4,7 +4,7 @@
 
 We'll use the uv package manager with VS Code for this workshop.  These are relatively common tools for Python that will set you up to work with Python locally.
 
-If you already have a working Python installation with Jupyter Notebooks, you're welcome to use that instead.  Below we have alternative installation instructions for [Miniforge](#downloading-and-installing-miniforge) and a list of available [cloud options](#local-install-alternatives) for working with Python.
+If you already have a working Python installation with Jupyter Notebooks, you're welcome to use that instead.  Below we have alternative installation instructions for [Miniforge](#miniforge) and a list of available [cloud options](#local-install-alternatives) for working with Python.
 
 ### VS Code
 
